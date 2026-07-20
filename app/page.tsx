@@ -228,7 +228,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
   display:flex;align-items:center;
 }
 .s-logo-img{
-  height:40px;width:auto;object-fit:contain;
+  height:55px;width:auto;object-fit:contain;mix-blend-mode:screen;
 }
 /* center section indicator */
 .s-section{

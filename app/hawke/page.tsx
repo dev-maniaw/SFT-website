@@ -286,7 +286,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
   border-bottom:1px solid rgba(74,199,255,0.08);
 }
 .s-logo{display:flex;align-items:center}
-.s-logo-img{height:40px;width:auto;object-fit:contain}
+.s-logo-img{height:55px;width:auto;object-fit:contain;mix-blend-mode:screen}
 .s-section{
   position:absolute;left:50%;transform:translateX(-50%);
   display:flex;align-items:center;gap:10px;

@@ -264,7 +264,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 /* ── Nav ── */
 .s-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:70px;background:rgba(5,5,5,0.78);border-bottom:1px solid rgba(74,199,255,0.08)}
 .s-logo{display:flex;align-items:center}
-.s-logo-img{height:40px;width:auto;object-fit:contain}
+.s-logo-img{height:55px;width:auto;object-fit:contain;mix-blend-mode:screen}
 .s-section{position:absolute;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:10px}
 .s-sec-num{font-family:'Space Mono',monospace;font-size:0.95rem;font-weight:400;letter-spacing:.1em;color:rgba(255,255,255,0.45)}
 .s-sec-label{font-family:'Space Grotesk',sans-serif;font-size:0.95rem;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:rgba(74,199,255,0.8);transition:opacity .4s}
