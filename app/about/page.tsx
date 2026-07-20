@@ -1052,8 +1052,8 @@ export default function AboutPage() {
           timelineRightRef.current.classList.toggle('vis', isTimelineActive)
         }
         if (isTimelineActive) {
-          const subStart = TIMELINE_SECTION_IDX + 0.05
-          const subEnd = TIMELINE_SECTION_IDX + 0.95
+          const subStart = TIMELINE_SECTION_IDX + 0.75
+          const subEnd = TIMELINE_SECTION_IDX + 1.70
           const subPct = Math.max(0, Math.min(1, (sF - subStart) / (subEnd - subStart)))
           const tlCount = tlCardRefs.current.filter(Boolean).length
           const activeCard = Math.min(tlCount - 1, Math.floor(subPct * tlCount))
