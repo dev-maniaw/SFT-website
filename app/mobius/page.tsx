@@ -1482,6 +1482,7 @@ export default function MobiusPage() {
         </div>
 
         <div className="s-nav-right">
+          <a href="/" className="s-nav-link">Home</a>
           <a href="/about" className="s-nav-link">About</a>
           <a href="/hawke" className="s-nav-link">HAWKE</a>
           <a href="/applications" className="s-nav-link">Applications</a>

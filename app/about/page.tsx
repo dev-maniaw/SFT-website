@@ -1361,6 +1361,7 @@ export default function AboutPage() {
 
         {/* Right: CTA */}
         <div className="s-nav-right">
+          <a href="/" className="s-nav-link">Home</a>
           <a href="/hawke" className="s-nav-link">HAWKE</a>
           <a href="/mobius" className="s-nav-link">MOBIUS</a>
           <a href="/applications" className="s-nav-link">Applications</a>

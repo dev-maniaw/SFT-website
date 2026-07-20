@@ -1585,6 +1585,7 @@ export default function HawkePage() {
 
         {/* Right: CTA */}
         <div className="s-nav-right">
+          <a href="/" className="s-nav-link">Home</a>
           <a href="/about" className="s-nav-link">About</a>
           <a href="/mobius" className="s-nav-link">MOBIUS</a>
           <a href="/applications" className="s-nav-link">Applications</a>

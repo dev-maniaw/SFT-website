@@ -1278,6 +1278,7 @@ export default function ApplicationsPage() {
           <span ref={ctrLabelRef} className="s-sec-label">Applications</span>
         </div>
         <div className="s-nav-right">
+          <a href="/" className="s-nav-link">Home</a>
           <a href="/about" className="s-nav-link">About</a>
           <a href="/hawke" className="s-nav-link">HAWKE</a>
           <a href="/mobius" className="s-nav-link">MOBIUS</a>
