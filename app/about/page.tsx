@@ -445,40 +445,41 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 
 /* ── Timeline ── */
 .timeline-right{
-  position:fixed;top:0;right:0;width:50%;height:100vh;
+  position:fixed;top:0;right:0;width:55%;height:100vh;
   z-index:11;pointer-events:none;
-  display:flex;align-items:center;justify-content:center;
-  padding:80px 60px 60px 40px;
+  display:flex;align-items:center;
+  padding:80px 40px 60px 0;
   opacity:0;
   transition:opacity 0.8s cubic-bezier(.16,1,.3,1);
+  overflow:hidden;
 }
 .timeline-right.vis{opacity:1}
 .timeline-card-stack{
-  position:relative;width:100%;max-width:440px;height:340px;
-  overflow:hidden;border-radius:16px;
+  display:flex;gap:20px;
+  transition:transform 0.6s cubic-bezier(.16,1,.3,1);
+  will-change:transform;
 }
 .tl-card-full{
-  position:absolute;inset:0;
+  flex:0 0 280px;
   background:rgba(5,5,5,0.85);
   border:1px solid rgba(74,199,255,0.12);
   border-radius:16px;
-  padding:36px 32px;
-  
+  padding:28px 24px;
   display:flex;flex-direction:column;justify-content:center;
-  opacity:0;transform:translateX(100%);
-  transition:opacity 0.6s cubic-bezier(.16,1,.3,1), transform 0.6s cubic-bezier(.16,1,.3,1);
-  pointer-events:none;
+  opacity:0.4;transform:scale(0.95);
+  transition:opacity 0.5s ease, transform 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+  pointer-events:auto;min-height:260px;
 }
 .tl-card-full.active{
-  opacity:1;transform:translateX(0);
-  pointer-events:auto;
+  opacity:1;transform:scale(1);
+  border-color:rgba(74,199,255,0.4);
+  box-shadow:0 0 30px rgba(74,199,255,0.08);
 }
 .tl-card-full.past{
-  opacity:0;transform:translateX(-100%);
-  pointer-events:none;
+  opacity:0.3;transform:scale(0.92);
 }
 .tl-card-full::before{
-  content:'';position:absolute;top:0;left:32px;right:32px;height:2px;
+  content:'';position:absolute;top:0;left:24px;right:24px;height:2px;
   background:linear-gradient(90deg,#4AC7FF,rgba(74,199,255,0.05));
   border-radius:1px;
 }
@@ -489,8 +490,8 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 }
 .tl-card-year{
   font-family:'Space Mono',monospace;
-  font-size:2.8rem;font-weight:700;color:#4AC7FF;
-  margin-bottom:16px;letter-spacing:-0.02em;
+  font-size:2.4rem;font-weight:700;color:#4AC7FF;
+  margin-bottom:12px;letter-spacing:-0.02em;
   line-height:1;
 }
 .tl-card-desc{
@@ -498,7 +499,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
   font-size:0.95rem;color:rgba(167,175,187,0.92);line-height:1.72;
 }
 .tl-card-progress{
-  margin-top:auto;padding-top:20px;
+  margin-top:auto;padding-top:16px;
   display:flex;gap:6px;
 }
 .tl-card-dot{
@@ -976,6 +977,7 @@ export default function AboutPage() {
   const activeIdx = useRef(-1)
   const timelineRightRef = useRef<HTMLDivElement>(null)
   const tlCardRefs = useRef<(HTMLDivElement | null)[]>([])
+  const tlStripRef = useRef<HTMLDivElement>(null)
   const TIMELINE_SECTION_IDX = 4 // section 05 (index 4) is the timeline
 
   useEffect(() => {
@@ -1054,6 +1056,11 @@ export default function AboutPage() {
           const subPct = Math.max(0, Math.min(1, sF - (TIMELINE_SECTION_IDX + 0.25)))
           const tlCount = tlCardRefs.current.filter(Boolean).length
           const activeCard = Math.min(tlCount - 1, Math.floor(subPct * tlCount))
+          /* Slide the strip: each card is 280px + 20px gap = 300px */
+          const stripOffset = activeCard * 300
+          if (tlStripRef.current) {
+            tlStripRef.current.style.transform = `translateX(-${stripOffset}px)`
+          }
           tlCardRefs.current.forEach((el, ci) => {
             if (!el) return
             el.classList.remove('active', 'past')
@@ -1062,6 +1069,7 @@ export default function AboutPage() {
           })
         } else {
           tlCardRefs.current.forEach(el => { el?.classList.remove('active', 'past') })
+          if (tlStripRef.current) tlStripRef.current.style.transform = 'translateX(0)'
         }
 
         if (newIdx === activeIdx.current) return
@@ -1456,7 +1464,7 @@ export default function AboutPage() {
 
       {/* ── Timeline Right Panel: card stack ── */}
       <div ref={timelineRightRef} className="timeline-right">
-        <div className="timeline-card-stack">
+        <div ref={tlStripRef} className="timeline-card-stack">
           {SECTIONS[4] && 'timeline' in SECTIONS[4] && (SECTIONS[4] as typeof SECTIONS[4] & { timeline: { year: string; desc: string }[] }).timeline.map((t, ti, arr) => (
             <div key={ti} ref={el => { tlCardRefs.current[ti] = el }} className="tl-card-full">
               <div className="tl-card-counter">{String(ti + 1).padStart(2, '0')} / {String(arr.length).padStart(2, '0')}</div>
