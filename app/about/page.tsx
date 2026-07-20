@@ -445,10 +445,9 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 
 /* ── Timeline ── */
 .timeline-right{
-  position:fixed;top:0;right:0;width:55%;height:100vh;
+  position:fixed;bottom:0;left:0;width:100%;height:auto;
   z-index:11;pointer-events:none;
-  display:flex;align-items:center;
-  padding:80px 40px 60px 0;
+  padding:0 40px 50px 40px;
   opacity:0;
   transition:opacity 0.8s cubic-bezier(.16,1,.3,1);
   overflow:hidden;
@@ -460,15 +459,15 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
   will-change:transform;
 }
 .tl-card-full{
-  flex:0 0 280px;
-  background:rgba(5,5,5,0.85);
-  border:1px solid rgba(74,199,255,0.12);
-  border-radius:16px;
-  padding:28px 24px;
-  display:flex;flex-direction:column;justify-content:center;
-  opacity:0.4;transform:scale(0.95);
+  flex:0 0 260px;
+  background:rgba(5,5,5,0.88);
+  border:1px solid rgba(74,199,255,0.1);
+  border-radius:14px;
+  padding:24px 22px;
+  display:flex;flex-direction:column;justify-content:flex-start;
+  opacity:0.35;transform:scale(0.95);
   transition:opacity 0.5s ease, transform 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
-  pointer-events:auto;min-height:260px;
+  pointer-events:auto;min-height:200px;
 }
 .tl-card-full.active{
   opacity:1;transform:scale(1);
@@ -476,39 +475,39 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
   box-shadow:0 0 30px rgba(74,199,255,0.08);
 }
 .tl-card-full.past{
-  opacity:0.3;transform:scale(0.92);
+  opacity:0.25;transform:scale(0.92);
 }
 .tl-card-full::before{
-  content:'';position:absolute;top:0;left:24px;right:24px;height:2px;
+  content:'';position:absolute;top:0;left:22px;right:22px;height:2px;
   background:linear-gradient(90deg,#4AC7FF,rgba(74,199,255,0.05));
   border-radius:1px;
 }
 .tl-card-counter{
   font-family:'Space Mono',monospace;
-  font-size:0.95rem;font-weight:400;letter-spacing:.1em;
-  color:rgba(255,255,255,0.35);margin-bottom:10px;
+  font-size:0.8rem;font-weight:400;letter-spacing:.1em;
+  color:rgba(255,255,255,0.35);margin-bottom:8px;
 }
 .tl-card-year{
   font-family:'Space Mono',monospace;
-  font-size:2.4rem;font-weight:700;color:#4AC7FF;
-  margin-bottom:12px;letter-spacing:-0.02em;
+  font-size:2rem;font-weight:700;color:#4AC7FF;
+  margin-bottom:10px;letter-spacing:-0.02em;
   line-height:1;
 }
 .tl-card-desc{
   font-family:'Inter',sans-serif;
-  font-size:0.95rem;color:rgba(167,175,187,0.92);line-height:1.72;
+  font-size:0.88rem;color:rgba(167,175,187,0.92);line-height:1.65;
 }
 .tl-card-progress{
-  margin-top:auto;padding-top:16px;
-  display:flex;gap:6px;
+  margin-top:auto;padding-top:14px;
+  display:flex;gap:5px;
 }
 .tl-card-dot{
-  width:24px;height:3px;border-radius:2px;
+  width:20px;height:3px;border-radius:2px;
   background:rgba(255,255,255,0.08);
   transition:background 0.3s ease, width 0.3s ease;
 }
 .tl-card-dot.active{
-  background:#4AC7FF;width:36px;
+  background:#4AC7FF;width:32px;
 }
 
 /* ── Supporters list ── */
@@ -1056,8 +1055,8 @@ export default function AboutPage() {
           const subPct = Math.max(0, Math.min(1, sF - (TIMELINE_SECTION_IDX + 0.25)))
           const tlCount = tlCardRefs.current.filter(Boolean).length
           const activeCard = Math.min(tlCount - 1, Math.floor(subPct * tlCount))
-          /* Slide the strip: each card is 280px + 20px gap = 300px */
-          const stripOffset = activeCard * 300
+          /* Slide the strip: each card is 260px + 20px gap = 280px */
+          const stripOffset = activeCard * 280
           if (tlStripRef.current) {
             tlStripRef.current.style.transform = `translateX(-${stripOffset}px)`
           }
