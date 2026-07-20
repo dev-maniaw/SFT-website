@@ -1052,7 +1052,9 @@ export default function AboutPage() {
           timelineRightRef.current.classList.toggle('vis', isTimelineActive)
         }
         if (isTimelineActive) {
-          const subPct = Math.max(0, Math.min(1, sF - (TIMELINE_SECTION_IDX + 0.25)))
+          const subStart = TIMELINE_SECTION_IDX + 0.05
+          const subEnd = TIMELINE_SECTION_IDX + 0.95
+          const subPct = Math.max(0, Math.min(1, (sF - subStart) / (subEnd - subStart)))
           const tlCount = tlCardRefs.current.filter(Boolean).length
           const activeCard = Math.min(tlCount - 1, Math.floor(subPct * tlCount))
           /* Slide the strip: each card is 260px + 20px gap = 280px */
