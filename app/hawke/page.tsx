@@ -1187,7 +1187,7 @@ export default function HawkePage() {
         const newIdx = Math.min(N - 1, Math.floor(sF - 0.75))
 
         /* intro */
-        if (introRef.current) introRef.current.classList.toggle('vis', sF < 0.72)
+        if (introRef.current) introRef.current.classList.toggle('vis', newIdx <= 0)
 
         /* outro */
         const isOutro = sF >= N + 0.5

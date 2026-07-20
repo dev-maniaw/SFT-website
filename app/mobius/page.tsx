@@ -1114,7 +1114,7 @@ export default function MobiusPage() {
         const sF = Math.max(0, (pct - 0.03) / 0.90) * (N + 1.5)
         const newIdx = Math.min(N - 1, Math.floor(sF - 0.75))
 
-        if (introRef.current) introRef.current.classList.toggle('vis', sF < 0.72)
+        if (introRef.current) introRef.current.classList.toggle('vis', newIdx <= 0)
 
         const isOutro = sF >= N + 0.5
         if (outroRef.current) outroRef.current.classList.toggle('vis', isOutro)
