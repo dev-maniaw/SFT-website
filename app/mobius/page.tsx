@@ -31,7 +31,7 @@ const ICON: Record<string, string> = {
   satellite: 'M13 9h-2V7h2v2zm0 2h-2v6h2v-6zm4-2V3H7v6l5 5 5-5zm-2-4v2.17l-3 3-3-3V5h6z',
   helicopter: 'M22 11h-6V9h6V7H4v2h6v2H4v2h7v2H9l-3 3v1h12v-1l-3-3h-2v-2h9v-2z',
 }
-function SvgIcon({ name, size = 18 }: { name: string; size?: number }) {
+function SvgIcon({ name, size = 28 }: { name: string; size?: number }) {
   const d = ICON[name]
   if (!d) return <span style={{width:size,height:size,display:'inline-block'}} />
   return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d={d} fill="currentColor" stroke="none" /></svg>
