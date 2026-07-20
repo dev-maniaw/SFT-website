@@ -288,8 +288,8 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
   position:fixed;top:0;left:0;right:0;z-index:100;
   display:flex;align-items:center;justify-content:space-between;
   padding:0 48px;height:70px;
-  background:rgba(5,5,5,0.4);
-  backdrop-filter:blur(20px);
+  background:rgba(5,5,5,0.78);
+  
   border-bottom:1px solid rgba(74,199,255,0.08);
 }
 .s-logo{display:flex;align-items:center}
@@ -412,10 +412,10 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 
 .p-chip{
   display:flex;align-items:center;gap:7px;
-  background:rgba(74,199,255,0.06);
+  background:rgba(10,15,20,0.82);
   border:1px solid rgba(74,199,255,0.12);
   border-radius:20px;padding:7px 16px;
-  backdrop-filter:blur(8px);
+  
   transition:all .3s ease;
 }
 .p-chip:hover{
@@ -459,7 +459,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
   text-decoration:none;display:inline-block;
   transition:all .25s ease;pointer-events:auto;cursor:pointer;
 }
-.btn-g:hover{color:#fff;border-color:rgba(74,199,255,0.4);background:rgba(74,199,255,0.06);box-shadow:0 0 16px rgba(74,199,255,0.12)}
+.btn-g:hover{color:#fff;border-color:rgba(74,199,255,0.4);background:rgba(10,15,20,0.82);box-shadow:0 0 16px rgba(74,199,255,0.12)}
 
 /* ── Metrics grid ── */
 .metrics-grid{
@@ -467,10 +467,10 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
   width:100%;max-width:900px;margin-top:24px;
 }
 .metric-card{
-  background:rgba(74,199,255,0.04);
+  background:rgba(10,15,20,0.82);
   border:1px solid rgba(74,199,255,0.1);
   border-radius:12px;padding:28px 20px;
-  backdrop-filter:blur(10px);
+  
   text-align:center;
   opacity:0;transform:translateY(60px);
   transition:opacity 0.8s cubic-bezier(.16,1,.3,1), transform 0.8s cubic-bezier(.16,1,.3,1), background 0.3s ease, border-color 0.3s ease;
@@ -500,10 +500,10 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
   width:100%;max-width:960px;margin-top:24px;
 }
 .cap-card{
-  background:rgba(74,199,255,0.04);
+  background:rgba(10,15,20,0.82);
   border:1px solid rgba(74,199,255,0.1);
   border-radius:12px;padding:28px 20px;
-  backdrop-filter:blur(10px);
+  
   text-align:center;
   opacity:0;transform:translateY(60px);
   transition:opacity 0.8s cubic-bezier(.16,1,.3,1), transform 0.8s cubic-bezier(.16,1,.3,1), background 0.3s ease, border-color 0.3s ease;
@@ -534,10 +534,10 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
   width:100%;max-width:960px;margin-top:24px;
 }
 .app-card{
-  background:rgba(74,199,255,0.04);
+  background:rgba(10,15,20,0.82);
   border:1px solid rgba(74,199,255,0.1);
   border-radius:12px;padding:28px 20px;
-  backdrop-filter:blur(10px);
+  
   text-align:center;
   opacity:0;transform:translateY(60px);
   transition:opacity 0.8s cubic-bezier(.16,1,.3,1), transform 0.8s cubic-bezier(.16,1,.3,1), background 0.3s ease, border-color 0.3s ease;
@@ -571,7 +571,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
   background:rgba(255,100,100,0.04);
   border:1px solid rgba(255,100,100,0.12);
   border-radius:12px;padding:24px 16px;
-  backdrop-filter:blur(10px);
+  
   text-align:center;
   opacity:0;transform:translateY(50px);
   transition:opacity 0.7s cubic-bezier(.16,1,.3,1), transform 0.7s cubic-bezier(.16,1,.3,1), background 0.3s ease, border-color 0.3s ease;
@@ -596,7 +596,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 }
 .solution-banner{
   margin-top:20px;
-  background:rgba(74,199,255,0.06);
+  background:rgba(10,15,20,0.82);
   border:1px solid rgba(74,199,255,0.2);
   border-radius:12px;padding:18px 28px;
   max-width:800px;
@@ -625,10 +625,10 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
   width:100%;max-width:900px;margin-top:24px;
 }
 .phase-card{
-  background:rgba(74,199,255,0.04);
+  background:rgba(10,15,20,0.82);
   border:1px solid rgba(74,199,255,0.1);
   border-radius:12px;padding:24px 20px;
-  backdrop-filter:blur(10px);
+  
   text-align:left;
   opacity:0;transform:translateY(50px);
   transition:opacity 0.7s cubic-bezier(.16,1,.3,1), transform 0.7s cubic-bezier(.16,1,.3,1), background 0.3s ease, border-color 0.3s ease;
@@ -762,7 +762,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
   transition:opacity .8s cubic-bezier(.16,1,.3,1), transform .8s cubic-bezier(.16,1,.3,1);
   display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;
   background:linear-gradient(180deg, rgba(5,5,5,.94) 0%, rgba(8,17,31,.98) 100%);
-  backdrop-filter:blur(30px);
+  
   padding:48px;
 }
 .outro-panel.vis{opacity:1;transform:translateY(0);pointer-events:auto}
@@ -893,7 +893,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 
 .m-content{position:relative;z-index:30;margin-top:auto;padding:0 12px 20px}
 .m-content-inner{
-  background:rgba(5,5,5,.5);backdrop-filter:blur(16px);
+  background:rgba(5,5,5,.5);
   border:1px solid rgba(74,199,255,0.08);border-radius:14px;padding:16px;
 }
 .m-sec-num{
@@ -923,7 +923,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 .m-sec-chips{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px}
 .m-sec-chip{
   display:flex;align-items:center;gap:4px;
-  background:rgba(74,199,255,0.06);border:1px solid rgba(74,199,255,0.1);
+  background:rgba(10,15,20,0.82);border:1px solid rgba(74,199,255,0.1);
   border-radius:14px;padding:3px 8px;
 }
 .m-sec-chip-val{font-family:'Space Mono',monospace;font-size:0.95rem;font-weight:700;color:#F5F7FA;line-height:1}
@@ -938,7 +938,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 /* ── Mobile grids ── */
 .m-metrics-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;margin-top:8px}
 .m-metric-card{
-  background:rgba(74,199,255,0.04);border:1px solid rgba(74,199,255,0.1);
+  background:rgba(10,15,20,0.82);border:1px solid rgba(74,199,255,0.1);
   border-radius:8px;padding:10px 8px;text-align:center;
 }
 .m-metric-val{font-family:'Space Mono',monospace;font-size:1rem;font-weight:700;color:#4AC7FF;margin-bottom:4px}
@@ -946,7 +946,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 
 .m-cap-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;margin-top:8px}
 .m-cap-card{
-  background:rgba(74,199,255,0.04);border:1px solid rgba(74,199,255,0.1);
+  background:rgba(10,15,20,0.82);border:1px solid rgba(74,199,255,0.1);
   border-radius:8px;padding:10px 8px;text-align:center;
 }
 .m-cap-icon{font-size:1rem;margin-bottom:4px}
@@ -958,7 +958,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 
 .m-app-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;margin-top:8px}
 .m-app-card{
-  background:rgba(74,199,255,0.04);border:1px solid rgba(74,199,255,0.1);
+  background:rgba(10,15,20,0.82);border:1px solid rgba(74,199,255,0.1);
   border-radius:8px;padding:10px 8px;text-align:center;
 }
 .m-app-icon{font-size:1rem;margin-bottom:4px}
@@ -982,7 +982,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 .m-problem-issue{font-family:'Inter',sans-serif;font-size:0.95rem;color:rgba(167,175,187,0.88);line-height:1.4}
 .m-solution-banner{
   margin-top:8px;
-  background:rgba(74,199,255,0.06);border:1px solid rgba(74,199,255,0.15);
+  background:rgba(10,15,20,0.82);border:1px solid rgba(74,199,255,0.15);
   border-radius:8px;padding:10px 12px;
   font-family:'Space Grotesk',sans-serif;font-size:0.95rem;font-weight:500;
   color:#4AC7FF;line-height:1.5;
@@ -999,7 +999,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 
 .m-phases-list{display:flex;flex-direction:column;gap:8px;margin-top:8px}
 .m-phase-card{
-  background:rgba(74,199,255,0.03);border:1px solid rgba(74,199,255,0.08);
+  background:rgba(10,15,20,0.8);border:1px solid rgba(74,199,255,0.08);
   border-radius:8px;padding:10px 12px;
 }
 .m-phase-label{
