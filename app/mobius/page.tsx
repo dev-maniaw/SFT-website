@@ -5,6 +5,38 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
 
+/* ── SVG Icon Map ── */
+const ICON: Record<string, string> = {
+  plane: 'M21 16v-2l-8-5V3.5A1.5 1.5 0 0011.5 2 1.5 1.5 0 0010 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z',
+  antenna: 'M12 10a2 2 0 100-4 2 2 0 000 4zm0 2c-3.31 0-6-2.69-6-6h2a4 4 0 008 0h2c0 3.31-2.69 6-6 6zm0 4c-5.52 0-10-4.48-10-10h2a8 8 0 0016 0h2c0 5.52-4.48 10-10 10zM11 16v6h2v-6z',
+  signal: 'M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3a4.24 4.24 0 00-6 0zm-4-4l2 2a7.07 7.07 0 0110 0l2-2C14.14 8.14 9.86 8.14 5 13z',
+  target: 'M12 2C6.49 2 2 6.49 2 12s4.49 10 10 10 10-4.49 10-10S17.51 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3-8a3 3 0 11-6 0 3 3 0 016 0z',
+  build: 'M22 4H2v16h20V4zm-2 14H4V8h16v10zM6 10h12v2H6v-2zm0 4h8v2H6v-2z',
+  rocket: 'M12 2.5s-5 7.5-5 12a5 5 0 0010 0c0-4.5-5-12-5-12zM12 18a2 2 0 110-4 2 2 0 010 4z',
+  bolt: 'M11 21h-1l1-7H7.5c-.89 0-.45-.53-.05-1.08l5.55-8.42h1l-1 7h3.5c.49 0 .56.34.16.88L11 21z',
+  monitor: 'M21 2H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h7v2H8v2h8v-2h-2v-2h7c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H3V4h18v12z',
+  camera: 'M12 15.2a3.2 3.2 0 100-6.4 3.2 3.2 0 000 6.4zM9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9z',
+  thermo: 'M15 13V5a3 3 0 00-6 0v8a5 5 0 106 0zm-3 7a3 3 0 01-1.5-5.6V5a1.5 1.5 0 013 0v9.4A3 3 0 0112 20z',
+  chart: 'M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z',
+  globe: 'M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z',
+  alert: 'M12 2L1 21h22L12 2zm0 4l7.53 13H4.47L12 6zm-1 5v4h2v-4h-2zm0 6v2h2v-2h-2z',
+  shield: 'M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z',
+  pick: 'M14.79 10.62L3.5 21.9 2.1 20.5 13.38 9.21l1.41 1.41zM19.27 2.05L17.86 3.46l1.41 1.41L17.86 6.28l-2.12-2.12L14.33 5.57l.71.71-1.42 1.41-.71-.71L11.5 8.39l2.12 2.12-1.41 1.42-.71-.71-1.41 1.41.71.71-1.42 1.42-2.12-2.12L5.85 14.05l2.12 2.12L6.56 17.58',
+  leaf: 'M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.95-2.71c.67.21 1.37.34 2.09.38C14 20 17 15 17 8zM6.73 17.1c1.4-3.84 3.35-7.38 7.27-9.04-.66 3.56-2.45 6.64-5.08 8.52-.81.03-1.54-.12-2.19-.48z',
+  clock: 'M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z',
+  mountain: 'M14 6l-3.75 5 2.85 3.8-1.6 1.2C9.81 13.75 7 10 7 10l-6 8h22L14 6z',
+  wrench: 'M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z',
+  refresh: 'M17.65 6.35A7.958 7.958 0 0012 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08A5.99 5.99 0 0112 18c-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z',
+  trending: 'M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z',
+  satellite: 'M13 9h-2V7h2v2zm0 2h-2v6h2v-6zm4-2V3H7v6l5 5 5-5zm-2-4v2.17l-3 3-3-3V5h6z',
+  helicopter: 'M22 11h-6V9h6V7H4v2h6v2H4v2h7v2H9l-3 3v1h12v-1l-3-3h-2v-2h9v-2z',
+}
+function SvgIcon({ name, size = 18 }: { name: string; size?: number }) {
+  const d = ICON[name]
+  if (!d) return <span style={{width:size,height:size,display:'inline-block'}} />
+  return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d={d} fill="currentColor" stroke="none" /></svg>
+}
+
 /* ═══════════════════════════════════════════════════════════════════
    SECTION DATA — MOBIUS Product Chapters
 ═══════════════════════════════════════════════════════════════════ */
@@ -89,9 +121,9 @@ const SECTIONS: {
     eyebrow: 'THE INFRASTRUCTURE GAP',
     cta: [],
     problems: [
-      { problem: 'TERRESTRIAL', issue: 'Limited range, expensive to build, vulnerable to disasters', icon: '🏗️' },
-      { problem: 'SATELLITE', issue: 'High latency, massive cost, long deployment cycles', icon: '🛰️' },
-      { problem: 'DRONES', issue: 'Short endurance, small coverage, regulatory barriers', icon: '🚁' },
+      { problem: 'TERRESTRIAL', issue: 'Limited range, expensive to build, vulnerable to disasters', icon: 'build' },
+      { problem: 'SATELLITE', issue: 'High latency, massive cost, long deployment cycles', icon: 'satellite' },
+      { problem: 'DRONES', issue: 'Short endurance, small coverage, regulatory barriers', icon: 'helicopter' },
     ],
     solution: 'MOBIUS bridges the gap — stratospheric persistence with terrestrial-grade latency and satellite-scale coverage.',
   },
@@ -128,10 +160,10 @@ const SECTIONS: {
     eyebrow: 'WHAT MOBIUS DELIVERS',
     cta: [],
     capabilities: [
-      { icon: '⏱️', title: 'PERSISTENCE', desc: 'Months of continuous operation without landing or refueling' },
-      { icon: '📈', title: 'SCALABILITY', desc: 'Deploy multiple platforms for mesh network coverage' },
-      { icon: '🔧', title: 'ADAPTABILITY', desc: 'Modular payloads for telecom, observation, and research' },
-      { icon: '🌍', title: 'COVERAGE', desc: '200 km diameter footprint from a single platform' },
+      { icon: 'clock', title: 'PERSISTENCE', desc: 'Months of continuous operation without landing or refueling' },
+      { icon: 'trending', title: 'SCALABILITY', desc: 'Deploy multiple platforms for mesh network coverage' },
+      { icon: 'wrench', title: 'ADAPTABILITY', desc: 'Modular payloads for telecom, observation, and research' },
+      { icon: 'globe', title: 'COVERAGE', desc: '200 km diameter footprint from a single platform' },
     ],
   },
   {
@@ -147,10 +179,10 @@ const SECTIONS: {
     eyebrow: 'SECTORS & USE CASES',
     cta: [],
     applications: [
-      { title: 'TELECOMMUNICATIONS', desc: '5G/LTE backhaul, rural connectivity, emergency comms restoration', icon: '📡' },
-      { title: 'DEFENCE & SECURITY', desc: 'ISR, border surveillance, secure communication networks', icon: '🛡️' },
-      { title: 'ENVIRONMENT', desc: 'Climate monitoring, ocean observation, atmospheric research', icon: '🌿' },
-      { title: 'DISASTER RESPONSE', desc: 'Post-disaster communication, situational awareness, coordination', icon: '🚨' },
+      { title: 'TELECOMMUNICATIONS', desc: '5G/LTE backhaul, rural connectivity, emergency comms restoration', icon: 'antenna' },
+      { title: 'DEFENCE & SECURITY', desc: 'ISR, border surveillance, secure communication networks', icon: 'shield' },
+      { title: 'ENVIRONMENT', desc: 'Climate monitoring, ocean observation, atmospheric research', icon: 'leaf' },
+      { title: 'DISASTER RESPONSE', desc: 'Post-disaster communication, situational awareness, coordination', icon: 'alert' },
     ],
   },
   {
@@ -1235,7 +1267,7 @@ export default function MobiusPage() {
                     <div className="m-cap-grid">
                       {(s as typeof SECTIONS[6] & { capabilities: { icon: string; title: string; desc: string }[] }).capabilities.map((c, ci) => (
                         <div key={ci} className="m-cap-card">
-                          <div className="m-cap-icon">{c.icon}</div>
+                          <div className="m-cap-icon"><SvgIcon name={c.icon} /></div>
                           <div className="m-cap-title">{c.title}</div>
                           <div className="m-cap-desc">{c.desc}</div>
                         </div>
@@ -1247,7 +1279,7 @@ export default function MobiusPage() {
                     <div className="m-app-grid">
                       {(s as typeof SECTIONS[7] & { applications: { icon: string; title: string; desc: string }[] }).applications.map((a, ai) => (
                         <div key={ai} className="m-app-card">
-                          <div className="m-app-icon">{a.icon}</div>
+                          <div className="m-app-icon"><SvgIcon name={a.icon} /></div>
                           <div className="m-app-title">{a.title}</div>
                           <div className="m-app-desc">{a.desc}</div>
                         </div>
@@ -1260,7 +1292,7 @@ export default function MobiusPage() {
                       <div className="m-problems-grid">
                         {(s as typeof SECTIONS[4] & { problems: { problem: string; issue: string; icon: string }[] }).problems.map((p, pi) => (
                           <div key={pi} className="m-problem-card">
-                            <div className="m-problem-icon">{p.icon}</div>
+                            <div className="m-problem-icon"><SvgIcon name={p.icon} /></div>
                             <div>
                               <div className="m-problem-name">{p.problem}</div>
                               <div className="m-problem-issue">{p.issue}</div>
@@ -1518,7 +1550,7 @@ export default function MobiusPage() {
             <div className="cap-grid">
               {(s as typeof SECTIONS[6] & { capabilities: { icon: string; title: string; desc: string }[] }).capabilities.map((c, ci) => (
                 <div key={ci} className="cap-card">
-                  <div className="cap-icon">{c.icon}</div>
+                  <div className="cap-icon"><SvgIcon name={c.icon} /></div>
                   <div className="cap-title">{c.title}</div>
                   <div className="cap-desc">{c.desc}</div>
                 </div>
@@ -1530,7 +1562,7 @@ export default function MobiusPage() {
             <div className="app-grid">
               {(s as typeof SECTIONS[7] & { applications: { icon: string; title: string; desc: string }[] }).applications.map((a, ai) => (
                 <div key={ai} className="app-card">
-                  <div className="app-icon">{a.icon}</div>
+                  <div className="app-icon"><SvgIcon name={a.icon} /></div>
                   <div className="app-title">{a.title}</div>
                   <div className="app-desc">{a.desc}</div>
                 </div>
@@ -1543,7 +1575,7 @@ export default function MobiusPage() {
               <div className="problems-grid">
                 {(s as typeof SECTIONS[4] & { problems: { problem: string; issue: string; icon: string }[] }).problems.map((p, pi) => (
                   <div key={pi} className="problem-card">
-                    <div className="problem-icon">{p.icon}</div>
+                    <div className="problem-icon"><SvgIcon name={p.icon} /></div>
                     <div className="problem-name">{p.problem}</div>
                     <div className="problem-issue">{p.issue}</div>
                   </div>
