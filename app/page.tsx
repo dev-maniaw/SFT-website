@@ -238,12 +238,12 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 .s-sec-num{
   font-family:'Space Mono',monospace;
   font-size:0.8rem;font-weight:400;letter-spacing:.1em;
-  color:rgba(255,255,255,0.25);
+  color:rgba(255,255,255,0.45);
 }
 .s-sec-label{
   font-family:'Space Grotesk',sans-serif;
   font-size:0.8rem;font-weight:500;letter-spacing:.28em;text-transform:uppercase;
-  color:rgba(74,199,255,0.55);
+  color:rgba(74,199,255,0.8);
   transition:opacity .4s;
 }
 .s-sep{width:1px;height:12px;background:rgba(255,255,255,0.08)}
@@ -252,7 +252,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 .s-nav-link{
   font-family:'Space Grotesk',sans-serif;
   font-size:0.75rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;
-  color:rgba(255,255,255,0.3);text-decoration:none;transition:color .2s;
+  color:rgba(255,255,255,0.55);text-decoration:none;transition:color .2s;
 }
 .s-nav-link:hover{color:rgba(255,255,255,0.6)}
 .s-cta-btn{
@@ -310,7 +310,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 
 .p-num{
   font-family:'Space Mono',monospace;font-size:0.85rem;font-weight:400;
-  letter-spacing:.1em;color:rgba(255,255,255,0.15);margin-bottom:8px;
+  letter-spacing:.1em;color:rgba(255,255,255,0.35);margin-bottom:8px;
 }
 
 .p-title{
@@ -333,7 +333,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 
 .p-note{
   font-family:'Space Grotesk',sans-serif;
-  font-size:0.85rem;font-weight:400;color:rgba(74,199,255,0.6);
+  font-size:0.85rem;font-weight:400;color:rgba(74,199,255,0.85);
   letter-spacing:.1em;padding-top:12px;
   border-top:1px solid rgba(74,199,255,0.12);
   max-width:420px;line-height:1.6;
@@ -392,7 +392,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 }
 .btn-p:hover{background:rgba(74,199,255,0.1);border-color:#4AC7FF;box-shadow:0 0 24px rgba(74,199,255,0.25);transform:translateY(-1px)}
 .btn-g{
-  color:rgba(255,255,255,0.5);font-family:'Space Grotesk',sans-serif;
+  color:rgba(255,255,255,0.7);font-family:'Space Grotesk',sans-serif;
   font-size:0.85rem;font-weight:400;letter-spacing:.18em;text-transform:uppercase;
   padding:11px 28px;border-radius:50px;border:1px solid rgba(255,255,255,0.12);
   text-decoration:none;display:inline-block;
@@ -442,7 +442,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 .upd-card-tag{
   display:inline-block;font-family:'Space Mono',monospace;
   font-size:0.75rem;font-weight:400;letter-spacing:.1em;
-  text-transform:uppercase;color:rgba(74,199,255,0.5);
+  text-transform:uppercase;color:rgba(74,199,255,0.75);
   margin-bottom:6px;
 }
 .upd-card-title{
@@ -452,7 +452,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 }
 .upd-card-desc{
   font-family:'Inter',sans-serif;
-  font-size:0.88rem;color:rgba(167,175,187,0.7);line-height:1.6;
+  font-size:0.88rem;color:rgba(167,175,187,0.88);line-height:1.6;
 }
 
 /* ── Intro panel ── */
@@ -564,7 +564,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 .o-eyebrow{
   font-family:'Space Grotesk',sans-serif;
   font-size:1rem;font-weight:500;letter-spacing:.28em;text-transform:uppercase;
-  color:rgba(74,199,255,0.45);
+  color:rgba(74,199,255,0.7);
   display:flex;align-items:center;gap:12px;
   margin-bottom:16px;
 }
@@ -601,17 +601,17 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 .o-footer-link{
   font-family:'Space Grotesk',sans-serif;
   font-size:0.9rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;
-  color:rgba(255,255,255,0.2);text-decoration:none;transition:color .2s;
+  color:rgba(255,255,255,0.5);text-decoration:none;transition:color .2s;
 }
-.o-footer-link:hover{color:rgba(74,199,255,0.6)}
+.o-footer-link:hover{color:rgba(74,199,255,0.85)}
 .o-footer-info{
   font-family:'Inter',sans-serif;
-  font-size:1rem;color:rgba(167,175,187,0.6);text-align:center;line-height:1.6;
+  font-size:1rem;color:rgba(167,175,187,0.92);text-align:center;line-height:1.6;
 }
 .o-footer-tagline{
   font-family:'Space Grotesk',sans-serif;
   font-size:0.85rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;
-  color:rgba(74,199,255,0.2);margin-top:8px;
+  color:rgba(74,199,255,0.45);margin-top:8px;
   display:flex;align-items:center;gap:8px;
 }
 .o-footer-dot{width:3px;height:3px;border-radius:50%;background:rgba(74,199,255,0.4)}
@@ -720,7 +720,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 .m-sec-num{
   font-family:'Space Mono',monospace;
   font-size:0.5rem;font-weight:400;letter-spacing:.1em;
-  color:rgba(255,255,255,0.18);margin-bottom:4px;
+  color:rgba(255,255,255,0.35);margin-bottom:4px;
 }
 .m-sec-label{
   font-family:'Space Grotesk',sans-serif;
@@ -742,7 +742,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 }
 .m-sec-note{
   font-family:'Space Grotesk',sans-serif;
-  font-size:0.55rem;font-weight:400;color:rgba(74,199,255,0.5);
+  font-size:0.55rem;font-weight:400;color:rgba(74,199,255,0.75);
   letter-spacing:.08em;
   padding-top:6px;border-top:1px solid rgba(74,199,255,0.1);
   line-height:1.5;
@@ -797,7 +797,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 }
 .m-upd-card-desc{
   font-family:'Inter',sans-serif;
-  font-size:0.7rem;color:rgba(167,175,187,0.8);line-height:1.55;
+  font-size:0.7rem;color:rgba(167,175,187,0.92);line-height:1.55;
 }
 
 /* ── Mobile outro slide ── */
@@ -839,13 +839,13 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 .m-outro-footer{
   margin-top:auto;
   font-family:'Inter',sans-serif;
-  font-size:0.7rem;color:rgba(167,175,187,0.5);text-align:center;line-height:1.6;
+  font-size:0.7rem;color:rgba(167,175,187,0.75);text-align:center;line-height:1.6;
   letter-spacing:.04em;
 }
 .m-outro-footer-tag{
   font-family:'Space Grotesk',sans-serif;
   font-size:0.42rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;
-  color:rgba(74,199,255,0.2);margin-top:8px;
+  color:rgba(74,199,255,0.45);margin-top:8px;
 }
 
 `
