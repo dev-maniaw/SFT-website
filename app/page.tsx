@@ -237,12 +237,12 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 }
 .s-sec-num{
   font-family:'Space Mono',monospace;
-  font-size:0.8rem;font-weight:400;letter-spacing:.1em;
+  font-size:0.95rem;font-weight:400;letter-spacing:.1em;
   color:rgba(255,255,255,0.45);
 }
 .s-sec-label{
   font-family:'Space Grotesk',sans-serif;
-  font-size:0.8rem;font-weight:500;letter-spacing:.28em;text-transform:uppercase;
+  font-size:0.95rem;font-weight:500;letter-spacing:.28em;text-transform:uppercase;
   color:rgba(74,199,255,0.8);
   transition:opacity .4s;
 }
@@ -251,12 +251,12 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 .s-nav-right{display:flex;align-items:center;gap:18px}
 .s-nav-link{
   font-family:'Space Grotesk',sans-serif;
-  font-size:0.75rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;
+  font-size:0.95rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;
   color:rgba(255,255,255,0.55);text-decoration:none;transition:color .2s;
 }
 .s-nav-link:hover{color:rgba(255,255,255,0.6)}
 .s-cta-btn{
-  font-family:'Space Grotesk',sans-serif;font-size:0.75rem;font-weight:600;
+  font-family:'Space Grotesk',sans-serif;font-size:0.95rem;font-weight:600;
   letter-spacing:.18em;text-transform:uppercase;
   background:transparent;
   color:#4AC7FF;
@@ -300,7 +300,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 /* ── Typography ── */
 .p-eyebrow{
   font-family:'Space Grotesk',sans-serif;
-  font-size:0.85rem;font-weight:500;letter-spacing:.28em;text-transform:uppercase;
+  font-size:0.95rem;font-weight:500;letter-spacing:.28em;text-transform:uppercase;
   color:#4AC7FF;margin-bottom:18px;
   display:flex;align-items:center;gap:10px;
 }
@@ -309,7 +309,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 .pos-center .p-eyebrow{justify-content:center}
 
 .p-num{
-  font-family:'Space Mono',monospace;font-size:0.85rem;font-weight:400;
+  font-family:'Space Mono',monospace;font-size:0.95rem;font-weight:400;
   letter-spacing:.1em;color:rgba(255,255,255,0.35);margin-bottom:8px;
 }
 
@@ -333,7 +333,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 
 .p-note{
   font-family:'Space Grotesk',sans-serif;
-  font-size:0.85rem;font-weight:400;color:rgba(74,199,255,0.85);
+  font-size:0.95rem;font-weight:400;color:rgba(74,199,255,0.85);
   letter-spacing:.1em;padding-top:12px;
   border-top:1px solid rgba(74,199,255,0.12);
   max-width:420px;line-height:1.6;
@@ -370,7 +370,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 }
 .p-chip-lbl{
   font-family:'Space Grotesk',sans-serif;
-  font-size:0.8rem;font-weight:500;
+  font-size:0.95rem;font-weight:500;
   letter-spacing:.2em;text-transform:uppercase;
   color:#4AC7FF;
 }
@@ -383,7 +383,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 .btn-p{
   background:transparent;color:#4AC7FF;
   font-family:'Space Grotesk',sans-serif;
-  font-size:0.85rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+  font-size:0.95rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
   padding:11px 28px;border-radius:50px;text-decoration:none;display:inline-block;
   border:1px solid rgba(74,199,255,0.5);
   transition:all .25s ease;
@@ -393,7 +393,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 .btn-p:hover{background:rgba(74,199,255,0.1);border-color:#4AC7FF;box-shadow:0 0 24px rgba(74,199,255,0.25);transform:translateY(-1px)}
 .btn-g{
   color:rgba(255,255,255,0.7);font-family:'Space Grotesk',sans-serif;
-  font-size:0.85rem;font-weight:400;letter-spacing:.18em;text-transform:uppercase;
+  font-size:0.95rem;font-weight:400;letter-spacing:.18em;text-transform:uppercase;
   padding:11px 28px;border-radius:50px;border:1px solid rgba(255,255,255,0.12);
   text-decoration:none;display:inline-block;
   transition:all .25s ease;pointer-events:auto;cursor:pointer;
@@ -441,7 +441,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 .upd-card-body{padding:16px 18px 20px}
 .upd-card-tag{
   display:inline-block;font-family:'Space Mono',monospace;
-  font-size:0.75rem;font-weight:400;letter-spacing:.1em;
+  font-size:0.95rem;font-weight:400;letter-spacing:.1em;
   text-transform:uppercase;color:rgba(74,199,255,0.75);
   margin-bottom:6px;
 }
@@ -452,7 +452,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 }
 .upd-card-desc{
   font-family:'Inter',sans-serif;
-  font-size:0.88rem;color:rgba(167,175,187,0.88);line-height:1.6;
+  font-size:0.95rem;color:rgba(167,175,187,0.88);line-height:1.6;
 }
 
 /* ── Intro panel ── */
@@ -600,7 +600,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 }
 .o-footer-link{
   font-family:'Space Grotesk',sans-serif;
-  font-size:0.9rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;
+  font-size:0.95rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;
   color:rgba(255,255,255,0.5);text-decoration:none;transition:color .2s;
 }
 .o-footer-link:hover{color:rgba(74,199,255,0.85)}
@@ -610,7 +610,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 }
 .o-footer-tagline{
   font-family:'Space Grotesk',sans-serif;
-  font-size:0.85rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;
+  font-size:0.95rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;
   color:rgba(74,199,255,0.45);margin-top:8px;
   display:flex;align-items:center;gap:8px;
 }
@@ -698,7 +698,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
   font-size:9px;font-weight:700;color:#fff;
 }
 .m-header-cta{
-  font-family:'Space Grotesk',sans-serif;font-size:0.75rem;font-weight:700;
+  font-family:'Space Grotesk',sans-serif;font-size:0.95rem;font-weight:700;
   letter-spacing:.14em;text-transform:uppercase;
   background:linear-gradient(135deg,#4AC7FF,#2a9fd4);color:#050505;
   padding:7px 12px;border-radius:5px;text-decoration:none;
@@ -719,12 +719,12 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 }
 .m-sec-num{
   font-family:'Space Mono',monospace;
-  font-size:0.72rem;font-weight:400;letter-spacing:.1em;
+  font-size:0.95rem;font-weight:400;letter-spacing:.1em;
   color:rgba(255,255,255,0.35);margin-bottom:4px;
 }
 .m-sec-label{
   font-family:'Space Grotesk',sans-serif;
-  font-size:0.72rem;font-weight:500;letter-spacing:.24em;text-transform:uppercase;
+  font-size:0.95rem;font-weight:500;letter-spacing:.24em;text-transform:uppercase;
   color:#4AC7FF;margin-bottom:8px;
   display:flex;align-items:center;gap:8px;
 }
@@ -737,12 +737,12 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 }
 .m-sec-body{
   font-family:'Inter',sans-serif;
-  font-size:0.8rem;color:#A7AFBB;
+  font-size:0.95rem;color:#A7AFBB;
   line-height:1.7;margin-bottom:6px;
 }
 .m-sec-note{
   font-family:'Space Grotesk',sans-serif;
-  font-size:0.75rem;font-weight:400;color:rgba(74,199,255,0.75);
+  font-size:0.95rem;font-weight:400;color:rgba(74,199,255,0.75);
   letter-spacing:.08em;
   padding-top:6px;border-top:1px solid rgba(74,199,255,0.1);
   line-height:1.5;
@@ -757,7 +757,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
   border-radius:14px;padding:3px 8px;
 }
 .m-sec-chip-val{
-  font-family:'Space Mono',monospace;font-size:0.75rem;font-weight:700;
+  font-family:'Space Mono',monospace;font-size:0.95rem;font-weight:700;
   color:#F5F7FA;line-height:1;
 }
 .m-sec-chip-lbl{
@@ -768,8 +768,8 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 .m-sec-ctas{
   display:flex;gap:6px;margin-top:8px;flex-wrap:wrap;
 }
-.m-sec-ctas .btn-p{font-size:0.75rem;padding:8px 14px}
-.m-sec-ctas .btn-g{font-size:0.75rem;padding:8px 14px}
+.m-sec-ctas .btn-p{font-size:0.95rem;padding:8px 14px}
+.m-sec-ctas .btn-g{font-size:0.95rem;padding:8px 14px}
 
 /* ── Mobile updates cards ── */
 .m-upd-grid{display:flex;flex-direction:row;gap:8px;margin-top:8px;overflow-x:auto}
@@ -792,7 +792,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 }
 .m-upd-card-title{
   font-family:'Space Grotesk',sans-serif;
-  font-size:0.8rem;font-weight:500;color:#F5F7FA;
+  font-size:0.95rem;font-weight:500;color:#F5F7FA;
   margin-bottom:3px;line-height:1.35;
 }
 .m-upd-card-desc{
@@ -827,14 +827,14 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 .m-outro-title .oc{color:#4AC7FF}
 .m-outro-sub{
   font-family:'Inter',sans-serif;
-  font-size:0.8rem;color:#A7AFBB;line-height:1.7;
+  font-size:0.95rem;color:#A7AFBB;line-height:1.7;
   max-width:280px;margin-bottom:22px;
 }
 .m-outro-ctas{
   display:flex;flex-direction:column;gap:8px;width:100%;max-width:260px;margin-bottom:20px;
 }
 .m-outro-ctas .btn-p,.m-outro-ctas .btn-g{
-  width:100%;text-align:center;padding:12px 20px;font-size:0.75rem;
+  width:100%;text-align:center;padding:12px 20px;font-size:0.95rem;
 }
 .m-outro-footer{
   margin-top:auto;
