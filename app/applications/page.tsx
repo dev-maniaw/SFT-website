@@ -1269,7 +1269,7 @@ export default function ApplicationsPage() {
 
       {/* Nav */}
       <nav className="s-nav">
-        <div className="s-logo">
+        <a href="/" className="s-logo" style={{textDecoration:"none"}}>
           <img src="/SFT-logo-1.png" alt="Susan Future Technologies" className="s-logo-img" />
         </div>
         <div className="s-section">

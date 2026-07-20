@@ -1572,7 +1572,7 @@ export default function HawkePage() {
       {/* Nav */}
       <nav className="s-nav">
         {/* Left: Logo */}
-        <div className="s-logo">
+        <a href="/" className="s-logo" style={{textDecoration:"none"}}>
           <img src="/SFT-logo-1.png" alt="Susan Future Technologies" className="s-logo-img" />
         </div>
 
