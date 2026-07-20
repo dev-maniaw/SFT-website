@@ -1281,7 +1281,6 @@ export default function ApplicationsPage() {
           <a href="/about" className="s-nav-link">About</a>
           <a href="/hawke" className="s-nav-link">HAWKE</a>
           <a href="/mobius" className="s-nav-link">MOBIUS</a>
-          <a href="/applications" className="s-nav-link">Applications</a>
           <a href="/ecosystem" className="s-nav-link">Ecosystem</a>
           <a href="tel:+919486675847" className="s-cta-btn">Request Pilot</a>
         </div>
