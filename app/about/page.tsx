@@ -6,162 +6,146 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 
 /* ═══════════════════════════════════════════════════════════════════
-   SECTION DATA — 12 cinematic chapters
+   SECTION DATA — About Us Chapters
 ═══════════════════════════════════════════════════════════════════ */
 const SECTIONS = [
   {
-    num: '01', label: 'Credibility',
-    title: 'BUILT FOR\nENVIRONMENTS\nWHERE SYSTEMS\nFAIL',
-    body: '',
-    note: '',
-    chips: [
-      { val: '3 HRS', lbl: 'Deployment' },
-      { val: '5 KM', lbl: 'Coverage' },
-      { val: '24/7', lbl: 'Persistence' },
-      { val: 'HAPS', lbl: 'Vision' },
-    ],
+    num: '01', label: 'Story',
+    title: 'BUILDING THE\nNEXT LAYER OF\nCONNECTIVITY',
+    body: 'Founded with a clear mission — to solve real-world infrastructure challenges using advanced aerial systems. We believe the future lies in persistent aerial platforms that deploy rapidly, operate continuously, and adapt to dynamic environments.',
+    note: 'HAWKE — deployable aerial system for communication & monitoring\nMOBIUS — high-altitude platform for scalable, long-endurance operations',
+    chips: [],
     pos: 'left' as const,
     bgPos: 'right center',
-    img: '/sft/stats.png',
+    img: '/sft/about/story.png',
     overlay: 'linear-gradient(90deg, rgba(5,5,5,0.94) 0%, rgba(5,5,5,0.82) 38%, rgba(5,5,5,0.3) 65%, transparent 100%)',
-    eyebrow: 'WHY IT MATTERS',
+    eyebrow: 'OUR STORY',
+    cta: [{ label: 'Explore HAWKE', style: 'primary', href: 'tel:+919486675847' }],
+  },
+  {
+    num: '02', label: 'Mission',
+    title: 'DESIGNED FOR\nENVIRONMENTS\nWHERE\nINFRASTRUCTURE\nFAILS',
+    body: 'From disaster response and remote industrial sites to defence and future telecom networks, SFT platforms are engineered to operate where reliability is critical.',
+    note: '',
+    chips: [],
+    pos: 'center' as const,
+    bgPos: 'center center',
+    img: '/sft/about/mission.png',
+    overlay: 'radial-gradient(ellipse at center, rgba(5,5,5,0.86) 0%, rgba(5,5,5,0.65) 40%, rgba(5,5,5,0.3) 65%, transparent 100%)',
+    eyebrow: 'BUILT FOR MISSIONS THAT DEMAND CONTINUOUS OPERATION',
     cta: [],
   },
   {
-    num: '02', label: 'Vision',
-    title: 'RETHINKING\nCONNECTIVITY\nDEPLOYMENT',
-    body: 'Towers are fixed. Drones are limited. Satellites are distant. We are building persistent aerial systems that deploy faster and last longer.',
+    num: '03', label: 'Metrics',
+    title: 'MILESTONES\n& METRICS',
+    body: '',
     note: '',
-    chips: [],
-    pos: 'right' as const,
-    bgPos: 'left center',
-    img: '/sft/vision.png',
-    overlay: 'linear-gradient(270deg, rgba(5,5,5,0.94) 0%, rgba(5,5,5,0.82) 38%, rgba(5,5,5,0.3) 65%, transparent 100%)',
-    eyebrow: 'STRATOSPHERIC SCALE',
-    cta: [{ label: 'About SFT', style: 'ghost', href: '/about' }],
-  },
-  {
-    num: '03', label: 'HAWKE',
-    title: 'HAWKE',
-    body: 'Rapidly deployable tethered aerial platform for communication relay, surveillance, and mission payload integration.',
-    note: 'Rapid Communication & Monitoring',
     chips: [
-      { val: '1 KM', lbl: 'Altitude' },
-      { val: '5 KM', lbl: 'Radius' },
-      { val: '20 KG', lbl: 'Payload' },
-      { val: '~3 HRS', lbl: 'Deploy' },
+      { val: 'TRL 7→9', lbl: 'Readiness' },
+      { val: '3+', lbl: 'Pilot Deployments' },
+      { val: 'MULTI', lbl: 'Sector Applications' },
+      { val: '2027', lbl: 'HAPS Target' },
     ],
     pos: 'center' as const,
     bgPos: 'center center',
-    img: '/sft/hawke.png',
-    overlay: 'radial-gradient(ellipse at center, rgba(5,5,5,0.84) 0%, rgba(5,5,5,0.62) 40%, rgba(5,5,5,0.25) 65%, transparent 100%)',
-    eyebrow: 'DEPLOYABLE AERIAL PLATFORM',
-    cta: [{ label: 'Explore HAWKE', style: 'primary', href: '/hawke' }],
-  },
-  {
-    num: '04', label: 'MOBIUS',
-    title: 'MOBIUS',
-    body: 'Scalable, autonomous high-altitude platform for telecom, remote sensing, and strategic wide-area coverage from the stratosphere.',
-    note: 'Next Era of Connectivity',
-    chips: [
-      { val: 'HIGH ALT.', lbl: 'Endurance' },
-      { val: 'SCALABLE', lbl: 'Payload' },
-      { val: 'AUTO', lbl: 'Positioning' },
-      { val: 'MULTI', lbl: 'Mission' },
+    img: '/sft/about/metrics.png',
+    overlay: 'radial-gradient(ellipse at center, rgba(5,5,5,0.88) 0%, rgba(5,5,5,0.68) 40%, rgba(5,5,5,0.3) 65%, transparent 100%)',
+    eyebrow: 'ACHIEVEMENTS',
+    cta: [],
+    metrics: [
+      { val: 'TRL 7 → 9', desc: 'HAWKE platform tested and progressing toward full deployment readiness' },
+      { val: '3+', desc: 'Pilot deployments across industrial and government use cases' },
+      { val: 'MULTI-SECTOR', desc: 'Disaster response, mining, defence, and remote monitoring' },
+      { val: 'HAPS 2027', desc: 'MOBIUS platform advancing toward high-altitude deployment' },
     ],
-    pos: 'left' as const,
-    bgPos: 'right center',
-    img: '/sft/mobius.png',
-    overlay: 'linear-gradient(90deg, rgba(5,5,5,0.94) 0%, rgba(5,5,5,0.82) 38%, rgba(5,5,5,0.3) 65%, transparent 100%)',
-    eyebrow: 'HIGH ALTITUDE PLATFORM SYSTEM',
-    cta: [{ label: 'Explore MOBIUS', style: 'primary', href: '/mobius' }],
   },
   {
-    num: '05', label: 'Payloads',
-    title: 'PAYLOADS\nBUILT FOR\nTHE MISSION',
-    body: 'Modular aerial systems supporting communication relay, optical surveillance, thermal imaging, radar, and environmental sensing.',
-    note: '',
-    chips: [],
-    pos: 'right' as const,
-    bgPos: 'left center',
-    img: '/sft/payload.png',
-    overlay: 'linear-gradient(270deg, rgba(5,5,5,0.94) 0%, rgba(5,5,5,0.82) 38%, rgba(5,5,5,0.3) 65%, transparent 100%)',
-    eyebrow: 'MODULAR MISSION SYSTEMS',
-    cta: [{ label: 'View Applications', style: 'ghost', href: '/applications' }],
-  },
-  {
-    num: '06', label: 'Comms',
-    title: 'CONNECTIVITY\nFROM ABOVE',
-    body: 'Persistent communication coverage and real-time situational awareness from elevated vantage points.',
+    num: '04', label: 'Ecosystem',
+    title: 'COLLABORATIONS\n& ECOSYSTEM',
+    body: 'Working with industry, research institutions, and government bodies to develop and deploy next-generation aerial systems.',
     note: '',
     chips: [],
     pos: 'center' as const,
     bgPos: 'center center',
-    img: '/sft/comms.png',
-    overlay: 'radial-gradient(ellipse at center, rgba(5,5,5,0.84) 0%, rgba(5,5,5,0.62) 40%, rgba(5,5,5,0.25) 65%, transparent 100%)',
-    eyebrow: 'COMMUNICATIONS & INTELLIGENCE',
-    cta: [{ label: 'Explore Use Cases', style: 'ghost', href: '/applications' }],
+    img: '/sft/about/ecosystem.png',
+    overlay: 'radial-gradient(ellipse at center, rgba(5,5,5,0.88) 0%, rgba(5,5,5,0.72) 40%, rgba(5,5,5,0.4) 65%, rgba(5,5,5,0.2) 100%)',
+    eyebrow: 'PARTNERSHIPS',
+    cta: [],
+    partners: [
+      'IIT Madras Research Park',
+      'Anna University / C-WiSD',
+      'Defence Research Partners',
+      'Industrial Collaborators',
+    ],
   },
   {
-    num: '07', label: 'Control',
-    title: 'FLIGHT, GROUND\n& MISSION\nCONTROL',
-    body: 'Integrated operational stack for telemetry, payload management, and autonomous flight architecture.',
-    note: '',
-    chips: [],
-    pos: 'left' as const,
-    bgPos: 'right center',
-    img: '/sft/control.png',
-    overlay: 'linear-gradient(90deg, rgba(5,5,5,0.94) 0%, rgba(5,5,5,0.82) 38%, rgba(5,5,5,0.3) 65%, transparent 100%)',
-    eyebrow: 'CONTROL SYSTEMS',
-    cta: [{ label: 'Explore Technology', style: 'ghost', href: '/ecosystem' }],
-  },
-  {
-    num: '08', label: 'Technology',
-    title: 'ENGINEERED\nFOR SCALE &\nENDURANCE',
-    body: 'Layered platform architecture combining lighter-than-air systems, payload integration, and mission-specific modules.',
-    note: '',
-    chips: [],
-    pos: 'right' as const,
-    bgPos: 'left center',
-    img: '/sft/tech.png',
-    overlay: 'linear-gradient(270deg, rgba(5,5,5,0.94) 0%, rgba(5,5,5,0.82) 38%, rgba(5,5,5,0.3) 65%, transparent 100%)',
-    eyebrow: 'TECHNOLOGY STACK',
-    cta: [{ label: 'Technology Overview', style: 'ghost', href: '/ecosystem' }],
-  },
-  {
-    num: '09', label: 'Operations',
-    title: 'READY WHEN\nTHE MISSION\nDEMANDS IT',
-    body: 'Designed for rapid deployment and persistent performance across disaster zones, industrial sites, and strategic environments.',
-    note: '',
-    chips: [],
-    pos: 'center' as const,
-    bgPos: 'center center',
-    img: '/sft/operations.png',
-    overlay: 'radial-gradient(ellipse at center, rgba(5,5,5,0.84) 0%, rgba(5,5,5,0.62) 40%, rgba(5,5,5,0.25) 65%, transparent 100%)',
-    eyebrow: 'RESPONSIVE OPERATIONS',
-    cta: [{ label: 'Request Pilot Deployment', style: 'primary', href: 'tel:+919486675847' }],
-  },
-  {
-    num: '10', label: 'Updates',
-    title: 'LATEST\nUPDATES',
+    num: '05', label: 'Journey',
+    title: 'OUR\nJOURNEY',
     body: '',
     note: '',
     chips: [],
+    pos: 'left' as const,
+    bgPos: 'right center',
+    img: '/sft/about/timeline.png',
+    overlay: 'linear-gradient(90deg, rgba(5,5,5,0.94) 0%, rgba(5,5,5,0.82) 38%, rgba(5,5,5,0.3) 65%, transparent 100%)',
+    eyebrow: 'TIMELINE',
+    cta: [],
+    timeline: [
+      { year: '2021', desc: 'Company founded with a vision to develop real-world engineering solutions for communication and monitoring challenges.' },
+      { year: '2022', desc: 'Recognition through national innovation programs and early-stage development of aerial platform technologies.' },
+      { year: '2023', desc: 'Awarded for advanced technology development and continued progress in communication and aerospace systems.' },
+      { year: '2024', desc: 'HAWKE platform development, testing, and pilot deployments initiated.' },
+      { year: '2025', desc: 'Advancing toward higher TRL levels and expanding application use cases.' },
+      { year: '2026+', desc: 'Commercial deployment of HAWKE and continued development of MOBIUS high-altitude platform.' },
+    ],
+  },
+  {
+    num: '06', label: 'Backed By',
+    title: 'SUPPORTED\nBY',
+    body: 'Backed by an ecosystem of research institutions, innovation programs, and strategic collaborators.',
+    note: '',
+    chips: [],
+    pos: 'right' as const,
+    bgPos: 'left center',
+    img: '/sft/about/investors.png',
+    overlay: 'linear-gradient(270deg, rgba(5,5,5,0.94) 0%, rgba(5,5,5,0.82) 38%, rgba(5,5,5,0.3) 65%, transparent 100%)',
+    eyebrow: 'INVESTORS & ECOSYSTEM',
+    cta: [{ label: 'Learn More', style: 'ghost', href: 'mailto:info@susanfuturetechnologies.com' }],
+    supporters: ['Incubation Programs', 'Research Grants', 'Institutional Partnerships'],
+  },
+  {
+    num: '07', label: 'Team',
+    title: 'BUILDING THE\nFUTURE\nTOGETHER',
+    body: 'Our team combines expertise across aerospace engineering, communication systems, and real-world deployment — driven by a shared mission to build technologies that matter.',
+    note: 'Headquartered at IIT Madras Research Park, SFT operates at the intersection of aerospace engineering, communication systems, and mission-critical deployment technologies.',
+    chips: [],
+    pos: 'left' as const,
+    bgPos: 'right center',
+    img: '/sft/about/team.png',
+    overlay: 'linear-gradient(90deg, rgba(5,5,5,0.94) 0%, rgba(5,5,5,0.82) 38%, rgba(5,5,5,0.3) 65%, transparent 100%)',
+    eyebrow: 'OUR TEAM',
+    cta: [{ label: 'Contact Us', style: 'primary', href: 'mailto:info@susanfuturetechnologies.com' }],
+  },
+  {
+    num: '08', label: 'Connect',
+    title: "LET'S BUILD THE\nNEXT LAYER OF\nCONNECTIVITY",
+    body: 'If you are exploring deployable communication systems, aerial monitoring platforms, or future HAPS infrastructure, we\'d love to connect.',
+    note: '',
+    chips: [],
     pos: 'center' as const,
     bgPos: 'center center',
-    img: '/sft/updates.png',
-    overlay: 'radial-gradient(ellipse at center, rgba(5,5,5,0.88) 0%, rgba(5,5,5,0.72) 40%, rgba(5,5,5,0.4) 65%, rgba(5,5,5,0.2) 100%)',
-    eyebrow: 'NEWS & MILESTONES',
-    cta: [{ label: 'View All Updates', style: 'ghost', href: 'mailto:info@susanfuturetechnologies.com' }],
-    updates: [
-      { title: 'HAWKE Deployment Readiness', desc: 'Platform development continues toward TRL 9.', img: '/sft/blog-hawke.png' },
-      { title: 'Modular Aerial Expansion', desc: 'Applications across disaster response and monitoring.', img: '/sft/blog-modular.png' },
-      { title: 'Next-Gen Infrastructure', desc: 'Shaping a new connectivity layer from above.', img: '/sft/blog-nextgen.png' },
+    img: '/sft/about/cta.png',
+    overlay: 'radial-gradient(ellipse at center, rgba(5,5,5,0.88) 0%, rgba(5,5,5,0.72) 40%, rgba(5,5,5,0.35) 65%, transparent 100%)',
+    eyebrow: 'GET IN TOUCH',
+    cta: [
+      { label: 'Contact Us', style: 'primary', href: 'mailto:info@susanfuturetechnologies.com' },
+      { label: 'Request a Pilot', style: 'ghost', href: 'tel:+919486675847' },
     ],
   },
 ]
+
 /* ═══════════════════════════════════════════════════════════════════
-   STYLES — Aerospace Dark Theme
+   STYLES
 ═══════════════════════════════════════════════════════════════════ */
 const CSS = `
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap');
@@ -190,7 +174,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
   transition:opacity 1.2s cubic-bezier(.16,1,.3,1);
 }
 
-/* ── Overlay gradient (changes per section) ── */
+/* ── Overlay gradient ── */
 .overlay-layer{
   position:fixed;inset:0;z-index:1;
   pointer-events:none;
@@ -293,15 +277,12 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
   left:0;right:0;width:100%;padding:0 80px;
   align-items:center;text-align:center;
 }
-.s-panel.pos-updates{
-  left:0;right:0;width:100%;padding:0 5%;
-}
 
 /* ── Typography ── */
 .p-eyebrow{
   font-family:'Space Grotesk',sans-serif;
-  font-size:0.85rem;font-weight:500;letter-spacing:.28em;text-transform:uppercase;
-  color:#4AC7FF;margin-bottom:18px;
+  font-size:0.7rem;font-weight:500;letter-spacing:.28em;text-transform:uppercase;
+  color:#4AC7FF;margin-bottom:12px;
   display:flex;align-items:center;gap:10px;
 }
 .p-eyebrow-line{width:22px;height:1px;background:rgba(74,199,255,0.35);flex-shrink:0}
@@ -309,34 +290,35 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 .pos-center .p-eyebrow{justify-content:center}
 
 .p-num{
-  font-family:'Space Mono',monospace;font-size:0.85rem;font-weight:400;
-  letter-spacing:.1em;color:rgba(255,255,255,0.15);margin-bottom:8px;
+  font-family:'Space Mono',monospace;font-size:0.7rem;font-weight:400;
+  letter-spacing:.1em;color:rgba(255,255,255,0.15);margin-bottom:6px;
 }
 
 .p-title{
   font-family:'Space Grotesk',sans-serif;
-  font-size:clamp(2.8rem,4.5vw,5rem);
+  font-size:clamp(2rem,3.5vw,3.5rem);
   font-weight:300;line-height:1.08;letter-spacing:-0.03em;
-  color:#F5F7FA;white-space:pre-line;margin-bottom:20px;
+  color:#F5F7FA;white-space:pre-line;margin-bottom:14px;
   text-transform:uppercase;
   text-shadow:0 4px 32px rgba(0,0,0,0.6);
 }
 
 .p-body{
   font-family:'Inter',sans-serif;
-  font-size:0.95rem;color:#A7AFBB;
-  line-height:1.82;max-width:420px;font-weight:400;margin-bottom:18px;
+  font-size:0.82rem;color:#A7AFBB;
+  line-height:1.72;max-width:380px;font-weight:400;margin-bottom:12px;
   white-space:pre-line;
 }
 .pos-right .p-body,.pos-right .p-note{margin-left:auto}
-.pos-center .p-body{max-width:500px}
+.pos-center .p-body{max-width:460px}
 
 .p-note{
   font-family:'Space Grotesk',sans-serif;
-  font-size:0.85rem;font-weight:400;color:rgba(74,199,255,0.6);
-  letter-spacing:.1em;padding-top:12px;
+  font-size:0.72rem;font-weight:400;color:rgba(74,199,255,0.6);
+  letter-spacing:.08em;padding-top:10px;
   border-top:1px solid rgba(74,199,255,0.12);
-  max-width:420px;line-height:1.6;
+  max-width:380px;line-height:1.5;
+  white-space:pre-line;
 }
 .pos-right .p-note{margin-left:auto}
 .pos-center .p-note{max-width:none}
@@ -400,60 +382,147 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 }
 .btn-g:hover{color:#fff;border-color:rgba(74,199,255,0.4);background:rgba(74,199,255,0.06);box-shadow:0 0 16px rgba(74,199,255,0.12)}
 
-/* ── Blog-style update cards (section 10) — Full Width ── */
-.upd-header{
-  display:flex;align-items:flex-start;justify-content:space-between;
-  width:100%;max-width:none;margin-bottom:24px;
+/* ── Metrics grid ── */
+.metrics-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:20px;
+  width:100%;max-width:900px;margin-top:24px;
 }
-.upd-header-left{display:flex;flex-direction:column}
-.upd-grid{
-  display:flex;gap:20px;
-  width:100%;max-width:none;
-}
-.upd-card{
-  flex:1;min-width:0;
+.metric-card{
   background:rgba(74,199,255,0.04);
   border:1px solid rgba(74,199,255,0.1);
-  border-radius:12px;overflow:hidden;
+  border-radius:12px;padding:28px 20px;
   backdrop-filter:blur(10px);
-  text-align:left;
-  cursor:pointer;
-  opacity:0;transform:translateY(80px);
-  transition:opacity 0.8s cubic-bezier(.16,1,.3,1), transform 0.8s cubic-bezier(.16,1,.3,1), background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  text-align:center;
+  opacity:0;transform:translateY(60px);
+  transition:opacity 0.8s cubic-bezier(.16,1,.3,1), transform 0.8s cubic-bezier(.16,1,.3,1), background 0.3s ease, border-color 0.3s ease;
 }
-.vis .upd-card{
-  opacity:1;transform:translateY(0);
-}
-.vis .upd-card:nth-child(1){transition-delay:0s}
-.vis .upd-card:nth-child(2){transition-delay:0.2s}
-.vis .upd-card:nth-child(3){transition-delay:0.4s}
-.upd-card:hover{
+.vis .metric-card{opacity:1;transform:translateY(0)}
+.vis .metric-card:nth-child(1){transition-delay:0s}
+.vis .metric-card:nth-child(2){transition-delay:0.15s}
+.vis .metric-card:nth-child(3){transition-delay:0.3s}
+.vis .metric-card:nth-child(4){transition-delay:0.45s}
+.metric-card:hover{
   background:rgba(74,199,255,0.1);
   border-color:rgba(74,199,255,0.25);
-  transform:translateY(-4px);
-  box-shadow:0 12px 40px rgba(0,0,0,0.3);
 }
-.upd-card-img{
-  width:100%;aspect-ratio:16/9;
-  object-fit:cover;display:block;
-  border-bottom:1px solid rgba(74,199,255,0.08);
+.metric-val{
+  font-family:'Space Mono',monospace;
+  font-size:1.6rem;font-weight:700;color:#4AC7FF;
+  margin-bottom:8px;letter-spacing:-0.02em;
 }
-.upd-card-body{padding:16px 18px 20px}
-.upd-card-tag{
-  display:inline-block;font-family:'Space Mono',monospace;
-  font-size:0.75rem;font-weight:400;letter-spacing:.1em;
-  text-transform:uppercase;color:rgba(74,199,255,0.5);
-  margin-bottom:6px;
-}
-.upd-card-title{
-  font-family:'Space Grotesk',sans-serif;
-  font-size:0.95rem;font-weight:500;color:#F5F7FA;
-  margin-bottom:6px;line-height:1.35;
-}
-.upd-card-desc{
+.metric-desc{
   font-family:'Inter',sans-serif;
-  font-size:0.88rem;color:rgba(167,175,187,0.7);line-height:1.6;
+  font-size:0.85rem;color:rgba(167,175,187,0.7);line-height:1.5;
 }
+
+/* ── Partners grid ── */
+.partners-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:16px;
+  width:100%;max-width:800px;margin-top:24px;
+}
+.partner-card{
+  background:rgba(74,199,255,0.04);
+  border:1px solid rgba(74,199,255,0.1);
+  border-radius:12px;padding:24px 16px;
+  backdrop-filter:blur(10px);
+  text-align:center;
+  font-family:'Space Grotesk',sans-serif;
+  font-size:0.85rem;font-weight:500;letter-spacing:.1em;
+  color:rgba(255,255,255,0.5);text-transform:uppercase;
+  opacity:0;transform:translateY(40px);
+  transition:opacity 0.7s cubic-bezier(.16,1,.3,1), transform 0.7s cubic-bezier(.16,1,.3,1), background 0.3s ease, border-color 0.3s ease;
+}
+.vis .partner-card{opacity:1;transform:translateY(0)}
+.vis .partner-card:nth-child(1){transition-delay:0s}
+.vis .partner-card:nth-child(2){transition-delay:0.12s}
+.vis .partner-card:nth-child(3){transition-delay:0.24s}
+.vis .partner-card:nth-child(4){transition-delay:0.36s}
+.partner-card:hover{
+  background:rgba(74,199,255,0.1);
+  border-color:rgba(74,199,255,0.25);
+  color:rgba(255,255,255,0.8);
+}
+
+/* ── Timeline ── */
+.timeline-right{
+  position:fixed;top:0;right:0;width:50%;height:100vh;
+  z-index:11;pointer-events:none;
+  display:flex;align-items:center;justify-content:center;
+  padding:80px 60px 60px 40px;
+  opacity:0;
+  transition:opacity 0.8s cubic-bezier(.16,1,.3,1);
+}
+.timeline-right.vis{opacity:1}
+.timeline-card-stack{
+  position:relative;width:100%;max-width:440px;height:340px;
+  overflow:hidden;border-radius:16px;
+}
+.tl-card-full{
+  position:absolute;inset:0;
+  background:rgba(5,5,5,0.6);
+  border:1px solid rgba(74,199,255,0.12);
+  border-radius:16px;
+  padding:36px 32px;
+  backdrop-filter:blur(20px);
+  display:flex;flex-direction:column;justify-content:center;
+  opacity:0;transform:translateX(100%);
+  transition:opacity 0.6s cubic-bezier(.16,1,.3,1), transform 0.6s cubic-bezier(.16,1,.3,1);
+  pointer-events:none;
+}
+.tl-card-full.active{
+  opacity:1;transform:translateX(0);
+  pointer-events:auto;
+}
+.tl-card-full.past{
+  opacity:0;transform:translateX(-100%);
+  pointer-events:none;
+}
+.tl-card-full::before{
+  content:'';position:absolute;top:0;left:32px;right:32px;height:2px;
+  background:linear-gradient(90deg,#4AC7FF,rgba(74,199,255,0.05));
+  border-radius:1px;
+}
+.tl-card-counter{
+  font-family:'Space Mono',monospace;
+  font-size:0.65rem;font-weight:400;letter-spacing:.1em;
+  color:rgba(255,255,255,0.15);margin-bottom:10px;
+}
+.tl-card-year{
+  font-family:'Space Mono',monospace;
+  font-size:2.8rem;font-weight:700;color:#4AC7FF;
+  margin-bottom:16px;letter-spacing:-0.02em;
+  line-height:1;
+}
+.tl-card-desc{
+  font-family:'Inter',sans-serif;
+  font-size:0.95rem;color:rgba(167,175,187,0.8);line-height:1.72;
+}
+.tl-card-progress{
+  margin-top:auto;padding-top:20px;
+  display:flex;gap:6px;
+}
+.tl-card-dot{
+  width:24px;height:3px;border-radius:2px;
+  background:rgba(255,255,255,0.08);
+  transition:background 0.3s ease, width 0.3s ease;
+}
+.tl-card-dot.active{
+  background:#4AC7FF;width:36px;
+}
+
+/* ── Supporters list ── */
+.supporters-list{
+  display:flex;flex-direction:column;gap:10px;margin-top:16px;
+}
+.supporter-item{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:0.9rem;font-weight:500;letter-spacing:.12em;
+  color:rgba(74,199,255,0.5);text-transform:uppercase;
+  padding:8px 0;
+  border-bottom:1px solid rgba(74,199,255,0.08);
+  display:flex;align-items:center;gap:10px;
+}
+.supporter-dot{width:4px;height:4px;border-radius:50%;background:#4AC7FF;flex-shrink:0}
 
 /* ── Intro panel ── */
 .intro-panel{
@@ -468,7 +537,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 .intro-panel.vis{opacity:1;transform:translateY(0);pointer-events:auto}
 .i-eye{
   font-family:'Space Grotesk',sans-serif;
-  font-size:1rem;font-weight:500;letter-spacing:.28em;text-transform:uppercase;
+  font-size:0.85rem;font-weight:500;letter-spacing:.28em;text-transform:uppercase;
   color:#4AC7FF;margin-bottom:22px;display:flex;align-items:center;
   justify-content:center;gap:12px
 }
@@ -483,12 +552,12 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 .i-title .gc{color:#4AC7FF}
 .i-sub{
   font-family:'Inter',sans-serif;
-  font-size:1.05rem;color:#A7AFBB;line-height:1.82;
+  font-size:0.95rem;color:#A7AFBB;line-height:1.82;
   max-width:480px;margin-bottom:42px;text-align:center
 }
 .i-ctas{display:flex;gap:12px;margin-bottom:48px}
 .i-scroll{
-  display:flex;align-items:center;gap:10px;font-size:1rem;
+  display:flex;align-items:center;gap:10px;font-size:0.85rem;
   font-family:'Space Grotesk',sans-serif;
   letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,0.2);
   justify-content:center
@@ -499,7 +568,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 }
 @keyframes pulse{0%,100%{opacity:.2;transform:scale(1)}50%{opacity:1;transform:scale(1.3)}}
 
-/* ── Signal pulse (hero background) ── */
+/* ── Signal pulse ── */
 .signal-rings{
   position:fixed;top:50%;left:50%;z-index:4;pointer-events:none;
   transform:translate(-50%,-50%);
@@ -555,15 +624,10 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
   display:flex;align-items:center;gap:6px;
   margin-bottom:18px;
 }
-.o-logo-icon{
-  width:24px;height:24px;border-radius:5px;
-  background:linear-gradient(135deg,#4AC7FF,#08111F);
-  display:flex;align-items:center;justify-content:center;
-  font-size:10px;font-weight:700;color:#fff;
-}
+.o-logo-img{height:36px;width:auto;object-fit:contain}
 .o-eyebrow{
   font-family:'Space Grotesk',sans-serif;
-  font-size:1rem;font-weight:500;letter-spacing:.28em;text-transform:uppercase;
+  font-size:0.85rem;font-weight:500;letter-spacing:.28em;text-transform:uppercase;
   color:rgba(74,199,255,0.45);
   display:flex;align-items:center;gap:12px;
   margin-bottom:16px;
@@ -581,7 +645,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 .o-title .oc{color:#4AC7FF}
 .o-sub{
   font-family:'Inter',sans-serif;
-  font-size:1.05rem;color:#A7AFBB;line-height:1.82;
+  font-size:0.95rem;color:#A7AFBB;line-height:1.82;
   text-align:center;max-width:440px;
   margin-bottom:32px;
 }
@@ -600,24 +664,24 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 }
 .o-footer-link{
   font-family:'Space Grotesk',sans-serif;
-  font-size:0.9rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;
+  font-size:0.85rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;
   color:rgba(255,255,255,0.2);text-decoration:none;transition:color .2s;
 }
 .o-footer-link:hover{color:rgba(74,199,255,0.6)}
 .o-footer-info{
   font-family:'Inter',sans-serif;
-  font-size:1rem;color:rgba(167,175,187,0.6);text-align:center;line-height:1.6;
+  font-size:0.9rem;color:rgba(167,175,187,0.6);text-align:center;line-height:1.6;
 }
 .o-footer-tagline{
   font-family:'Space Grotesk',sans-serif;
-  font-size:0.85rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;
+  font-size:0.8rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;
   color:rgba(74,199,255,0.2);margin-top:8px;
   display:flex;align-items:center;gap:8px;
 }
 .o-footer-dot{width:3px;height:3px;border-radius:50%;background:rgba(74,199,255,0.4)}
 
 /* ── Scroll driver ── */
-#sd{height:3400vh;position:relative;z-index:5;pointer-events:none}
+#sd{height:2800vh;position:relative;z-index:5;pointer-events:none}
 
 
 /* ═══════════════════════════════════════════════════════════════
@@ -687,21 +751,15 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
   padding:20px 16px 0;
 }
 .m-header-logo{
-  font-family:'Space Grotesk',sans-serif;font-size:0.7rem;font-weight:600;
-  color:#F5F7FA;display:flex;align-items:center;gap:4px;
-  letter-spacing:.08em;text-transform:uppercase;
+  display:flex;align-items:center;
 }
-.m-header-icon{
-  width:22px;height:22px;border-radius:4px;
-  background:linear-gradient(135deg,#4AC7FF,#08111F);
-  display:flex;align-items:center;justify-content:center;
-  font-size:9px;font-weight:700;color:#fff;
-}
+.m-header-logo-img{height:28px;width:auto;object-fit:contain}
 .m-header-cta{
   font-family:'Space Grotesk',sans-serif;font-size:0.55rem;font-weight:700;
   letter-spacing:.14em;text-transform:uppercase;
-  background:linear-gradient(135deg,#4AC7FF,#2a9fd4);color:#050505;
-  padding:7px 12px;border-radius:5px;text-decoration:none;
+  background:transparent;color:#4AC7FF;
+  border:1px solid rgba(74,199,255,0.4);
+  padding:7px 12px;border-radius:50px;text-decoration:none;
 }
 
 /* ── Story content (bottom anchored) ── */
@@ -771,33 +829,44 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 .m-sec-ctas .btn-p{font-size:0.55rem;padding:8px 14px}
 .m-sec-ctas .btn-g{font-size:0.55rem;padding:8px 14px}
 
-/* ── Mobile updates cards ── */
-.m-upd-grid{display:flex;flex-direction:row;gap:8px;margin-top:8px;overflow-x:auto}
-.m-upd-card{
-  min-width:140px;max-width:160px;flex-shrink:0;
+/* ── Mobile metrics ── */
+.m-metrics-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;margin-top:8px}
+.m-metric-card{
+  background:rgba(74,199,255,0.04);
+  border:1px solid rgba(74,199,255,0.1);
+  border-radius:8px;padding:10px 8px;text-align:center;
+}
+.m-metric-val{
+  font-family:'Space Mono',monospace;font-size:1rem;font-weight:700;color:#4AC7FF;margin-bottom:4px;
+}
+.m-metric-desc{
+  font-family:'Inter',sans-serif;font-size:0.6rem;color:rgba(167,175,187,0.7);line-height:1.4;
+}
+
+/* ── Mobile timeline ── */
+.m-tl-grid{display:flex;flex-direction:column;gap:6px;margin-top:8px;max-height:200px;overflow-y:auto}
+.m-tl-card{
+  display:flex;gap:8px;align-items:flex-start;
   background:rgba(74,199,255,0.03);
   border:1px solid rgba(74,199,255,0.08);
-  border-radius:8px;overflow:hidden;
+  border-radius:8px;padding:8px 10px;
 }
-.m-upd-card-img{
-  width:100%;aspect-ratio:16/10;
-  object-fit:cover;display:block;
-  border-bottom:1px solid rgba(74,199,255,0.06);
+.m-tl-year{
+  font-family:'Space Mono',monospace;font-size:0.85rem;font-weight:700;color:#4AC7FF;flex-shrink:0;
 }
-.m-upd-card-body{padding:6px 8px 8px}
-.m-upd-card-tag{
-  font-family:'Space Mono',monospace;
-  font-size:0.42rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;
-  color:rgba(74,199,255,0.4);margin-bottom:3px;
+.m-tl-desc{
+  font-family:'Inter',sans-serif;font-size:0.65rem;color:rgba(167,175,187,0.7);line-height:1.45;
 }
-.m-upd-card-title{
+
+/* ── Mobile partners ── */
+.m-partners-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;margin-top:8px}
+.m-partner-card{
+  background:rgba(74,199,255,0.04);
+  border:1px solid rgba(74,199,255,0.1);
+  border-radius:8px;padding:10px 8px;text-align:center;
   font-family:'Space Grotesk',sans-serif;
-  font-size:0.8rem;font-weight:500;color:#F5F7FA;
-  margin-bottom:3px;line-height:1.35;
-}
-.m-upd-card-desc{
-  font-family:'Inter',sans-serif;
-  font-size:0.7rem;color:rgba(167,175,187,0.8);line-height:1.55;
+  font-size:0.6rem;font-weight:500;letter-spacing:.08em;
+  color:rgba(255,255,255,0.5);text-transform:uppercase;
 }
 
 /* ── Mobile outro slide ── */
@@ -808,16 +877,9 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
   flex:1;padding:60px 20px 36px;text-align:center;
 }
 .m-outro-logo{
-  font-family:'Space Grotesk',sans-serif;font-size:0.7rem;font-weight:600;
-  color:#F5F7FA;display:flex;align-items:center;gap:4px;margin-bottom:14px;
-  letter-spacing:.08em;text-transform:uppercase;
+  display:flex;align-items:center;margin-bottom:14px;
 }
-.m-outro-icon{
-  width:22px;height:22px;border-radius:4px;
-  background:linear-gradient(135deg,#4AC7FF,#08111F);
-  display:flex;align-items:center;justify-content:center;
-  font-size:9px;font-weight:700;color:#fff;
-}
+.m-outro-logo-img{height:28px;width:auto;object-fit:contain}
 .m-outro-title{
   font-family:'Space Grotesk',sans-serif;
   font-size:clamp(1.5rem,6vw,2.2rem);font-weight:300;line-height:1.1;
@@ -853,11 +915,11 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 /* ═══════════════════════════════════════════════════════════════════
    PAGE COMPONENT
 ═══════════════════════════════════════════════════════════════════ */
-export default function SFTHomePage() {
+export default function AboutPage() {
   /* ── Mobile detection ── */
   const [isMobile, setIsMobile] = useState(false)
   const [activeStory, setActiveStory] = useState(0)
-  const totalStories = SECTIONS.length + 1 // 10 sections + 1 outro
+  const totalStories = SECTIONS.length + 1
 
   useEffect(() => {
     const check = () => setIsMobile(window.innerWidth <= 768)
@@ -875,11 +937,15 @@ export default function SFTHomePage() {
     setActiveStory(prev => Math.max(0, prev - 1))
   }, [])
 
-  /* ── Touch swipe for stories ── */
+  /* ── Touch handlers ── */
   const touchStart = useRef<{ x: number; y: number; t: number } | null>(null)
 
   const onTouchStart = useCallback((e: React.TouchEvent) => {
-    touchStart.current = { x: e.touches[0].clientX, y: e.touches[0].clientY, t: Date.now() }
+    touchStart.current = {
+      x: e.touches[0].clientX,
+      y: e.touches[0].clientY,
+      t: Date.now(),
+    }
   }, [])
 
   const onTouchEnd = useCallback((e: React.TouchEvent) => {
@@ -908,6 +974,9 @@ export default function SFTHomePage() {
   const ctrRef = useRef<HTMLSpanElement>(null)
   const ctrLabelRef = useRef<HTMLSpanElement>(null)
   const activeIdx = useRef(-1)
+  const timelineRightRef = useRef<HTMLDivElement>(null)
+  const tlCardRefs = useRef<(HTMLDivElement | null)[]>([])
+  const TIMELINE_SECTION_IDX = 4 // section 05 (index 4) is the timeline
 
   useEffect(() => {
     if (isMobile) return
@@ -931,21 +1000,21 @@ export default function SFTHomePage() {
       const driver = document.getElementById('sd')!
       if (!driver) return
 
-      const N = SECTIONS.length // 12
+      const N = SECTIONS.length
       const onScroll = () => {
         const pct = Math.max(0, Math.min(1, window.scrollY / (driver.offsetHeight - window.innerHeight)))
 
         /* progress bar */
         if (fillRef.current) fillRef.current.style.width = (pct * 100) + '%'
 
-        /* section mapping: sections occupy 3%–93% of scroll */
-        const sF = Math.max(0, (pct - 0.03) / 0.90) * (N + 1.5)  // 0 → N+1.5
+        /* section mapping */
+        const sF = Math.max(0, (pct - 0.03) / 0.90) * (N + 1.5)
         const newIdx = Math.min(N - 1, Math.floor(sF - 0.75))
 
-        /* intro: visible when at top */
+        /* intro */
         if (introRef.current) introRef.current.classList.toggle('vis', sF < 0.72)
 
-        /* outro: visible at very end */
+        /* outro */
         const isOutro = sF >= N + 0.5
         if (outroRef.current) outroRef.current.classList.toggle('vis', isOutro)
 
@@ -973,6 +1042,26 @@ export default function SFTHomePage() {
         }
         if (bgLayerBRef.current) {
           bgLayerBRef.current.style.transform = `translateY(${shift}%)`
+        }
+
+        /* ── Timeline sub-scroll: must run on every tick ── */
+        const curIdx = newIdx >= 0 ? newIdx : activeIdx.current
+        const isTimelineActive = curIdx === TIMELINE_SECTION_IDX
+        if (timelineRightRef.current) {
+          timelineRightRef.current.classList.toggle('vis', isTimelineActive)
+        }
+        if (isTimelineActive) {
+          const subPct = Math.max(0, Math.min(1, sF - (TIMELINE_SECTION_IDX + 0.25)))
+          const tlCount = tlCardRefs.current.filter(Boolean).length
+          const activeCard = Math.min(tlCount - 1, Math.floor(subPct * tlCount))
+          tlCardRefs.current.forEach((el, ci) => {
+            if (!el) return
+            el.classList.remove('active', 'past')
+            if (ci === activeCard) el.classList.add('active')
+            else if (ci < activeCard) el.classList.add('past')
+          })
+        } else {
+          tlCardRefs.current.forEach(el => { el?.classList.remove('active', 'past') })
         }
 
         if (newIdx === activeIdx.current) return
@@ -1026,38 +1115,32 @@ export default function SFTHomePage() {
           <div className="m-progress">
             {Array.from({ length: totalStories }).map((_, i) => (
               <div key={i} className="m-prog-bar">
-                <div
-                  className={`m-prog-fill${i < activeStory ? ' done' : ''}`}
-                  style={i === activeStory ? { width: '100%', transition: 'none' } : {}}
-                />
+                <div className={`m-prog-fill${i < activeStory ? ' done' : ''}`}
+                  style={i === activeStory ? { width: '50%' } : {}} />
               </div>
             ))}
           </div>
 
-          {/* Section slides */}
+          {/* Slides */}
           {SECTIONS.map((s, i) => (
-            <div
-              key={i}
-              className={`m-slide${i === activeStory ? ' active' : ''}`}
-            >
+            <div key={i} className={`m-slide${activeStory === i ? ' active' : ''}`}>
               <div className="m-slide-bg" style={{ backgroundImage: `url(${s.img})` }} />
               <div className="m-slide-overlay" style={{ background: s.overlay }} />
               <div className="m-slide-vignette" />
 
-              {/* Header */}
-              <div className="m-header">
-                <div className="m-header-logo">
-                  <span className="m-header-icon">S</span>
-                  SFT
-                </div>
-                <a href="#contact" className="m-header-cta">
-                  Request Pilot
-                </a>
-              </div>
-
               {/* Tap zones */}
               <div className="m-tap-left" onClick={goPrev} />
               <div className="m-tap-right" onClick={goNext} />
+
+              {/* Header */}
+              <div className="m-header">
+                <div className="m-header-logo">
+                  <img src="/SFT-logo-1.png" alt="SFT" className="m-header-logo-img" />
+                </div>
+                <a href="/" className="m-header-cta">
+                  Home
+                </a>
+              </div>
 
               {/* Content */}
               <div className="m-content">
@@ -1068,16 +1151,9 @@ export default function SFTHomePage() {
                     {s.eyebrow}
                   </div>
                   <div className="m-sec-title">
-                    {s.title.split('\n').slice(0, 2).map((line, li) => (
-                      <span key={li}>{line} </span>
-                    ))}
+                    {s.title.split('\n').map((l, li) => <span key={li}>{l}<br /></span>)}
                   </div>
-                  {s.body && (
-                    <div className="m-sec-body">
-                      {s.body.split('\n\n')[0].substring(0, 150)}
-                      {s.body.length > 150 ? '...' : ''}
-                    </div>
-                  )}
+                  {s.body && <div className="m-sec-body">{s.body}</div>}
                   {s.note && <div className="m-sec-note">{s.note}</div>}
                   {s.chips && s.chips.length > 0 && (
                     <div className="m-sec-chips">
@@ -1089,18 +1165,33 @@ export default function SFTHomePage() {
                       ))}
                     </div>
                   )}
-                  {/* Blog-style update cards */}
-                  {'updates' in s && (s as typeof SECTIONS[9] & { updates: { title: string; desc: string; img: string }[] }).updates && (
-                    <div className="m-upd-grid">
-                      {(s as typeof SECTIONS[9] & { updates: { title: string; desc: string; img: string }[] }).updates.map((u, ui) => (
-                        <div key={ui} className="m-upd-card">
-                          <img src={u.img} alt={u.title} className="m-upd-card-img" />
-                          <div className="m-upd-card-body">
-                            <div className="m-upd-card-tag">UPDATE {String(ui + 1).padStart(2, '0')}</div>
-                            <div className="m-upd-card-title">{u.title}</div>
-                            <div className="m-upd-card-desc">{u.desc}</div>
-                          </div>
+                  {/* Mobile metrics */}
+                  {'metrics' in s && (s as typeof SECTIONS[4] & { metrics: { val: string; desc: string }[] }).metrics && (
+                    <div className="m-metrics-grid">
+                      {(s as typeof SECTIONS[4] & { metrics: { val: string; desc: string }[] }).metrics.map((m, mi) => (
+                        <div key={mi} className="m-metric-card">
+                          <div className="m-metric-val">{m.val}</div>
+                          <div className="m-metric-desc">{m.desc}</div>
                         </div>
+                      ))}
+                    </div>
+                  )}
+                  {/* Mobile timeline */}
+                  {'timeline' in s && (s as typeof SECTIONS[6] & { timeline: { year: string; desc: string }[] }).timeline && (
+                    <div className="m-tl-grid">
+                      {(s as typeof SECTIONS[6] & { timeline: { year: string; desc: string }[] }).timeline.map((t, ti) => (
+                        <div key={ti} className="m-tl-card">
+                          <div className="m-tl-year">{t.year}</div>
+                          <div className="m-tl-desc">{t.desc}</div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                  {/* Mobile partners */}
+                  {'partners' in s && (s as typeof SECTIONS[5] & { partners: string[] }).partners && (
+                    <div className="m-partners-grid">
+                      {(s as typeof SECTIONS[5] & { partners: string[] }).partners.map((p, pi) => (
+                        <div key={pi} className="m-partner-card">{p}</div>
                       ))}
                     </div>
                   )}
@@ -1121,14 +1212,19 @@ export default function SFTHomePage() {
           {/* Outro slide */}
           <div className={`m-slide${activeStory === SECTIONS.length ? ' active' : ''}`}>
             <div className="m-slide-bg" style={{ backgroundImage: `url(${SECTIONS[0].img})` }} />
-            <div className="m-slide-overlay" style={{ background: 'rgba(5,5,5,0.92)' }} />
-
+            <div className="m-slide-overlay" style={{ background: 'radial-gradient(ellipse at center, rgba(5,5,5,0.92) 0%, rgba(5,5,5,0.88) 50%, rgba(5,5,5,0.7) 100%)' }} />
+            <div className="m-slide-vignette" />
             <div className="m-tap-left" onClick={goPrev} />
-
+            <div className="m-tap-right" onClick={goNext} />
+            <div className="m-header">
+              <div className="m-header-logo">
+                <img src="/SFT-logo-1.png" alt="SFT" className="m-header-logo-img" />
+              </div>
+              <a href="/" className="m-header-cta">Home</a>
+            </div>
             <div className="m-outro-content">
               <div className="m-outro-logo">
-                <span className="m-outro-icon">S</span>
-                Susan Future Technologies
+                <img src="/SFT-logo-1.png" alt="SFT" className="m-outro-logo-img" />
               </div>
               <h2 className="m-outro-title">
                 Let&apos;s Build The<br />
@@ -1139,8 +1235,8 @@ export default function SFTHomePage() {
                 Deployable communication systems, aerial monitoring platforms, and future HAPS infrastructure.
               </p>
               <div className="m-outro-ctas">
-                <a href="tel:+919486675847" className="btn-p">Request a Pilot</a>
-                <a href="mailto:info@susanfuturetechnologies.com" className="btn-g">Contact Us</a>
+                <a href="mailto:info@susanfuturetechnologies.com" className="btn-p">Contact Us</a>
+                <a href="tel:+919486675847" className="btn-g">Request a Pilot</a>
               </div>
               <div className="m-outro-footer">
                 Susan Future Technologies Pvt. Ltd.<br />
@@ -1169,9 +1265,9 @@ export default function SFTHomePage() {
           ref={bgLayerARef}
           className="bg-inner-a"
           style={{
-            backgroundImage: `url(${SECTIONS[0].img})`,
+            backgroundImage: `url(/sft/about/hero.png)`,
             backgroundSize: 'cover',
-            backgroundPosition: SECTIONS[0].bgPos,
+            backgroundPosition: 'center center',
             opacity: 1,
           }}
         />
@@ -1187,7 +1283,7 @@ export default function SFTHomePage() {
       </div>
 
       {/* Overlay gradient */}
-      <div ref={overlayRef} className="overlay-layer" style={{ background: SECTIONS[0].overlay }} />
+      <div ref={overlayRef} className="overlay-layer" style={{ background: 'radial-gradient(ellipse at center, rgba(5,5,5,0.84) 0%, rgba(5,5,5,0.62) 40%, rgba(5,5,5,0.25) 65%, transparent 100%)' }} />
 
       {/* Vignette */}
       <div className="vignette" />
@@ -1205,20 +1301,39 @@ export default function SFTHomePage() {
 
       {/* Floating particles */}
       <div className="particles">
-        {Array.from({ length: 20 }).map((_, i) => (
+        {Array.from({ length: 15 }).map((_, i) => (
           <div
             key={i}
             className="particle"
             style={{
               left: `${Math.random() * 100}%`,
-              animationDuration: `${12 + Math.random() * 20}s`,
-              animationDelay: `${Math.random() * 10}s`,
-              width: `${1 + Math.random() * 2}px`,
-              height: `${1 + Math.random() * 2}px`,
-              opacity: 0.1 + Math.random() * 0.3,
+              animationDuration: `${8 + Math.random() * 12}s`,
+              animationDelay: `${Math.random() * 8}s`,
             }}
           />
         ))}
+      </div>
+
+      {/* Scroll driver */}
+      <div id="sd" />
+
+      {/* Intro panel */}
+      <div ref={introRef} className="intro-panel">
+        <div className="i-eye">
+          <span className="i-eye-line" />
+          SUSAN FUTURE TECHNOLOGIES
+          <span className="i-eye-line" />
+        </div>
+        <h1 className="i-title">
+          About<br />
+          <span className="gc">Us</span>
+        </h1>
+        <p className="i-sub">
+          Engineering persistent aerial systems for the next generation of connectivity.
+        </p>
+        <div className="i-scroll">
+          <span className="i-dot" />Scroll to explore
+        </div>
       </div>
 
       {/* Nav */}
@@ -1230,9 +1345,9 @@ export default function SFTHomePage() {
 
         {/* Center: Section indicator */}
         <div className="s-section">
-          <span ref={ctrRef} className="s-sec-num">01 / 12</span>
+          <span ref={ctrRef} className="s-sec-num">01 / 08</span>
           <span className="s-sep" />
-          <span ref={ctrLabelRef} className="s-sec-label">Hero</span>
+          <span ref={ctrLabelRef} className="s-sec-label">About</span>
         </div>
 
         {/* Right: CTA */}
@@ -1256,171 +1371,143 @@ export default function SFTHomePage() {
         ))}
       </div>
 
-      {/* Tall scroll driver */}
-      <div id="sd" />
-
-      {/* Intro panel */}
-      <div ref={introRef} className="intro-panel vis">
-        <div className="i-eye">
-          <span className="i-eye-line" />
-          Susan Future Technologies
-          <span className="i-eye-line" />
-        </div>
-        <h1 className="i-title">
-          The Future of<br />
-          Persistent Aerial<br />
-          <span className="gc">Infrastructure.</span>
-        </h1>
-        <p className="i-sub">
-          Deployable and high-altitude aerial platforms for communication, monitoring, and mission-critical operations.
-        </p>
-        <div className="i-ctas">
-          <a href="/hawke" className="btn-p">Explore HAWKE</a>
-          <a href="/mobius" className="btn-g">Explore MOBIUS</a>
-        </div>
-        <div className="i-scroll">
-          <span className="i-dot" />Scroll to explore
-        </div>
-      </div>
-
       {/* Section content panels */}
       {SECTIONS.map((s, i) => {
-        const isUpdates = 'updates' in s;
+        const hasMetrics = 'metrics' in s
+        const hasTimeline = 'timeline' in s
+        const hasPartners = 'partners' in s
+        const hasSupporters = 'supporters' in s
         return (
         <div
           key={i}
           ref={el => { panelRefs.current[i] = el }}
-          className={`s-panel ${isUpdates ? 'pos-updates' : `pos-${s.pos}`}`}
+          className={`s-panel pos-${s.pos}`}
         >
-          {isUpdates ? (
-            <>
-              {/* Updates: Header row — heading left, button right */}
-              <div className="upd-header">
-                <div className="upd-header-left">
-                  <div className="p-num">— {s.num}</div>
-                  <div className="p-eyebrow">
-                    <span className="p-eyebrow-line" />
-                    {s.eyebrow}
-                  </div>
-                  <h2 className="p-title">
-                    {s.title.split('\n').map((line, li) => (
-                      <span key={li}>{line}<br /></span>
-                    ))}
-                  </h2>
+          <div className="p-num">— {s.num}</div>
+          <div className="p-eyebrow">
+            <span className="p-eyebrow-line" />
+            {s.eyebrow}
+          </div>
+          <h2 className="p-title">
+            {s.title.split('\n').map((line, li) => (
+              <span key={li}>{line}<br /></span>
+            ))}
+          </h2>
+          {s.body && (
+            <p className="p-body">{s.body}</p>
+          )}
+          {s.note && (
+            <div className="p-note">{s.note}</div>
+          )}
+          {s.chips && s.chips.length > 0 && (
+            <div className="p-chips">
+              {s.chips.map((c, ci) => (
+                <div key={ci} className="p-chip">
+                  <span className="p-chip-val">{c.val}</span>
+                  <span className="p-chip-lbl">{c.lbl}</span>
                 </div>
-                {s.cta && s.cta.length > 0 && (
-                  <div className="p-ctas" style={{ marginTop: 0 }}>
-                    {s.cta.map((c, ci) => (
-                      <a key={ci} href={c.href || 'tel:+919486675847'} className={c.style === 'primary' ? 'btn-p' : 'btn-g'}>
-                        {c.label}
-                      </a>
-                    ))}
-                  </div>
-                )}
-              </div>
-              {/* Full-width blog cards */}
-              <div className="upd-grid">
-                {(s as typeof SECTIONS[9] & { updates: { title: string; desc: string; img: string }[] }).updates.map((u, ui) => (
-                  <div key={ui} className="upd-card">
-                    <img src={u.img} alt={u.title} className="upd-card-img" />
-                    <div className="upd-card-body">
-                      <div className="upd-card-tag">UPDATE {String(ui + 1).padStart(2, '0')}</div>
-                      <div className="upd-card-title">{u.title}</div>
-                      <div className="upd-card-desc">{u.desc}</div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </>
-          ) : (
-            <>
-              <div className="p-num">— {s.num}</div>
-              <div className="p-eyebrow">
-                <span className="p-eyebrow-line" />
-                {s.eyebrow}
-              </div>
-              <h2 className="p-title">
-                {s.title.split('\n').map((line, li) => (
-                  <span key={li}>{line}<br /></span>
-                ))}
-              </h2>
-              {s.body && (
-                <p className="p-body">{s.body}</p>
-              )}
-              {s.note && (
-                <div className="p-note">{s.note}</div>
-              )}
-              {s.chips && s.chips.length > 0 && (
-                <div className="p-chips">
-                  {s.chips.map((c, ci) => (
-                    <div key={ci} className="p-chip">
-                      <span className="p-chip-val">{c.val}</span>
-                      <span className="p-chip-lbl">{c.lbl}</span>
-                    </div>
-                  ))}
+              ))}
+            </div>
+          )}
+          {/* Metrics grid */}
+          {hasMetrics && (
+            <div className="metrics-grid">
+              {(s as typeof SECTIONS[4] & { metrics: { val: string; desc: string }[] }).metrics.map((m, mi) => (
+                <div key={mi} className="metric-card">
+                  <div className="metric-val">{m.val}</div>
+                  <div className="metric-desc">{m.desc}</div>
                 </div>
-              )}
-              {s.cta && s.cta.length > 0 && (
-                <div className="p-ctas">
-                  {s.cta.map((c, ci) => (
-                    <a key={ci} href={c.href || 'tel:+919486675847'} className={c.style === 'primary' ? 'btn-p' : 'btn-g'}>
-                      {c.label}
-                    </a>
-                  ))}
+              ))}
+            </div>
+          )}
+          {/* Partners grid */}
+          {hasPartners && (
+            <div className="partners-grid">
+              {(s as typeof SECTIONS[5] & { partners: string[] }).partners.map((p, pi) => (
+                <div key={pi} className="partner-card">{p}</div>
+              ))}
+            </div>
+          )}
+          {/* Timeline — now rendered as separate right-side panel */}
+          {hasTimeline && null}
+          {/* Supporters */}
+          {hasSupporters && (
+            <div className="supporters-list">
+              {(s as typeof SECTIONS[7] & { supporters: string[] }).supporters.map((sup, si) => (
+                <div key={si} className="supporter-item">
+                  <span className="supporter-dot" />
+                  {sup}
                 </div>
-              )}
-            </>
+              ))}
+            </div>
+          )}
+          {s.cta && s.cta.length > 0 && (
+            <div className="p-ctas">
+              {s.cta.map((c, ci) => (
+                <a key={ci} href={c.href || 'tel:+919486675847'} className={c.style === 'primary' ? 'btn-p' : 'btn-g'}>
+                  {c.label}
+                </a>
+              ))}
+            </div>
           )}
         </div>
-        );
+        )
       })}
 
-      {/* Outro — Full CTA + Footer */}
+      {/* ── Timeline Right Panel: card stack ── */}
+      <div ref={timelineRightRef} className="timeline-right">
+        <div className="timeline-card-stack">
+          {SECTIONS[4] && 'timeline' in SECTIONS[4] && (SECTIONS[4] as typeof SECTIONS[4] & { timeline: { year: string; desc: string }[] }).timeline.map((t, ti, arr) => (
+            <div key={ti} ref={el => { tlCardRefs.current[ti] = el }} className="tl-card-full">
+              <div className="tl-card-counter">{String(ti + 1).padStart(2, '0')} / {String(arr.length).padStart(2, '0')}</div>
+              <div className="tl-card-year">{t.year}</div>
+              <div className="tl-card-desc">{t.desc}</div>
+              <div className="tl-card-progress">
+                {arr.map((_, di) => (
+                  <span key={di} className={`tl-card-dot${di === ti ? ' active' : ''}`} />
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Outro overlay */}
       <div ref={outroRef} className="outro-panel">
-        {/* Logo */}
         <div className="o-logo">
-          <span className="o-logo-icon">S</span>
-          Susan Future Technologies
+          <img src="/SFT-logo-1.png" alt="SFT" className="o-logo-img" />
         </div>
 
-        {/* Eyebrow */}
         <div className="o-eyebrow">
           <span className="o-eyebrow-line" />
-          High Altitude Platform Systems
+          GET IN TOUCH
           <span className="o-eyebrow-line" />
         </div>
 
-        {/* Title */}
         <h2 className="o-title">
           Let&apos;s Build The<br />
           Next Layer of<br />
           <span className="oc">Connectivity.</span>
         </h2>
 
-        {/* Subtitle */}
         <p className="o-sub">
           Deployable communication systems, aerial monitoring, and HAPS infrastructure. Let&apos;s talk.
         </p>
 
-        {/* CTA buttons */}
         <div className="o-cta-row">
-          <a href="tel:+919486675847" className="btn-p">Request a Pilot</a>
-          <a href="mailto:info@susanfuturetechnologies.com" className="btn-g">Contact Us</a>
-          <a href="/hawke" className="btn-g">Explore HAWKE</a>
-          <a href="/mobius" className="btn-g">Explore MOBIUS</a>
+          <a href="mailto:info@susanfuturetechnologies.com" className="btn-p">Contact Us</a>
+          <a href="tel:+919486675847" className="btn-g">Request a Pilot</a>
+          <a href="/" className="btn-g">Home</a>
         </div>
 
-        {/* Divider */}
         <div className="o-divider" />
 
-        {/* Footer */}
         <div className="o-footer">
           <div className="o-footer-nav">
-            <a href="/about" className="o-footer-link">About</a>
+            <a href="/" className="o-footer-link">Home</a>
             <a href="/hawke" className="o-footer-link">HAWKE</a>
             <a href="/mobius" className="o-footer-link">MOBIUS</a>
-            <a href="/applications" className="o-footer-link">Applications</a>
-            <a href="/ecosystem" className="o-footer-link">Ecosystem</a>
+            <a href="/#" className="o-footer-link">Technology</a>
             <a href="mailto:info@susanfuturetechnologies.com" className="o-footer-link">Contact</a>
           </div>
           <div className="o-footer-info">
@@ -1429,7 +1516,11 @@ export default function SFTHomePage() {
           </div>
           <div className="o-footer-tagline">
             <span className="o-footer-dot" />
-            Persistent aerial systems for communication, monitoring, and high-altitude operations
+            Persistent Aerial Systems
+            <span className="o-footer-dot" />
+            HAPS
+            <span className="o-footer-dot" />
+            Communication
             <span className="o-footer-dot" />
           </div>
         </div>
