@@ -1236,7 +1236,7 @@ export default function HawkePage() {
         if (overlayRef.current) overlayRef.current.style.background = s.overlay
 
         /* panels */
-        panelRefs.current.forEach((p, i) => p?.classList.toggle('vis', i === newIdx))
+        panelRefs.current.forEach((p, i) => p?.classList.toggle('vis', i === newIdx && i !== 0))
 
         /* dots */
         dotRefs.current.forEach((d, i) => d?.classList.toggle('act', i === newIdx))

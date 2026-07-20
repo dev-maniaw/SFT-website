@@ -1154,7 +1154,7 @@ export default function MobiusPage() {
         }
         if (overlayRef.current) overlayRef.current.style.background = s.overlay
 
-        panelRefs.current.forEach((p, i) => p?.classList.toggle('vis', i === newIdx))
+        panelRefs.current.forEach((p, i) => p?.classList.toggle('vis', i === newIdx && i !== 0))
         dotRefs.current.forEach((d, i) => d?.classList.toggle('act', i === newIdx))
       }
 
