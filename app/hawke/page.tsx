@@ -1121,6 +1121,50 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
   color:rgba(74,199,255,0.45);margin-top:8px;
 }
 
+/* ── Mobile Responsive ── */
+.s-hamburger{
+  display:none;background:none;border:none;cursor:pointer;padding:8px;
+  flex-direction:column;gap:5px;z-index:101;
+}
+.s-hamburger span{
+  display:block;width:24px;height:2px;background:#F5F7FA;
+  transition:transform 0.3s ease, opacity 0.3s ease;
+}
+.s-hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.s-hamburger.open span:nth-child(2){opacity:0}
+.s-hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+.s-mobile-menu{
+  display:none;position:fixed;top:0;left:0;right:0;bottom:0;
+  background:rgba(5,5,5,0.96);z-index:99;
+  flex-direction:column;align-items:center;justify-content:center;gap:28px;
+  opacity:0;pointer-events:none;transition:opacity 0.3s ease;
+}
+.s-mobile-menu.open{opacity:1;pointer-events:auto}
+.s-mobile-menu a{
+  font-family:'Space Grotesk',sans-serif;font-size:1.4rem;
+  font-weight:500;letter-spacing:.2em;text-transform:uppercase;
+  color:rgba(255,255,255,0.8);text-decoration:none;transition:color 0.2s;
+}
+.s-mobile-menu a:hover{color:#4AC7FF}
+@media(max-width:768px){
+  .s-nav{padding:0 16px;height:56px}
+  .s-logo-img{height:38px}
+  .s-section{display:none}
+  .s-nav-right{display:none}
+  .s-hamburger{display:flex}
+  .s-mobile-menu{display:flex}
+  .p-panel{padding:0 20px}
+  .p-title{font-size:clamp(1.8rem,8vw,3rem)!important}
+  .p-body,.p-note{font-size:0.9rem!important;max-width:100%!important}
+  .p-chips{flex-wrap:wrap}
+  .i-title{font-size:clamp(2rem,10vw,3.5rem)!important}
+  .i-sub{font-size:0.9rem!important;max-width:90vw!important}
+  #dots{right:8px;gap:6px}
+  .dot{width:6px;height:6px}
+  .o-footer{padding:40px 20px!important}
+  .o-footer-grid{flex-direction:column!important;gap:24px!important}
+}
+
 `
 
 /* ═══════════════════════════════════════════════════════════════════
@@ -1129,6 +1173,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 export default function HawkePage() {
   /* ── Mobile detection ── */
   const [isMobile, setIsMobile] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
   const [activeStory, setActiveStory] = useState(0)
   const totalStories = SECTIONS.length + 1
 
@@ -1592,7 +1637,19 @@ export default function HawkePage() {
           <a href="/ecosystem" className="s-nav-link">Ecosystem</a>
           <a href="tel:+919486675847" className="s-cta-btn">Request Pilot</a>
         </div>
+        <button className={`s-hamburger${menuOpen?' open':''}`} onClick={()=>setMenuOpen(!menuOpen)} aria-label="Menu">
+          <span /><span /><span />
+        </button>
       </nav>
+      <div className={`s-mobile-menu${menuOpen?' open':''}`}>
+        <a href="/" onClick={()=>setMenuOpen(false)}>Home</a>
+        <a href="/about" onClick={()=>setMenuOpen(false)}>About</a>
+        <a href="/mobius" onClick={()=>setMenuOpen(false)}>MOBIUS</a>
+        <a href="/applications" onClick={()=>setMenuOpen(false)}>Applications</a>
+        <a href="/ecosystem" onClick={()=>setMenuOpen(false)}>Ecosystem</a>
+        <a href="tel:+919486675847" onClick={()=>setMenuOpen(false)} style={{color:'#4AC7FF'}}>Request Pilot</a>
+      </div>
+
 
       {/* Progress bar */}
       <div id="prog"><div ref={fillRef} id="prog-fill" /></div>
