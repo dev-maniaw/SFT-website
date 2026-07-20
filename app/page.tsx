@@ -1226,7 +1226,7 @@ export default function SFTHomePage() {
         {/* Left: Logo */}
         <a href="/" className="s-logo" style={{textDecoration:"none"}}>
           <img src="/SFT-logo-1.png" alt="Susan Future Technologies" className="s-logo-img" />
-        </div>
+        </a>
 
         {/* Center: Section indicator */}
         <div className="s-section">

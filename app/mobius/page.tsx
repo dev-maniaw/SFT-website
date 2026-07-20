@@ -1473,7 +1473,7 @@ export default function MobiusPage() {
       <nav className="s-nav">
         <a href="/" className="s-logo" style={{textDecoration:"none"}}>
           <img src="/SFT-logo-1.png" alt="Susan Future Technologies" className="s-logo-img" />
-        </div>
+        </a>
 
         <div className="s-section">
           <span ref={ctrRef} className="s-sec-num">01 / 11</span>
