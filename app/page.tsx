@@ -698,7 +698,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
   font-size:9px;font-weight:700;color:#fff;
 }
 .m-header-cta{
-  font-family:'Space Grotesk',sans-serif;font-size:0.55rem;font-weight:700;
+  font-family:'Space Grotesk',sans-serif;font-size:0.75rem;font-weight:700;
   letter-spacing:.14em;text-transform:uppercase;
   background:linear-gradient(135deg,#4AC7FF,#2a9fd4);color:#050505;
   padding:7px 12px;border-radius:5px;text-decoration:none;
@@ -719,12 +719,12 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 }
 .m-sec-num{
   font-family:'Space Mono',monospace;
-  font-size:0.5rem;font-weight:400;letter-spacing:.1em;
+  font-size:0.72rem;font-weight:400;letter-spacing:.1em;
   color:rgba(255,255,255,0.35);margin-bottom:4px;
 }
 .m-sec-label{
   font-family:'Space Grotesk',sans-serif;
-  font-size:0.5rem;font-weight:500;letter-spacing:.24em;text-transform:uppercase;
+  font-size:0.72rem;font-weight:500;letter-spacing:.24em;text-transform:uppercase;
   color:#4AC7FF;margin-bottom:8px;
   display:flex;align-items:center;gap:8px;
 }
@@ -742,7 +742,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 }
 .m-sec-note{
   font-family:'Space Grotesk',sans-serif;
-  font-size:0.55rem;font-weight:400;color:rgba(74,199,255,0.75);
+  font-size:0.75rem;font-weight:400;color:rgba(74,199,255,0.75);
   letter-spacing:.08em;
   padding-top:6px;border-top:1px solid rgba(74,199,255,0.1);
   line-height:1.5;
@@ -768,8 +768,8 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 .m-sec-ctas{
   display:flex;gap:6px;margin-top:8px;flex-wrap:wrap;
 }
-.m-sec-ctas .btn-p{font-size:0.55rem;padding:8px 14px}
-.m-sec-ctas .btn-g{font-size:0.55rem;padding:8px 14px}
+.m-sec-ctas .btn-p{font-size:0.75rem;padding:8px 14px}
+.m-sec-ctas .btn-g{font-size:0.75rem;padding:8px 14px}
 
 /* ── Mobile updates cards ── */
 .m-upd-grid{display:flex;flex-direction:row;gap:8px;margin-top:8px;overflow-x:auto}
@@ -834,7 +834,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
   display:flex;flex-direction:column;gap:8px;width:100%;max-width:260px;margin-bottom:20px;
 }
 .m-outro-ctas .btn-p,.m-outro-ctas .btn-g{
-  width:100%;text-align:center;padding:12px 20px;font-size:0.55rem;
+  width:100%;text-align:center;padding:12px 20px;font-size:0.75rem;
 }
 .m-outro-footer{
   margin-top:auto;

@@ -296,7 +296,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 
 .p-title{
   font-family:'Space Grotesk',sans-serif;
-  font-size:clamp(2rem,3.5vw,3.5rem);
+  font-size:clamp(2.8rem,4.5vw,5rem);
   font-weight:300;line-height:1.08;letter-spacing:-0.03em;
   color:#F5F7FA;white-space:pre-line;margin-bottom:14px;
   text-transform:uppercase;
@@ -314,7 +314,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 
 .p-note{
   font-family:'Space Grotesk',sans-serif;
-  font-size:0.72rem;font-weight:400;color:rgba(74,199,255,0.85);
+  font-size:0.82rem;font-weight:400;color:rgba(74,199,255,0.85);
   letter-spacing:.08em;padding-top:10px;
   border-top:1px solid rgba(74,199,255,0.12);
   max-width:380px;line-height:1.5;
@@ -484,7 +484,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 }
 .tl-card-counter{
   font-family:'Space Mono',monospace;
-  font-size:0.65rem;font-weight:400;letter-spacing:.1em;
+  font-size:0.78rem;font-weight:400;letter-spacing:.1em;
   color:rgba(255,255,255,0.35);margin-bottom:10px;
 }
 .tl-card-year{
@@ -755,7 +755,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 }
 .m-header-logo-img{height:28px;width:auto;object-fit:contain}
 .m-header-cta{
-  font-family:'Space Grotesk',sans-serif;font-size:0.55rem;font-weight:700;
+  font-family:'Space Grotesk',sans-serif;font-size:0.75rem;font-weight:700;
   letter-spacing:.14em;text-transform:uppercase;
   background:transparent;color:#4AC7FF;
   border:1px solid rgba(74,199,255,0.4);
@@ -777,12 +777,12 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 }
 .m-sec-num{
   font-family:'Space Mono',monospace;
-  font-size:0.5rem;font-weight:400;letter-spacing:.1em;
+  font-size:0.82rem;font-weight:400;letter-spacing:.1em;
   color:rgba(255,255,255,0.35);margin-bottom:4px;
 }
 .m-sec-label{
   font-family:'Space Grotesk',sans-serif;
-  font-size:0.5rem;font-weight:500;letter-spacing:.24em;text-transform:uppercase;
+  font-size:0.82rem;font-weight:500;letter-spacing:.24em;text-transform:uppercase;
   color:#4AC7FF;margin-bottom:8px;
   display:flex;align-items:center;gap:8px;
 }
@@ -800,7 +800,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 }
 .m-sec-note{
   font-family:'Space Grotesk',sans-serif;
-  font-size:0.55rem;font-weight:400;color:rgba(74,199,255,0.75);
+  font-size:0.75rem;font-weight:400;color:rgba(74,199,255,0.75);
   letter-spacing:.08em;
   padding-top:6px;border-top:1px solid rgba(74,199,255,0.1);
   line-height:1.5;
@@ -826,8 +826,8 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 .m-sec-ctas{
   display:flex;gap:6px;margin-top:8px;flex-wrap:wrap;
 }
-.m-sec-ctas .btn-p{font-size:0.55rem;padding:8px 14px}
-.m-sec-ctas .btn-g{font-size:0.55rem;padding:8px 14px}
+.m-sec-ctas .btn-p{font-size:0.75rem;padding:8px 14px}
+.m-sec-ctas .btn-g{font-size:0.75rem;padding:8px 14px}
 
 /* ── Mobile metrics ── */
 .m-metrics-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;margin-top:8px}
@@ -840,7 +840,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
   font-family:'Space Mono',monospace;font-size:1rem;font-weight:700;color:#4AC7FF;margin-bottom:4px;
 }
 .m-metric-desc{
-  font-family:'Inter',sans-serif;font-size:0.6rem;color:rgba(167,175,187,0.88);line-height:1.4;
+  font-family:'Inter',sans-serif;font-size:0.78rem;color:rgba(167,175,187,0.88);line-height:1.4;
 }
 
 /* ── Mobile timeline ── */
@@ -855,7 +855,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
   font-family:'Space Mono',monospace;font-size:0.85rem;font-weight:700;color:#4AC7FF;flex-shrink:0;
 }
 .m-tl-desc{
-  font-family:'Inter',sans-serif;font-size:0.65rem;color:rgba(167,175,187,0.88);line-height:1.45;
+  font-family:'Inter',sans-serif;font-size:0.78rem;color:rgba(167,175,187,0.88);line-height:1.45;
 }
 
 /* ── Mobile partners ── */
@@ -865,7 +865,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
   border:1px solid rgba(74,199,255,0.1);
   border-radius:8px;padding:10px 8px;text-align:center;
   font-family:'Space Grotesk',sans-serif;
-  font-size:0.6rem;font-weight:500;letter-spacing:.08em;
+  font-size:0.78rem;font-weight:500;letter-spacing:.08em;
   color:rgba(255,255,255,0.7);text-transform:uppercase;
 }
 
@@ -896,7 +896,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
   display:flex;flex-direction:column;gap:8px;width:100%;max-width:260px;margin-bottom:20px;
 }
 .m-outro-ctas .btn-p,.m-outro-ctas .btn-g{
-  width:100%;text-align:center;padding:12px 20px;font-size:0.55rem;
+  width:100%;text-align:center;padding:12px 20px;font-size:0.75rem;
 }
 .m-outro-footer{
   margin-top:auto;
