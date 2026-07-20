@@ -684,25 +684,38 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 .m-header{
   position:relative;z-index:50;
   display:flex;align-items:center;justify-content:space-between;
-  padding:20px 16px 0;
+  padding:16px 16px 0;
 }
 .m-header-logo{
-  font-family:'Space Grotesk',sans-serif;font-size:0.7rem;font-weight:600;
-  color:#F5F7FA;display:flex;align-items:center;gap:4px;
-  letter-spacing:.08em;text-transform:uppercase;
+  display:flex;align-items:center;text-decoration:none;
 }
-.m-header-icon{
-  width:22px;height:22px;border-radius:4px;
-  background:linear-gradient(135deg,#4AC7FF,#08111F);
-  display:flex;align-items:center;justify-content:center;
-  font-size:9px;font-weight:700;color:#fff;
+.m-header-logo img{
+  height:38px;width:auto;object-fit:contain;mix-blend-mode:screen;
 }
-.m-header-cta{
-  font-family:'Space Grotesk',sans-serif;font-size:0.95rem;font-weight:700;
-  letter-spacing:.14em;text-transform:uppercase;
-  background:linear-gradient(135deg,#4AC7FF,#2a9fd4);color:#050505;
-  padding:7px 12px;border-radius:5px;text-decoration:none;
+.m-hamburger{
+  background:none;border:none;cursor:pointer;padding:8px;
+  display:flex;flex-direction:column;gap:5px;z-index:101;
 }
+.m-hamburger span{
+  display:block;width:24px;height:2px;background:#F5F7FA;
+  transition:transform 0.3s ease, opacity 0.3s ease;
+}
+.m-hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.m-hamburger.open span:nth-child(2){opacity:0}
+.m-hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+.m-mobile-overlay{
+  position:fixed;top:0;left:0;right:0;bottom:0;z-index:100;
+  background:rgba(5,5,5,0.96);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;
+  opacity:0;pointer-events:none;transition:opacity 0.3s ease;
+}
+.m-mobile-overlay.open{opacity:1;pointer-events:auto}
+.m-mobile-overlay a{
+  font-family:'Space Grotesk',sans-serif;font-size:1.3rem;
+  font-weight:500;letter-spacing:.2em;text-transform:uppercase;
+  color:rgba(255,255,255,0.8);text-decoration:none;transition:color 0.2s;
+}
+.m-mobile-overlay a:hover{color:#4AC7FF}
 
 /* ── Story content (bottom anchored) ── */
 .m-content{
@@ -808,15 +821,10 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
   flex:1;padding:60px 20px 36px;text-align:center;
 }
 .m-outro-logo{
-  font-family:'Space Grotesk',sans-serif;font-size:0.7rem;font-weight:600;
-  color:#F5F7FA;display:flex;align-items:center;gap:4px;margin-bottom:14px;
-  letter-spacing:.08em;text-transform:uppercase;
+  display:flex;align-items:center;margin-bottom:14px;
 }
-.m-outro-icon{
-  width:22px;height:22px;border-radius:4px;
-  background:linear-gradient(135deg,#4AC7FF,#08111F);
-  display:flex;align-items:center;justify-content:center;
-  font-size:9px;font-weight:700;color:#fff;
+.m-outro-logo img{
+  height:42px;width:auto;object-fit:contain;mix-blend-mode:screen;
 }
 .m-outro-title{
   font-family:'Space Grotesk',sans-serif;
@@ -1091,13 +1099,20 @@ export default function SFTHomePage() {
 
               {/* Header */}
               <div className="m-header">
-                <div className="m-header-logo">
-                  <span className="m-header-icon">S</span>
-                  SFT
-                </div>
-                <a href="#contact" className="m-header-cta">
-                  Request Pilot
+                <a href="/" className="m-header-logo">
+                  <img src="/SFT-logo-1.png" alt="SFT" />
                 </a>
+                <button className={`m-hamburger${menuOpen?' open':''}`} onClick={()=>setMenuOpen(!menuOpen)} aria-label="Menu">
+                  <span /><span /><span />
+                </button>
+              </div>
+              <div className={`m-mobile-overlay${menuOpen?' open':''}`}>
+                <a href="/about" onClick={()=>setMenuOpen(false)}>About</a>
+                <a href="/hawke" onClick={()=>setMenuOpen(false)}>HAWKE</a>
+                <a href="/mobius" onClick={()=>setMenuOpen(false)}>MOBIUS</a>
+                <a href="/applications" onClick={()=>setMenuOpen(false)}>Applications</a>
+                <a href="/ecosystem" onClick={()=>setMenuOpen(false)}>Ecosystem</a>
+                <a href="tel:+919486675847" onClick={()=>setMenuOpen(false)} style={{color:'#4AC7FF'}}>Request Pilot</a>
               </div>
 
               {/* Tap zones */}
@@ -1168,12 +1183,29 @@ export default function SFTHomePage() {
             <div className="m-slide-bg" style={{ backgroundImage: `url(${SECTIONS[0].img})` }} />
             <div className="m-slide-overlay" style={{ background: 'rgba(5,5,5,0.92)' }} />
 
+            {/* Header */}
+            <div className="m-header">
+              <a href="/" className="m-header-logo">
+                <img src="/SFT-logo-1.png" alt="SFT" />
+              </a>
+              <button className={`m-hamburger${menuOpen?' open':''}`} onClick={()=>setMenuOpen(!menuOpen)} aria-label="Menu">
+                <span /><span /><span />
+              </button>
+            </div>
+            <div className={`m-mobile-overlay${menuOpen?' open':''}`}>
+              <a href="/about" onClick={()=>setMenuOpen(false)}>About</a>
+              <a href="/hawke" onClick={()=>setMenuOpen(false)}>HAWKE</a>
+              <a href="/mobius" onClick={()=>setMenuOpen(false)}>MOBIUS</a>
+              <a href="/applications" onClick={()=>setMenuOpen(false)}>Applications</a>
+              <a href="/ecosystem" onClick={()=>setMenuOpen(false)}>Ecosystem</a>
+              <a href="tel:+919486675847" onClick={()=>setMenuOpen(false)} style={{color:'#4AC7FF'}}>Request Pilot</a>
+            </div>
+
             <div className="m-tap-left" onClick={goPrev} />
 
             <div className="m-outro-content">
               <div className="m-outro-logo">
-                <span className="m-outro-icon">S</span>
-                Susan Future Technologies
+                <img src="/SFT-logo-1.png" alt="Susan Future Technologies" />
               </div>
               <h2 className="m-outro-title">
                 Let&apos;s Build The<br />

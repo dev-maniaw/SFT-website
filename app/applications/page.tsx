@@ -838,10 +838,41 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 .m-tap-left{left:0;width:30%}
 .m-tap-right{right:0;width:70%}
 
-.m-header{position:relative;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:20px 16px 0}
-.m-header-logo{display:flex;align-items:center}
-.m-header-logo-img{height:28px;width:auto;object-fit:contain}
-.m-header-cta{font-family:'Space Grotesk',sans-serif;font-size:0.95rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;background:transparent;color:#4AC7FF;border:1px solid rgba(74,199,255,0.4);padding:7px 12px;border-radius:50px;text-decoration:none}
+.m-header{
+  position:relative;z-index:50;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:16px 16px 0;
+}
+.m-header-logo{
+  display:flex;align-items:center;text-decoration:none;
+}
+.m-header-logo img{
+  height:38px;width:auto;object-fit:contain;mix-blend-mode:screen;
+}
+.m-hamburger{
+  background:none;border:none;cursor:pointer;padding:8px;
+  display:flex;flex-direction:column;gap:5px;z-index:101;
+}
+.m-hamburger span{
+  display:block;width:24px;height:2px;background:#F5F7FA;
+  transition:transform 0.3s ease, opacity 0.3s ease;
+}
+.m-hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.m-hamburger.open span:nth-child(2){opacity:0}
+.m-hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+.m-mobile-overlay{
+  position:fixed;top:0;left:0;right:0;bottom:0;z-index:100;
+  background:rgba(5,5,5,0.96);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;
+  opacity:0;pointer-events:none;transition:opacity 0.3s ease;
+}
+.m-mobile-overlay.open{opacity:1;pointer-events:auto}
+.m-mobile-overlay a{
+  font-family:'Space Grotesk',sans-serif;font-size:1.3rem;
+  font-weight:500;letter-spacing:.2em;text-transform:uppercase;
+  color:rgba(255,255,255,0.8);text-decoration:none;transition:color 0.2s;
+}
+.m-mobile-overlay a:hover{color:#4AC7FF}
 
 .m-content{position:relative;z-index:30;margin-top:auto;padding:0 12px 20px}
 .m-content-inner{background:rgba(5,5,5,.5);border:1px solid rgba(74,199,255,0.08);border-radius:14px;padding:16px}
@@ -1123,9 +1154,21 @@ export default function ApplicationsPage() {
               <div className="m-tap-left" onClick={goPrev} />
               <div className="m-tap-right" onClick={goNext} />
               <div className="m-header">
-                <div className="m-header-logo"><img src="/SFT-logo-1.png" alt="SFT" className="m-header-logo-img" /></div>
-                <a href="/" className="m-header-cta">Home</a>
-              </div>
+                              <a href="/" className="m-header-logo">
+                                <img src="/SFT-logo-1.png" alt="SFT" />
+                              </a>
+                              <button className={`m-hamburger${menuOpen?' open':''}`} onClick={()=>setMenuOpen(!menuOpen)} aria-label="Menu">
+                                <span /><span /><span />
+                              </button>
+                            </div>
+                            <div className={`m-mobile-overlay${menuOpen?' open':''}`}>
+                              <a href="/" onClick={()=>setMenuOpen(false)}>Home</a>
+                              <a href="/about" onClick={()=>setMenuOpen(false)}>About</a>
+                              <a href="/hawke" onClick={()=>setMenuOpen(false)}>HAWKE</a>
+                              <a href="/mobius" onClick={()=>setMenuOpen(false)}>MOBIUS</a>
+                              <a href="/ecosystem" onClick={()=>setMenuOpen(false)}>Ecosystem</a>
+                              <a href="tel:+919486675847" onClick={()=>setMenuOpen(false)} style={{color:'#4AC7FF'}}>Request Pilot</a>
+                            </div>
               <div className="m-content">
                 <div className="m-content-inner">
                   <div className="m-sec-num">— {s.num}</div>
@@ -1226,9 +1269,21 @@ export default function ApplicationsPage() {
             <div className="m-tap-left" onClick={goPrev} />
             <div className="m-tap-right" onClick={goNext} />
             <div className="m-header">
-              <div className="m-header-logo"><img src="/SFT-logo-1.png" alt="SFT" className="m-header-logo-img" /></div>
-              <a href="/" className="m-header-cta">Home</a>
-            </div>
+                            <a href="/" className="m-header-logo">
+                              <img src="/SFT-logo-1.png" alt="SFT" />
+                            </a>
+                            <button className={`m-hamburger${menuOpen?' open':''}`} onClick={()=>setMenuOpen(!menuOpen)} aria-label="Menu">
+                              <span /><span /><span />
+                            </button>
+                          </div>
+                          <div className={`m-mobile-overlay${menuOpen?' open':''}`}>
+                            <a href="/" onClick={()=>setMenuOpen(false)}>Home</a>
+                            <a href="/about" onClick={()=>setMenuOpen(false)}>About</a>
+                            <a href="/hawke" onClick={()=>setMenuOpen(false)}>HAWKE</a>
+                            <a href="/mobius" onClick={()=>setMenuOpen(false)}>MOBIUS</a>
+                            <a href="/ecosystem" onClick={()=>setMenuOpen(false)}>Ecosystem</a>
+                            <a href="tel:+919486675847" onClick={()=>setMenuOpen(false)} style={{color:'#4AC7FF'}}>Request Pilot</a>
+                          </div>
             <div className="m-outro-content">
               <div className="m-outro-logo"><img src="/SFT-logo-1.png" alt="SFT" className="m-outro-logo-img" /></div>
               <h2 className="m-outro-title">
