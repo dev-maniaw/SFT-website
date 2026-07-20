@@ -788,7 +788,7 @@ export default function EcosystemPage() {
 
       {/* Nav */}
       <nav className="s-nav">
-        <a href="/" className="s-logo" style={{textDecoration:"none"}}><img src="/SFT-logo-1.png" alt="Susan Future Technologies" className="s-logo-img" /></div>
+        <a href="/" className="s-logo" style={{textDecoration:"none"}}><img src="/SFT-logo-1.png" alt="Susan Future Technologies" className="s-logo-img" /></a>
         <div className="s-section">
           <span ref={ctrRef} className="s-sec-num">01 / 10</span>
           <span className="s-sep" />
