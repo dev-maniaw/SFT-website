@@ -17,7 +17,7 @@ const SECTIONS = [
     chips: [],
     pos: 'left' as const,
     bgPos: 'right center',
-    img: '/sft/about/story.png',
+    img: '/sft/about-new/our-story.png',
     overlay: 'linear-gradient(90deg, rgba(5,5,5,0.94) 0%, rgba(5,5,5,0.82) 38%, rgba(5,5,5,0.3) 65%, transparent 100%)',
     eyebrow: 'OUR STORY',
     cta: [{ label: 'Explore HAWKE', style: 'primary', href: 'tel:+919486675847' }],
@@ -107,7 +107,7 @@ const SECTIONS = [
     chips: [],
     pos: 'right' as const,
     bgPos: 'left center',
-    img: '/sft/about/investors.png',
+    img: '/sft/about-new/investors.png',
     overlay: 'linear-gradient(270deg, rgba(5,5,5,0.94) 0%, rgba(5,5,5,0.82) 38%, rgba(5,5,5,0.3) 65%, transparent 100%)',
     eyebrow: 'INVESTORS & ECOSYSTEM',
     cta: [{ label: 'Learn More', style: 'ghost', href: 'mailto:info@susanfuturetechnologies.com' }],
@@ -121,7 +121,7 @@ const SECTIONS = [
     chips: [],
     pos: 'left' as const,
     bgPos: 'right center',
-    img: '/sft/about/team.png',
+    img: '/sft/about-new/team.png',
     overlay: 'linear-gradient(90deg, rgba(5,5,5,0.94) 0%, rgba(5,5,5,0.82) 38%, rgba(5,5,5,0.3) 65%, transparent 100%)',
     eyebrow: 'OUR TEAM',
     cta: [{ label: 'Contact Us', style: 'primary', href: 'mailto:info@susanfuturetechnologies.com' }],
@@ -1340,7 +1340,7 @@ export default function AboutPage() {
           ref={bgLayerARef}
           className="bg-inner-a"
           style={{
-            backgroundImage: `url(/sft/about/hero.png)`,
+            backgroundImage: `url(/sft/about-new/hero-banner.png)`,
             backgroundSize: 'cover',
             backgroundPosition: 'center center',
             opacity: 1,
