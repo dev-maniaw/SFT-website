@@ -25,7 +25,7 @@ const SECTIONS = [
     img: '/sft/hawke/capabilities.png',
     overlay: 'radial-gradient(ellipse at center, rgba(5,5,5,0.84) 0%, rgba(5,5,5,0.62) 40%, rgba(5,5,5,0.25) 65%, transparent 100%)',
     eyebrow: 'WHAT HAWKE DELIVERS',
-    cta: [],
+    cta: [] as { label: string; style: string; href: string }[],
   },
   {
     num: '02', label: 'Missions',
