@@ -1465,43 +1465,6 @@ export default function SFTHomePage() {
 
       {/* Outro — Full CTA + Footer */}
       <div ref={outroRef} className="outro-panel">
-        {/* Logo */}
-        <div className="o-logo">
-          <span className="o-logo-icon">S</span>
-          Susan Future Technologies
-        </div>
-
-        {/* Eyebrow */}
-        <div className="o-eyebrow">
-          <span className="o-eyebrow-line" />
-          High Altitude Platform Systems
-          <span className="o-eyebrow-line" />
-        </div>
-
-        {/* Title */}
-        <h2 className="o-title">
-          Let&apos;s Build The<br />
-          Next Layer of<br />
-          <span className="oc">Connectivity.</span>
-        </h2>
-
-        {/* Subtitle */}
-        <p className="o-sub">
-          Deployable communication systems, aerial monitoring, and HAPS infrastructure. Let&apos;s talk.
-        </p>
-
-        {/* CTA buttons */}
-        <div className="o-cta-row">
-          <a href="tel:+919486675847" className="btn-p">Request a Pilot</a>
-          <a href="mailto:info@susanfuturetechnologies.com" className="btn-g">Contact Us</a>
-          <a href="/hawke" className="btn-g">Explore HAWKE</a>
-          <a href="/mobius" className="btn-g">Explore MOBIUS</a>
-        </div>
-
-        {/* Divider */}
-        <div className="o-divider" />
-
-        {/* Footer */}
         <div className="o-footer">
           <div className="o-footer-nav">
             <a href="/about" className="o-footer-link">About</a>
