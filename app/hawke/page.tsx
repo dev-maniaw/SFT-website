@@ -26,20 +26,7 @@ const SECTIONS = [
     ],
   },
   {
-    num: '02', label: 'Value',
-    title: 'RAPIDLY\nDEPLOYABLE.\nPERSISTENT\nBY DESIGN.',
-    body: 'Connectivity shouldn\'t depend on infrastructure that takes months to build — or systems that last minutes in the air. HAWKE bridges the gap between grounded towers and short-endurance drones.',
-    note: '',
-    chips: [],
-    pos: 'left' as const,
-    bgPos: 'right center',
-    img: '/sft/hawke/value.png',
-    overlay: 'linear-gradient(90deg, rgba(5,5,5,0.94) 0%, rgba(5,5,5,0.82) 38%, rgba(5,5,5,0.3) 65%, transparent 100%)',
-    eyebrow: 'VALUE PROPOSITION',
-    cta: [],
-  },
-  {
-    num: '03', label: 'Capabilities',
+    num: '02', label: 'Capabilities',
     title: 'CORE\nCAPABILITIES',
     body: '',
     note: '',
@@ -57,7 +44,7 @@ const SECTIONS = [
     cta: [],
   },
   {
-    num: '04', label: 'Missions',
+    num: '03', label: 'Missions',
     title: 'MISSION\nPROFILES',
     body: 'From disaster zones to defence perimeters, industrial sites to environmental frontlines — HAWKE is built for the missions that can\'t wait.',
     note: '',
@@ -75,7 +62,7 @@ const SECTIONS = [
     cta: [],
   },
   {
-    num: '05', label: 'Architecture',
+    num: '04', label: 'Architecture',
     title: 'HOW HAWKE\nWORKS',
     body: 'An integrated system of five components working together — from the lighter-than-air envelope to the ground control station.',
     note: 'Aerostat Envelope · Tether System · Payload Bay · GCS · Power',
@@ -88,7 +75,7 @@ const SECTIONS = [
     cta: [],
   },
   {
-    num: '06', label: 'Performance',
+    num: '05', label: 'Performance',
     title: 'PERFORMANCE\nSPECS',
     body: '',
     note: '',
@@ -106,7 +93,7 @@ const SECTIONS = [
     cta: [],
   },
   {
-    num: '07', label: 'Deployment',
+    num: '06', label: 'Deployment',
     title: 'FIELD-READY\nIN UNDER\n3 HOURS',
     body: 'Transport → Position → Inflate → Operate. HAWKE deploys from a standard vehicle platform with a small ground crew.',
     note: '',
@@ -124,7 +111,7 @@ const SECTIONS = [
     cta: [],
   },
   {
-    num: '08', label: 'Advantages',
+    num: '07', label: 'Advantages',
     title: 'WHY NOT\nJUST USE A\nDRONE?',
     body: 'Drones are limited by battery. Towers are fixed. Satellites are distant. HAWKE operates in the gap — persistent, deployable, and cost-effective.',
     note: '',
@@ -137,7 +124,7 @@ const SECTIONS = [
     cta: [],
   },
   {
-    num: '09', label: 'Validation',
+    num: '08', label: 'Validation',
     title: 'TESTED.\nVALIDATED.\nDEPLOYED.',
     body: 'HAWKE has been field-tested across multiple environments. Every subsystem has undergone rigorous validation.',
     note: 'Moving toward TRL 9 operational readiness',

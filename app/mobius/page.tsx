@@ -19,19 +19,7 @@ const SECTIONS = [
     cta: [{ label: 'Request a Pilot', style: 'primary', href: 'tel:+919486675847' }, { label: 'Contact Us', style: 'ghost', href: 'mailto:info@susanfuturetechnologies.com' }],
   },
   {
-    num: '02', label: 'Vision',
-    title: 'BEYOND\nGROUND.\nBEYOND ORBIT\nLIMITATIONS.',
-    body: 'The stratosphere remains the most underutilized operational layer in our infrastructure stack. MOBIUS is designed to fill this gap — a persistent, scalable platform operating above weather and beyond terrestrial limits.',
-    note: '',
-    chips: [],
-    pos: 'left' as const, bgPos: 'right center',
-    img: '/sft/mobius/vision.png',
-    overlay: 'linear-gradient(90deg, rgba(5,5,5,0.94) 0%, rgba(5,5,5,0.82) 38%, rgba(5,5,5,0.3) 65%, transparent 100%)',
-    eyebrow: 'CORE VISION',
-    cta: [],
-  },
-  {
-    num: '03', label: 'Metrics',
+    num: '02', label: 'Metrics',
     title: 'KEY\nCAPABILITIES',
     body: '',
     note: '',
@@ -48,7 +36,7 @@ const SECTIONS = [
     cta: [],
   },
   {
-    num: '04', label: 'Platform',
+    num: '03', label: 'Platform',
     title: 'A NEW LAYER\nOF AERIAL\nINFRASTRUCTURE',
     body: 'MOBIUS is not an aircraft. It is an infrastructure platform — a reusable, station-keeping system that operates in the stratosphere to provide persistent coverage, sensing, and relay capabilities.',
     note: '',
@@ -60,7 +48,7 @@ const SECTIONS = [
     cta: [],
   },
   {
-    num: '05', label: 'Problem',
+    num: '04', label: 'Problem',
     title: 'WHY IT\nMATTERS',
     body: 'Ground infrastructure is terrain-limited and expensive to scale. Drones are short-endurance and low-altitude. Satellites are distant, latency-bound, and costly to deploy. MOBIUS operates in the gap.',
     note: '',
@@ -72,7 +60,7 @@ const SECTIONS = [
     cta: [],
   },
   {
-    num: '06', label: 'Architecture',
+    num: '05', label: 'Architecture',
     title: 'PLATFORM\nARCHITECTURE',
     body: 'Five integrated systems working in concert — lighter-than-air structure, autonomous flight control, modular payload bay, energy management, and ground operations.',
     note: 'LTA Structure · Autonomous Control · Payload Bay · Energy · Ground Ops',
@@ -84,7 +72,7 @@ const SECTIONS = [
     cta: [],
   },
   {
-    num: '07', label: 'Capabilities',
+    num: '06', label: 'Capabilities',
     title: 'WHAT MOBIUS\nDELIVERS',
     body: '',
     note: '',
@@ -101,7 +89,7 @@ const SECTIONS = [
     cta: [],
   },
   {
-    num: '08', label: 'Applications',
+    num: '07', label: 'Applications',
     title: 'MISSION\nAPPLICATIONS',
     body: 'From telecom backhaul to defence surveillance, environmental monitoring to disaster response — MOBIUS adapts to the mission.',
     note: '',
@@ -118,7 +106,7 @@ const SECTIONS = [
     cta: [],
   },
   {
-    num: '09', label: 'Roadmap',
+    num: '08', label: 'Roadmap',
     title: 'DEVELOPMENT\nROADMAP',
     body: 'MOBIUS is under active development, progressing through three phases: subsystem validation, integrated flight testing, and operational deployment.',
     note: 'Phase 1: Subsystem → Phase 2: Integration → Phase 3: Operations',
@@ -130,7 +118,7 @@ const SECTIONS = [
     cta: [],
   },
   {
-    num: '10', label: 'Future',
+    num: '09', label: 'Future',
     title: 'TOWARD A\nNEW\nCONNECTIVITY\nLAYER',
     body: 'A fleet of MOBIUS platforms forming a persistent network in the stratosphere — extending connectivity, intelligence, and coverage to every corner of the Earth.',
     note: '',
