@@ -31,10 +31,10 @@ const ICON: Record<string, string> = {
   satellite: 'M13 9h-2V7h2v2zm0 2h-2v6h2v-6zm4-2V3H7v6l5 5 5-5zm-2-4v2.17l-3 3-3-3V5h6z',
   helicopter: 'M22 11h-6V9h6V7H4v2h6v2H4v2h7v2H9l-3 3v1h12v-1l-3-3h-2v-2h9v-2z',
 }
-function SvgIcon({ name, size = 28 }: { name: string; size?: number }) {
+function SvgIcon({ name, size = 22 }: { name: string; size?: number }) {
   const d = ICON[name]
   if (!d) return <span style={{width:size,height:size,display:'inline-block'}} />
-  return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d={d} fill="currentColor" stroke="none" /></svg>
+  return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d={d} fill="none" /></svg>
 }
 
 /* ═══════════════════════════════════════════════════════════════════
@@ -451,7 +451,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 .app-pillar-header{
   display:flex;align-items:center;gap:12px;margin-bottom:10px;margin-top:4px;
 }
-.app-pillar-icon{font-size:1.3rem}
+.app-pillar-icon{color:#4AC7FF;display:flex;align-items:center}
 .app-pillar-num{
   font-family:'Space Mono',monospace;
   font-size:0.95rem;font-weight:400;letter-spacing:.1em;
@@ -510,7 +510,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
   transform:translateY(-3px);
 }
 .payload-icon{
-  font-size:1.5rem;margin-bottom:12px;
+  color:#4AC7FF;margin-bottom:12px;
   display:flex;align-items:center;justify-content:center;
   width:44px;height:44px;margin:0 auto 12px;
   background:rgba(10,15,20,0.82);
@@ -585,7 +585,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
   background:rgba(74,199,255,0.1);
   border-color:rgba(74,199,255,0.25);
 }
-.scenario-icon{font-size:1.3rem;margin-bottom:10px}
+.scenario-icon{color:#4AC7FF;margin-bottom:10px;display:flex;align-items:center;justify-content:center}
 .scenario-title{
   font-family:'Space Grotesk',sans-serif;
   font-size:0.7rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
@@ -863,7 +863,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 .m-app-pillars{display:flex;flex-direction:column;gap:6px;margin-top:8px;max-height:220px;overflow-y:auto}
 .m-app-pillar{background:rgba(10,15,20,0.8);border:1px solid rgba(74,199,255,0.08);border-radius:8px;padding:10px 12px}
 .m-app-pillar-header{display:flex;align-items:center;gap:6px;margin-bottom:4px}
-.m-app-pillar-icon{font-size:0.95rem}
+.m-app-pillar-icon{color:#4AC7FF;display:flex;align-items:center}
 .m-app-pillar-title{font-family:'Space Grotesk',sans-serif;font-size:0.95rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#F5F7FA}
 .m-app-pillar-body{font-family:'Inter',sans-serif;font-size:0.95rem;color:rgba(167,175,187,0.88);line-height:1.4;margin-bottom:6px}
 .m-app-pillar-caps{display:flex;flex-wrap:wrap;gap:3px}
@@ -871,7 +871,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 
 .m-payload-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;margin-top:8px}
 .m-payload-card{background:rgba(10,15,20,0.82);border:1px solid rgba(74,199,255,0.1);border-radius:8px;padding:10px 8px;text-align:center}
-.m-payload-icon{font-size:1rem;margin-bottom:4px}
+.m-payload-icon{color:#4AC7FF;margin-bottom:4px;display:flex;align-items:center;justify-content:center}
 .m-payload-title{font-family:'Space Grotesk',sans-serif;font-size:0.95rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#4AC7FF;margin-bottom:4px}
 .m-payload-desc{font-family:'Inter',sans-serif;font-size:0.95rem;color:rgba(167,175,187,0.88);line-height:1.4}
 
@@ -882,7 +882,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 
 .m-scenario-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;margin-top:8px}
 .m-scenario-tile{background:rgba(10,15,20,0.82);border:1px solid rgba(74,199,255,0.1);border-radius:8px;padding:10px 8px;text-align:center}
-.m-scenario-icon{font-size:0.95rem;margin-bottom:4px}
+.m-scenario-icon{color:#4AC7FF;margin-bottom:4px;display:flex;align-items:center;justify-content:center}
 .m-scenario-title{font-family:'Space Grotesk',sans-serif;font-size:0.95rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#F5F7FA;margin-bottom:4px}
 .m-scenario-desc{font-family:'Inter',sans-serif;font-size:0.95rem;color:rgba(167,175,187,0.88);line-height:1.4}
 
@@ -1202,7 +1202,7 @@ export default function ApplicationsPage() {
                     <div className="m-scenario-grid">
                       {(s.scenarios as ScenarioItem[]).map((sc, si) => (
                         <div key={si} className="m-scenario-tile">
-                          <div className="m-scenario-icon">{sc.icon}</div>
+                          <div className="m-scenario-icon"><SvgIcon name={sc.icon} /></div>
                           <div className="m-scenario-title">{sc.title}</div>
                           <div className="m-scenario-desc">{sc.desc}</div>
                         </div>
@@ -1458,7 +1458,7 @@ export default function ApplicationsPage() {
             <div className="scenario-grid">
               {(s.scenarios as ScenarioItem[]).map((sc, si) => (
                 <div key={si} className="scenario-tile">
-                  <div className="scenario-icon">{sc.icon}</div>
+                  <div className="scenario-icon"><SvgIcon name={sc.icon} /></div>
                   <div className="scenario-title">{sc.title}</div>
                   <div className="scenario-desc">{sc.desc}</div>
                 </div>
