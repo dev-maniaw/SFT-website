@@ -13,7 +13,7 @@ const SECTIONS = [
     note: 'Persistent, Scalable Aerial Infrastructure',
     chips: [],
     pos: 'center' as const, bgPos: 'center center',
-    img: '/sft/mobius/hero.png',
+    img: '/sft/mobius/hero-new.jpg',
     overlay: 'radial-gradient(ellipse at center, rgba(5,5,5,0.84) 0%, rgba(5,5,5,0.62) 40%, rgba(5,5,5,0.25) 65%, transparent 100%)',
     eyebrow: 'HIGH-ALTITUDE PLATFORM SYSTEM',
     cta: [{ label: 'Request a Pilot', style: 'primary', href: 'tel:+919486675847' }, { label: 'Contact Us', style: 'ghost', href: 'mailto:info@susanfuturetechnologies.com' }],

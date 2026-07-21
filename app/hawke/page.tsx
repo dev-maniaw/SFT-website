@@ -17,7 +17,7 @@ const SECTIONS = [
     chips: [],
     pos: 'center' as const,
     bgPos: 'center center',
-    img: '/sft/hawke/hero.png',
+    img: '/sft/hawke/hero-new.jpg',
     overlay: 'radial-gradient(ellipse at center, rgba(5,5,5,0.84) 0%, rgba(5,5,5,0.62) 40%, rgba(5,5,5,0.25) 65%, transparent 100%)',
     eyebrow: 'TETHERED AERIAL SYSTEM',
     cta: [
