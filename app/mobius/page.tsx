@@ -151,7 +151,7 @@ const CSS = `
 html{scroll-behavior:auto}
 body{background:#050505;color:#F5F7FA;overflow-x:hidden;font-family:'Inter',sans-serif}
 ::selection{background:rgba(74,199,255,0.25);color:#fff}
-.bg-layer{position:fixed;inset:0;z-index:1;background-size:cover;background-position:center;will-change:transform,opacity;transition:opacity 1.2s cubic-bezier(.16,1,.3,1)}
+.bg-layer{position:fixed;inset:-5%;z-index:1;width:110%;height:110%;background-size:cover;background-position:center;will-change:transform,opacity;transition:opacity 1.2s cubic-bezier(.16,1,.3,1)}
 .bg-overlay{position:fixed;inset:0;z-index:1;transition:opacity 1.2s cubic-bezier(.16,1,.3,1)}
 .vignette{position:fixed;inset:0;z-index:2;pointer-events:none;background:radial-gradient(ellipse at center,transparent 50%,rgba(5,5,5,0.5) 100%)}
 .scanlines{position:fixed;inset:0;z-index:3;pointer-events:none;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(74,199,255,0.008) 2px,rgba(74,199,255,0.008) 4px)}
