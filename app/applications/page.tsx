@@ -207,20 +207,7 @@ const SECTIONS: {
       { name: 'INDUSTRIAL', glow: false },
       { name: 'ENVIRONMENTAL', glow: false },
     ],
-  },
-  {
-    num: '08', label: 'Connect',
-    title: 'DEPLOY\nWHEN AND\nWHERE IT\nMATTERS',
-    body: 'Whether responding to emergencies, monitoring remote environments, or extending communication networks, SFT platforms are built to deliver immediate operational impact.',
-    note: '',
-    chips: [],
-    pos: 'center' as const,
-    bgPos: 'center center',
-    img: '/sft/applications/cta.png',
-    overlay: 'radial-gradient(ellipse at center, rgba(5,5,5,0.88) 0%, rgba(5,5,5,0.72) 40%, rgba(5,5,5,0.35) 65%, transparent 100%)',
-    eyebrow: 'GET STARTED',
-    cta: [],
-  },
+  }
 ]
 
 /* ═══════════════════════════════════════════════════════════════════
@@ -1370,7 +1357,7 @@ export default function ApplicationsPage() {
           <img src="/SFT-logo-1.png" alt="Susan Future Technologies" className="s-logo-img" />
         </a>
         <div className="s-section">
-          <span ref={ctrRef} className="s-sec-num">01 / 08</span>
+          <span ref={ctrRef} className="s-sec-num">01 / 7</span>
           <span className="s-sep" />
           <span ref={ctrLabelRef} className="s-sec-label">Applications</span>
         </div>

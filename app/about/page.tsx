@@ -125,23 +125,7 @@ const SECTIONS = [
     overlay: 'linear-gradient(90deg, rgba(5,5,5,0.94) 0%, rgba(5,5,5,0.82) 38%, rgba(5,5,5,0.3) 65%, transparent 100%)',
     eyebrow: 'OUR TEAM',
     cta: [{ label: 'Contact Us', style: 'primary', href: 'mailto:info@susanfuturetechnologies.com' }],
-  },
-  {
-    num: '08', label: 'Connect',
-    title: "LET'S BUILD THE\nNEXT LAYER OF\nCONNECTIVITY",
-    body: 'If you are exploring deployable communication systems, aerial monitoring platforms, or future HAPS infrastructure, we\'d love to connect.',
-    note: '',
-    chips: [],
-    pos: 'center' as const,
-    bgPos: 'center center',
-    img: '/sft/about/cta.png',
-    overlay: 'radial-gradient(ellipse at center, rgba(5,5,5,0.88) 0%, rgba(5,5,5,0.72) 40%, rgba(5,5,5,0.35) 65%, transparent 100%)',
-    eyebrow: 'GET IN TOUCH',
-    cta: [
-      { label: 'Contact Us', style: 'primary', href: 'mailto:info@susanfuturetechnologies.com' },
-      { label: 'Request a Pilot', style: 'ghost', href: 'tel:+919486675847' },
-    ],
-  },
+  }
 ]
 
 /* ═══════════════════════════════════════════════════════════════════
@@ -1436,7 +1420,7 @@ export default function AboutPage() {
 
         {/* Center: Section indicator */}
         <div className="s-section">
-          <span ref={ctrRef} className="s-sec-num">01 / 08</span>
+          <span ref={ctrRef} className="s-sec-num">01 / 7</span>
           <span className="s-sep" />
           <span ref={ctrLabelRef} className="s-sec-label">About</span>
         </div>
@@ -1577,6 +1561,34 @@ export default function AboutPage() {
 
       {/* Outro overlay */}
       <div ref={outroRef} className="outro-panel">
+        <div className="o-logo">
+          <img src="/SFT-logo-1.png" alt="SFT" className="o-logo-img" />
+        </div>
+
+        <div className="o-eyebrow">
+          <span className="o-eyebrow-line" />
+          GET IN TOUCH
+          <span className="o-eyebrow-line" />
+        </div>
+
+        <h2 className="o-title">
+          Let&apos;s Build The<br />
+          Next Layer of<br />
+          <span className="oc">Connectivity.</span>
+        </h2>
+
+        <p className="o-sub">
+          Deployable communication systems, aerial monitoring, and HAPS infrastructure. Let&apos;s talk.
+        </p>
+
+        <div className="o-cta-row">
+          <a href="mailto:info@susanfuturetechnologies.com" className="btn-p">Contact Us</a>
+          <a href="tel:+919486675847" className="btn-g">Request a Pilot</a>
+          <a href="/" className="btn-g">Home</a>
+        </div>
+
+        <div className="o-divider" />
+
         <div className="o-footer">
           <div className="o-footer-nav">
             <a href="/" className="o-footer-link">Home</a>

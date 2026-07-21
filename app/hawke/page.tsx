@@ -148,23 +148,7 @@ const SECTIONS = [
     overlay: 'radial-gradient(ellipse at center, rgba(5,5,5,0.84) 0%, rgba(5,5,5,0.62) 40%, rgba(5,5,5,0.25) 65%, transparent 100%)',
     eyebrow: 'FIELD VALIDATION',
     cta: [],
-  },
-  {
-    num: '10', label: 'Connect',
-    title: 'DEPLOY\nCONNECTIVITY\nWHEN IT\nMATTERS MOST',
-    body: 'Whether you\'re responding to a disaster, securing a perimeter, or extending coverage to the unreachable — HAWKE is ready.',
-    note: '',
-    chips: [],
-    pos: 'center' as const,
-    bgPos: 'center center',
-    img: '/sft/hawke/cta.png',
-    overlay: 'radial-gradient(ellipse at center, rgba(5,5,5,0.84) 0%, rgba(5,5,5,0.62) 40%, rgba(5,5,5,0.25) 65%, transparent 100%)',
-    eyebrow: 'GET STARTED',
-    cta: [
-      { label: 'Request a Pilot', style: 'primary', href: 'tel:+919486675847' },
-      { label: 'Contact Us', style: 'ghost', href: 'mailto:info@susanfuturetechnologies.com' },
-    ],
-  },
+  }
 ]
 
 const N = SECTIONS.length
@@ -487,6 +471,12 @@ export default function HawkePage() {
         </div>
       ))}
       <div ref={outroRef} className="outro-panel">
+        <div className="o-logo"><img src="/SFT-logo-1.png" alt="SFT" className="o-logo-img" /></div>
+        <div className="o-eyebrow"><span className="o-eyebrow-line" />LET&apos;S BUILD<span className="o-eyebrow-line" /></div>
+        <h2 className="o-title">Deploy<br /><span className="oc">Connectivity</span><br />When It Matters Most</h2>
+        <p className="o-sub">Ready to explore HAWKE for your next mission? Talk to our team.</p>
+        <div className="o-cta-row"><a href="tel:+919486675847" className="btn-p">Request a Pilot</a><a href="mailto:info@susanfuturetechnologies.com" className="btn-g">Contact Us</a><a href="/mobius" className="btn-g">Explore MOBIUS</a></div>
+        <div className="o-divider" />
         <div className="o-footer">
           <div className="o-footer-nav"><a href="/" className="o-footer-link">Home</a><a href="/about" className="o-footer-link">About</a><a href="/mobius" className="o-footer-link">MOBIUS</a><a href="/applications" className="o-footer-link">Applications</a><a href="/ecosystem" className="o-footer-link">Ecosystem</a><a href="mailto:info@susanfuturetechnologies.com" className="o-footer-link">Contact</a></div>
           <div className="o-footer-info">Susan Future Technologies Pvt. Ltd.<br />Chennai, India · +91 94866 75847 · info@susanfuturetechnologies.com</div>

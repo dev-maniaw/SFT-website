@@ -140,19 +140,7 @@ const SECTIONS = [
     overlay: 'linear-gradient(270deg, rgba(5,5,5,0.94) 0%, rgba(5,5,5,0.82) 38%, rgba(5,5,5,0.3) 65%, transparent 100%)',
     eyebrow: 'FUTURE VISION',
     cta: [],
-  },
-  {
-    num: '11', label: 'Connect',
-    title: 'BUILD THE\nFUTURE OF\nAERIAL\nINFRASTRUCTURE',
-    body: 'Whether you represent a government, telecom operator, or investor — MOBIUS is ready to be part of your infrastructure vision.',
-    note: '',
-    chips: [],
-    pos: 'center' as const, bgPos: 'center center',
-    img: '/sft/mobius/cta.png',
-    overlay: 'radial-gradient(ellipse at center, rgba(5,5,5,0.84) 0%, rgba(5,5,5,0.62) 40%, rgba(5,5,5,0.25) 65%, transparent 100%)',
-    eyebrow: 'GET STARTED',
-    cta: [{ label: 'Request a Pilot', style: 'primary', href: 'tel:+919486675847' }, { label: 'Contact Us', style: 'ghost', href: 'mailto:info@susanfuturetechnologies.com' }],
-  },
+  }
 ]
 
 const N = SECTIONS.length
@@ -468,6 +456,12 @@ export default function MobiusPage() {
         </div>
       ))}
       <div ref={outroRef} className="outro-panel">
+        <div className="o-logo"><img src="/SFT-logo-1.png" alt="SFT" className="o-logo-img" /></div>
+        <div className="o-eyebrow"><span className="o-eyebrow-line" />LET&apos;S BUILD<span className="o-eyebrow-line" /></div>
+        <h2 className="o-title">Build The<br /><span className="oc">Future</span> Of<br />Aerial Infrastructure</h2>
+        <p className="o-sub">Whether you represent a government, telecom operator, or investor — MOBIUS is ready.</p>
+        <div className="o-cta-row"><a href="tel:+919486675847" className="btn-p">Request a Pilot</a><a href="mailto:info@susanfuturetechnologies.com" className="btn-g">Contact Us</a><a href="/hawke" className="btn-g">Explore HAWKE</a></div>
+        <div className="o-divider" />
         <div className="o-footer">
           <div className="o-footer-nav"><a href="/" className="o-footer-link">Home</a><a href="/about" className="o-footer-link">About</a><a href="/hawke" className="o-footer-link">HAWKE</a><a href="/applications" className="o-footer-link">Applications</a><a href="/ecosystem" className="o-footer-link">Ecosystem</a><a href="mailto:info@susanfuturetechnologies.com" className="o-footer-link">Contact</a></div>
           <div className="o-footer-info">Susan Future Technologies Pvt. Ltd.<br />Chennai, India · +91 94866 75847 · info@susanfuturetechnologies.com</div>

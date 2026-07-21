@@ -224,20 +224,7 @@ const SECTIONS: {
       { val: 'NETWORK', desc: 'Mesh coverage across regions' },
       { val: 'NATIONAL', desc: 'Infrastructure-scale operations' },
     ],
-  },
-  {
-    num: '10', label: 'Connect',
-    title: 'BUILDING\nTHE NEXT\nLAYER OF\nINFRASTRUCTURE',
-    body: 'SFT\'s ecosystem brings together platforms, systems, and applications into a unified approach to aerial infrastructure.',
-    note: '',
-    chips: [],
-    pos: 'center' as const,
-    bgPos: 'center center',
-    img: '/sft/ecosystem/cta.png',
-    overlay: 'radial-gradient(ellipse at center, rgba(5,5,5,0.88) 0%, rgba(5,5,5,0.72) 40%, rgba(5,5,5,0.35) 65%, transparent 100%)',
-    eyebrow: 'GET STARTED',
-    cta: [],
-  },
+  }
 ]
 
 /* ═══════════════════════════════════════════════════════════════════
@@ -889,7 +876,7 @@ export default function EcosystemPage() {
       <nav className="s-nav">
         <a href="/" className="s-logo" style={{textDecoration:"none"}}><img src="/SFT-logo-1.png" alt="Susan Future Technologies" className="s-logo-img" /></a>
         <div className="s-section">
-          <span ref={ctrRef} className="s-sec-num">01 / 10</span>
+          <span ref={ctrRef} className="s-sec-num">01 / 9</span>
           <span className="s-sep" />
           <span ref={ctrLabelRef} className="s-sec-label">Ecosystem</span>
         </div>
@@ -979,6 +966,17 @@ export default function EcosystemPage() {
 
       {/* Outro */}
       <div ref={outroRef} className="outro-panel">
+        <div className="o-logo"><img src="/SFT-logo-1.png" alt="SFT" className="o-logo-img" /></div>
+        <div className="o-eyebrow"><span className="o-eyebrow-line" />THE ECOSYSTEM<span className="o-eyebrow-line" /></div>
+        <h2 className="o-title">Building The<br />Next Layer of<br /><span className="oc">Infrastructure.</span></h2>
+        <p className="o-sub">Platforms, payloads, communication, and control — unified aerial infrastructure for critical operations at scale.</p>
+        <div className="o-cta-row">
+          <a href="/hawke" className="btn-p">Explore HAWKE</a>
+          <a href="/mobius" className="btn-g">Explore MOBIUS</a>
+          <a href="mailto:info@susanfuturetechnologies.com" className="btn-g">Contact Our Team</a>
+          <a href="/" className="btn-g">Home</a>
+        </div>
+        <div className="o-divider" />
         <div className="o-footer">
           <div className="o-footer-nav">
             <a href="/" className="o-footer-link">Home</a>
