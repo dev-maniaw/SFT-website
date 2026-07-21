@@ -418,10 +418,10 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
   color:rgba(255,255,255,0.6);
 }
 
-/* ── Application pillars (2x2 grid) ── */
+/* ── Application pillars (4 columns) ── */
 .app-pillars{
-  display:grid;grid-template-columns:repeat(2,1fr);gap:16px;
-  width:100%;max-width:900px;margin-top:20px;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:14px;
+  width:100%;max-width:1200px;margin-top:20px;
 }
 .app-pillar{
   background:rgba(10,15,20,0.8);
