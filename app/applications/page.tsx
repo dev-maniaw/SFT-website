@@ -1515,26 +1515,6 @@ export default function ApplicationsPage() {
 
       {/* Outro overlay */}
       <div ref={outroRef} className="outro-panel">
-        <div className="o-logo">
-          <img src="/SFT-logo-1.png" alt="SFT" className="o-logo-img" />
-        </div>
-        <div className="o-eyebrow">
-          <span className="o-eyebrow-line" />
-          DEPLOY NOW
-          <span className="o-eyebrow-line" />
-        </div>
-        <h2 className="o-title">
-          Deploy When<br />And Where<br /><span className="oc">It Matters.</span>
-        </h2>
-        <p className="o-sub">
-          Aerial infrastructure for disaster response, monitoring, defence, and mission-critical communication at scale.
-        </p>
-        <div className="o-cta-row">
-          <a href="tel:+919486675847" className="btn-p">Request Pilot Deployment</a>
-          <a href="mailto:info@susanfuturetechnologies.com" className="btn-g">Contact Our Team</a>
-          <a href="/" className="btn-g">Home</a>
-        </div>
-        <div className="o-divider" />
         <div className="o-footer">
           <div className="o-footer-nav">
             <a href="/" className="o-footer-link">Home</a>

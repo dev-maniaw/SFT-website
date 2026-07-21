@@ -979,17 +979,6 @@ export default function EcosystemPage() {
 
       {/* Outro */}
       <div ref={outroRef} className="outro-panel">
-        <div className="o-logo"><img src="/SFT-logo-1.png" alt="SFT" className="o-logo-img" /></div>
-        <div className="o-eyebrow"><span className="o-eyebrow-line" />THE ECOSYSTEM<span className="o-eyebrow-line" /></div>
-        <h2 className="o-title">Building The<br />Next Layer of<br /><span className="oc">Infrastructure.</span></h2>
-        <p className="o-sub">Platforms, payloads, communication, and control — unified aerial infrastructure for critical operations at scale.</p>
-        <div className="o-cta-row">
-          <a href="/hawke" className="btn-p">Explore HAWKE</a>
-          <a href="/mobius" className="btn-g">Explore MOBIUS</a>
-          <a href="mailto:info@susanfuturetechnologies.com" className="btn-g">Contact Our Team</a>
-          <a href="/" className="btn-g">Home</a>
-        </div>
-        <div className="o-divider" />
         <div className="o-footer">
           <div className="o-footer-nav">
             <a href="/" className="o-footer-link">Home</a>

@@ -137,7 +137,10 @@ const SECTIONS = [
     img: '/sft/about/cta.png',
     overlay: 'radial-gradient(ellipse at center, rgba(5,5,5,0.88) 0%, rgba(5,5,5,0.72) 40%, rgba(5,5,5,0.35) 65%, transparent 100%)',
     eyebrow: 'GET IN TOUCH',
-    cta: [],
+    cta: [
+      { label: 'Contact Us', style: 'primary', href: 'mailto:info@susanfuturetechnologies.com' },
+      { label: 'Request a Pilot', style: 'ghost', href: 'tel:+919486675847' },
+    ],
   },
 ]
 
@@ -1574,34 +1577,6 @@ export default function AboutPage() {
 
       {/* Outro overlay */}
       <div ref={outroRef} className="outro-panel">
-        <div className="o-logo">
-          <img src="/SFT-logo-1.png" alt="SFT" className="o-logo-img" />
-        </div>
-
-        <div className="o-eyebrow">
-          <span className="o-eyebrow-line" />
-          GET IN TOUCH
-          <span className="o-eyebrow-line" />
-        </div>
-
-        <h2 className="o-title">
-          Let&apos;s Build The<br />
-          Next Layer of<br />
-          <span className="oc">Connectivity.</span>
-        </h2>
-
-        <p className="o-sub">
-          Deployable communication systems, aerial monitoring, and HAPS infrastructure. Let&apos;s talk.
-        </p>
-
-        <div className="o-cta-row">
-          <a href="mailto:info@susanfuturetechnologies.com" className="btn-p">Contact Us</a>
-          <a href="tel:+919486675847" className="btn-g">Request a Pilot</a>
-          <a href="/" className="btn-g">Home</a>
-        </div>
-
-        <div className="o-divider" />
-
         <div className="o-footer">
           <div className="o-footer-nav">
             <a href="/" className="o-footer-link">Home</a>
