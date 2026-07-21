@@ -127,7 +127,7 @@ const CSS = `
 html{scroll-behavior:auto}
 body{background:#050505;color:#F5F7FA;overflow-x:hidden;font-family:'Inter',sans-serif}
 ::selection{background:rgba(74,199,255,0.25);color:#fff}
-.bg-layer{position:fixed;inset:-5%;z-index:1;width:110%;height:110%;background-size:cover;background-position:center;will-change:transform,opacity;transition:opacity 1.2s cubic-bezier(.16,1,.3,1)}
+.bg-layer{position:fixed;inset:0;z-index:1;background-size:cover;background-position:center;will-change:transform,opacity;transition:opacity 1.2s cubic-bezier(.16,1,.3,1)}
 .bg-overlay{position:fixed;inset:0;z-index:1;transition:opacity 1.2s cubic-bezier(.16,1,.3,1)}
 .vignette{position:fixed;inset:0;z-index:2;pointer-events:none;background:radial-gradient(ellipse at center,transparent 50%,rgba(5,5,5,0.5) 100%)}
 .scanlines{position:fixed;inset:0;z-index:3;pointer-events:none;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(74,199,255,0.008) 2px,rgba(74,199,255,0.008) 4px)}
@@ -314,10 +314,6 @@ export default function MobiusPage() {
       outroRef.current?.classList.toggle('vis', sF >= N + 0.5)
       let newIdx = -1
       if (sF >= 0.75 && sF <= N + 0.5) newIdx = Math.min(N - 1, Math.floor(sF - 0.75))
-      const fractional = sF - Math.floor(sF)
-      const shift = (fractional - 0.5) * 4
-      if (front === 'A' && bgLayerARef.current) bgLayerARef.current.style.transform = `translateY(${shift}%)`
-      else if (front === 'B' && bgLayerBRef.current) bgLayerBRef.current.style.transform = `translateY(${shift}%)`
       if (newIdx === activeIdx.current) return
       activeIdx.current = newIdx
       panelRefs.current.forEach((p, i) => p?.classList.toggle('vis', i === newIdx))
@@ -326,16 +322,15 @@ export default function MobiusPage() {
       if (ctrLabelRef.current) ctrLabelRef.current.textContent = newIdx >= 0 ? SECTIONS[newIdx].label : ''
       if (newIdx >= 0) {
         const s = SECTIONS[newIdx]
-        const next = front === 'A' ? 'B' : 'A'
-        const nextBg = next === 'A' ? bgLayerARef.current : bgLayerBRef.current
-        const nextOv = next === 'A' ? overlayARef.current : overlayBRef.current
-        const prevBg = front === 'A' ? bgLayerARef.current : bgLayerBRef.current
-        const prevOv = front === 'A' ? overlayARef.current : overlayBRef.current
-        if (nextBg) { nextBg.style.backgroundImage = `url(${s.img})`; nextBg.style.backgroundPosition = s.bgPos; nextBg.style.opacity = '1' }
-        if (nextOv) { nextOv.style.background = s.overlay; nextOv.style.opacity = '1' }
-        if (prevBg) prevBg.style.opacity = '0'
-        if (prevOv) prevOv.style.opacity = '0'
-        front = next
+        const incoming = front === 'A' ? bgLayerBRef.current : bgLayerARef.current
+        const outgoing = front === 'A' ? bgLayerARef.current : bgLayerBRef.current
+        const inOv = front === 'A' ? overlayBRef.current : overlayARef.current
+        const outOv = front === 'A' ? overlayARef.current : overlayBRef.current
+        if (incoming) { incoming.style.backgroundImage = `url(${s.img})`; incoming.style.backgroundPosition = s.bgPos; incoming.style.opacity = '1' }
+        if (inOv) { inOv.style.background = s.overlay; inOv.style.opacity = '1' }
+        if (outgoing) outgoing.style.opacity = '0'
+        if (outOv) outOv.style.opacity = '0'
+        front = front === 'A' ? 'B' : 'A'
       }
     }
     window.addEventListener('scroll', onScroll, { passive: true })
