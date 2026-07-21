@@ -452,7 +452,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 .o-footer-tagline{font-family:'Space Grotesk',sans-serif;font-size:0.95rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:rgba(74,199,255,0.45);margin-top:8px;display:flex;align-items:center;gap:8px}
 .o-footer-dot{width:3px;height:3px;border-radius:50%;background:rgba(74,199,255,0.4)}
 
-#sd{height:1560vh;position:relative;z-index:5;pointer-events:none}
+#sd{height:1080vh;position:relative;z-index:5;pointer-events:none}
 
 
 /* ═══════════════════════════════════════════════════════════════

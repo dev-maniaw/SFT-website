@@ -253,7 +253,7 @@ body{background:#050505;color:#F5F7FA;overflow-x:hidden;font-family:'Inter',sans
 .o-footer-info{font-family:'Inter',sans-serif;font-size:1rem;color:rgba(167,175,187,0.92);text-align:center;line-height:1.6}
 .o-footer-tagline{font-family:'Space Grotesk',sans-serif;font-size:0.95rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:rgba(74,199,255,0.45);margin-top:8px;display:flex;align-items:center;gap:8px}
 .o-footer-dot{width:3px;height:3px;border-radius:50%;background:rgba(74,199,255,0.4)}
-#sd{height:1600vh;position:relative;z-index:5;pointer-events:none}
+#sd{height:1080vh;position:relative;z-index:5;pointer-events:none}
 .m-stories{position:fixed;inset:0;z-index:500;overflow:hidden;background:#050505;touch-action:pan-y}
 .m-progress{position:absolute;top:0;left:0;right:0;z-index:60;display:flex;gap:3px;padding:8px 10px 0}
 .m-prog-bar{flex:1;height:2px;border-radius:2px;background:rgba(255,255,255,0.12);overflow:hidden}

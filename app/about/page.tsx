@@ -665,7 +665,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 .o-footer-dot{width:3px;height:3px;border-radius:50%;background:rgba(74,199,255,0.4)}
 
 /* ── Scroll driver ── */
-#sd{height:1430vh;position:relative;z-index:5;pointer-events:none}
+#sd{height:840vh;position:relative;z-index:5;pointer-events:none}
 
 
 /* ═══════════════════════════════════════════════════════════════
