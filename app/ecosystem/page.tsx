@@ -239,7 +239,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
   -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 
 .bg-fixed{position:fixed;inset:0;z-index:0;background-size:cover;background-position:center;transition:none}
-.bg-inner-a,.bg-inner-b{position:absolute;inset:0;background-size:cover;background-position:center;will-change:transform,opacity;transition:opacity 1.2s cubic-bezier(.16,1,.3,1)}
+.bg-inner-a,.bg-inner-b{position:absolute;inset:0;background-size:cover;background-position:center;will-change:transform,opacity;transition:opacity 0.6s cubic-bezier(.16,1,.3,1)}
 .overlay-layer{position:fixed;inset:0;z-index:1;pointer-events:none;transition:background 1.2s cubic-bezier(.16,1,.3,1)}
 .vignette{position:fixed;inset:0;z-index:2;pointer-events:none;background:radial-gradient(ellipse at center,transparent 50%,rgba(5,5,5,0.5) 100%)}
 .scanlines{position:fixed;inset:0;z-index:3;pointer-events:none;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(74,199,255,0.008) 2px,rgba(74,199,255,0.008) 4px)}
@@ -267,7 +267,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 .dot.act{background:#4AC7FF;transform:scale(1.7);box-shadow:0 0 8px rgba(74,199,255,0.5)}
 
 /* ── Content panels ── */
-.s-panel{position:fixed;top:0;height:100vh;z-index:10;display:flex;flex-direction:column;justify-content:center;pointer-events:none;opacity:0;transform:translateY(18px);transition:opacity 1.0s cubic-bezier(.16,1,.3,1), transform 1.0s cubic-bezier(.16,1,.3,1)}
+.s-panel{position:fixed;top:0;height:100vh;z-index:10;display:flex;flex-direction:column;justify-content:center;pointer-events:none;opacity:0;transform:translateY(18px);transition:opacity 0.5s cubic-bezier(.16,1,.3,1), transform 0.5s cubic-bezier(.16,1,.3,1)}
 .s-panel.vis{opacity:1;transform:translateY(0)}
 .s-panel.pos-left{left:0;width:42%;padding:0 56px 0 64px}
 .s-panel.pos-right{right:0;width:42%;padding:0 64px 0 56px;align-items:flex-end;text-align:right}
@@ -409,7 +409,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 .scale-desc{font-family:'Inter',sans-serif;font-size:0.95rem;color:rgba(167,175,187,0.88);line-height:1.5}
 
 /* ── Intro panel ── */
-.intro-panel{position:fixed;top:0;left:0;right:0;height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:80px;z-index:10;pointer-events:none;opacity:0;transform:translateY(18px);transition:opacity 1.0s cubic-bezier(.16,1,.3,1), transform 1.0s cubic-bezier(.16,1,.3,1);background:radial-gradient(ellipse at center,rgba(5,5,5,.86) 0%,rgba(5,5,5,.68) 45%,rgba(5,5,5,.3) 70%,transparent 100%)}
+.intro-panel{position:fixed;top:0;left:0;right:0;height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:80px;z-index:10;pointer-events:none;opacity:0;transform:translateY(18px);transition:opacity 0.5s cubic-bezier(.16,1,.3,1), transform 0.5s cubic-bezier(.16,1,.3,1);background:radial-gradient(ellipse at center,rgba(5,5,5,.86) 0%,rgba(5,5,5,.68) 45%,rgba(5,5,5,.3) 70%,transparent 100%)}
 .intro-panel.vis{opacity:1;transform:translateY(0);pointer-events:auto}
 .i-eye{font-family:'Space Grotesk',sans-serif;font-size:0.95rem;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:#4AC7FF;margin-bottom:22px;display:flex;align-items:center;justify-content:center;gap:12px}
 .i-eye-line{width:24px;height:1px;background:rgba(74,199,255,0.35)}
@@ -452,7 +452,7 @@ body{background:#050505;color:#F5F7FA;font-family:'Inter',sans-serif;overflow-x:
 .o-footer-tagline{font-family:'Space Grotesk',sans-serif;font-size:0.95rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:rgba(74,199,255,0.45);margin-top:8px;display:flex;align-items:center;gap:8px}
 .o-footer-dot{width:3px;height:3px;border-radius:50%;background:rgba(74,199,255,0.4)}
 
-#sd{height:1080vh;position:relative;z-index:5;pointer-events:none}
+#sd{height:900vh;position:relative;z-index:5;pointer-events:none}
 
 
 /* ═══════════════════════════════════════════════════════════════
