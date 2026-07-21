@@ -10,23 +10,7 @@ gsap.registerPlugin(ScrollTrigger)
 ═══════════════════════════════════════════════════════════════════ */
 const SECTIONS = [
   {
-    num: '01', label: 'Hero',
-    title: 'HAWKE',
-    body: 'A tethered aerial platform engineered for rapid deployment, persistent coverage, and mission-grade payload integration.',
-    note: 'A Rapidly Deployable Tethered Aerial Platform',
-    chips: [],
-    pos: 'center' as const,
-    bgPos: 'center center',
-    img: '/sft/hawke/hero-new.jpg',
-    overlay: 'radial-gradient(ellipse at center, rgba(5,5,5,0.84) 0%, rgba(5,5,5,0.62) 40%, rgba(5,5,5,0.25) 65%, transparent 100%)',
-    eyebrow: 'TETHERED AERIAL SYSTEM',
-    cta: [
-      { label: 'Request a Pilot', style: 'primary', href: 'tel:+919486675847' },
-      { label: 'Contact Us', style: 'ghost', href: 'mailto:info@susanfuturetechnologies.com' },
-    ],
-  },
-  {
-    num: '02', label: 'Capabilities',
+    num: '01', label: 'Capabilities',
     title: 'CORE\nCAPABILITIES',
     body: '',
     note: '',
@@ -44,7 +28,7 @@ const SECTIONS = [
     cta: [],
   },
   {
-    num: '03', label: 'Missions',
+    num: '02', label: 'Missions',
     title: 'MISSION\nPROFILES',
     body: 'From disaster zones to defence perimeters, industrial sites to environmental frontlines — HAWKE is built for the missions that can\'t wait.',
     note: '',
@@ -62,7 +46,7 @@ const SECTIONS = [
     cta: [],
   },
   {
-    num: '04', label: 'Architecture',
+    num: '03', label: 'Architecture',
     title: 'HOW HAWKE\nWORKS',
     body: 'An integrated system of five components working together — from the lighter-than-air envelope to the ground control station.',
     note: 'Aerostat Envelope · Tether System · Payload Bay · GCS · Power',
@@ -75,7 +59,7 @@ const SECTIONS = [
     cta: [],
   },
   {
-    num: '05', label: 'Performance',
+    num: '04', label: 'Performance',
     title: 'PERFORMANCE\nSPECS',
     body: '',
     note: '',
@@ -93,7 +77,7 @@ const SECTIONS = [
     cta: [],
   },
   {
-    num: '06', label: 'Deployment',
+    num: '05', label: 'Deployment',
     title: 'FIELD-READY\nIN UNDER\n3 HOURS',
     body: 'Transport → Position → Inflate → Operate. HAWKE deploys from a standard vehicle platform with a small ground crew.',
     note: '',
@@ -111,7 +95,7 @@ const SECTIONS = [
     cta: [],
   },
   {
-    num: '07', label: 'Advantages',
+    num: '06', label: 'Advantages',
     title: 'WHY NOT\nJUST USE A\nDRONE?',
     body: 'Drones are limited by battery. Towers are fixed. Satellites are distant. HAWKE operates in the gap — persistent, deployable, and cost-effective.',
     note: '',
@@ -124,7 +108,7 @@ const SECTIONS = [
     cta: [],
   },
   {
-    num: '08', label: 'Validation',
+    num: '07', label: 'Validation',
     title: 'TESTED.\nVALIDATED.\nDEPLOYED.',
     body: 'HAWKE has been field-tested across multiple environments. Every subsystem has undergone rigorous validation.',
     note: 'Moving toward TRL 9 operational readiness',
@@ -420,9 +404,9 @@ export default function HawkePage() {
 
   return (
     <><style dangerouslySetInnerHTML={{ __html: CSS }} />
-      <div ref={bgLayerARef} className="bg-layer" style={{ backgroundImage: `url(${SECTIONS[0].img})`, backgroundPosition: SECTIONS[0].bgPos, opacity: 1 }} />
+      <div ref={bgLayerARef} className="bg-layer" style={{ backgroundImage: "url(/sft/hawke/hero-new.jpg)", backgroundPosition: 'center center', opacity: 1 }} />
       <div ref={bgLayerBRef} className="bg-layer" style={{ opacity: 0 }} />
-      <div ref={overlayARef} className="bg-overlay" style={{ background: SECTIONS[0].overlay, opacity: 1 }} />
+      <div ref={overlayARef} className="bg-overlay" style={{ background: 'radial-gradient(ellipse at center, rgba(5,5,5,0.84) 0%, rgba(5,5,5,0.62) 40%, rgba(5,5,5,0.25) 65%, transparent 100%)', opacity: 1 }} />
       <div ref={overlayBRef} className="bg-overlay" style={{ opacity: 0 }} />
       <div className="vignette" /><div className="scanlines" />
       <div className="signal-rings"><div className="signal-ring" /><div className="signal-ring" /><div className="signal-ring" /><div className="signal-ring" /></div>
