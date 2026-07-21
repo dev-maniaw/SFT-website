@@ -348,11 +348,11 @@ export default function HawkePage() {
       const total = sd.scrollHeight - window.innerHeight
       const pct = Math.max(0, Math.min(1, scrolled / total))
       if (fillRef.current) fillRef.current.style.width = `${pct * 100}%`
-      const sF = pct * (N + 1)
-      introRef.current?.classList.toggle('vis', sF < 0.5)
-      outroRef.current?.classList.toggle('vis', sF > N + 0.2)
+      const sF = Math.max(0, (pct - 0.03) / 0.90) * (N + 1.5)
+      introRef.current?.classList.toggle('vis', sF < 0.72)
+      outroRef.current?.classList.toggle('vis', sF >= N + 0.5)
       let newIdx = -1
-      if (sF >= 0.5 && sF <= N + 0.2) newIdx = Math.min(N - 1, Math.floor(sF - 0.5))
+      if (sF >= 0.75 && sF <= N + 0.5) newIdx = Math.min(N - 1, Math.floor(sF - 0.75))
       const fractional = sF - Math.floor(sF)
       const shift = (fractional - 0.5) * 4
       if (front === 'A' && bgLayerARef.current) bgLayerARef.current.style.transform = `translateY(${shift}%)`
