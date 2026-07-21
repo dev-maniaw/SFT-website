@@ -236,11 +236,7 @@ const SECTIONS: {
     img: '/sft/ecosystem/cta.png',
     overlay: 'radial-gradient(ellipse at center, rgba(5,5,5,0.88) 0%, rgba(5,5,5,0.72) 40%, rgba(5,5,5,0.35) 65%, transparent 100%)',
     eyebrow: 'GET STARTED',
-    cta: [
-      { label: 'Explore HAWKE', style: 'primary', href: '/hawke' },
-      { label: 'Explore MOBIUS', style: 'ghost', href: '/mobius' },
-      { label: 'Contact Our Team', style: 'ghost', href: 'mailto:info@susanfuturetechnologies.com' },
-    ],
+    cta: [],
   },
 ]
 

@@ -219,10 +219,7 @@ const SECTIONS: {
     img: '/sft/applications/cta.png',
     overlay: 'radial-gradient(ellipse at center, rgba(5,5,5,0.88) 0%, rgba(5,5,5,0.72) 40%, rgba(5,5,5,0.35) 65%, transparent 100%)',
     eyebrow: 'GET STARTED',
-    cta: [
-      { label: 'Request Pilot Deployment', style: 'primary', href: 'tel:+919486675847' },
-      { label: 'Contact Our Team', style: 'ghost', href: 'mailto:info@susanfuturetechnologies.com' },
-    ],
+    cta: [],
   },
 ]
 

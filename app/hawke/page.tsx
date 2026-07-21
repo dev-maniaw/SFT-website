@@ -220,10 +220,7 @@ const SECTIONS: {
     img: '/sft/hawke/cta.png',
     overlay: 'radial-gradient(ellipse at center, rgba(5,5,5,0.88) 0%, rgba(5,5,5,0.72) 40%, rgba(5,5,5,0.35) 65%, transparent 100%)',
     eyebrow: 'GET STARTED',
-    cta: [
-      { label: 'Contact Us', style: 'primary', href: 'mailto:info@susanfuturetechnologies.com' },
-      { label: 'Request a Pilot', style: 'ghost', href: 'tel:+919486675847' },
-    ],
+    cta: [],
   },
 ]
 
