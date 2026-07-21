@@ -48,23 +48,7 @@ const SECTIONS: {
   [key: string]: unknown;
 }[] = [
   {
-    num: '01', label: 'Hero',
-    title: 'APPLICATIONS',
-    body: 'Deployable Aerial Infrastructure for Real-World Environments',
-    note: 'From disaster response to large-scale monitoring, SFT platforms deliver communication, visibility, and control where conventional systems cannot operate.',
-    chips: [],
-    pos: 'center' as const,
-    bgPos: 'center center',
-    img: '/sft/applications/hero.png',
-    overlay: 'radial-gradient(ellipse at center, rgba(5,5,5,0.86) 0%, rgba(5,5,5,0.65) 40%, rgba(5,5,5,0.3) 65%, transparent 100%)',
-    eyebrow: 'MISSION-FIRST AERIAL SYSTEMS',
-    cta: [
-      { label: 'Explore HAWKE', style: 'primary', href: '/hawke' },
-      { label: 'Request Pilot Deployment', style: 'ghost', href: 'tel:+919486675847' },
-    ],
-  },
-  {
-    num: '02', label: 'Overview',
+    num: '01', label: 'Overview',
     title: 'ENGINEERED\nFOR CRITICAL\nENVIRONMENTS',
     body: 'SFT platforms are designed to operate in environments where infrastructure is limited, damaged, or non-existent.\n\nBy combining aerial deployment, modular payload systems, and persistent operation, SFT enables communication, monitoring, and operational awareness across diverse mission scenarios.',
     note: '',
@@ -74,7 +58,7 @@ const SECTIONS: {
     img: '/sft/applications/overview.png',
     overlay: 'radial-gradient(ellipse at center, rgba(5,5,5,0.88) 0%, rgba(5,5,5,0.72) 40%, rgba(5,5,5,0.35) 65%, transparent 100%)',
     eyebrow: 'APPLICATIONS OVERVIEW',
-    cta: [],
+    cta: [] as { label: string; style: string; href: string }[],
     environments: [
       { label: 'DISASTER ZONES', icon: 'alert' },
       { label: 'BORDER REGIONS', icon: 'shield' },
@@ -83,7 +67,7 @@ const SECTIONS: {
     ],
   },
   {
-    num: '03', label: 'Applications',
+    num: '02', label: 'Applications',
     title: 'CORE\nAPPLICATION\nAREAS',
     body: '',
     note: '',
@@ -130,7 +114,7 @@ const SECTIONS: {
     ],
   },
   {
-    num: '04', label: 'Payloads',
+    num: '03', label: 'Payloads',
     title: 'MODULAR\nPAYLOAD\nSYSTEMS',
     body: 'SFT platforms are designed to support a range of mission-specific payloads, allowing each deployment to be configured based on operational requirements.',
     note: '',
@@ -150,7 +134,7 @@ const SECTIONS: {
     ],
   },
   {
-    num: '05', label: 'Coverage',
+    num: '04', label: 'Coverage',
     title: 'ELEVATED\nCOVERAGE.\nENHANCED\nVISIBILITY.',
     body: 'Operating from an elevated vantage point, SFT platforms extend both communication reach and monitoring capability across wide areas.',
     note: '',
@@ -169,7 +153,7 @@ const SECTIONS: {
     ],
   },
   {
-    num: '06', label: 'Scenarios',
+    num: '05', label: 'Scenarios',
     title: 'DEPLOYABLE\nACROSS\nENVIRONMENTS',
     body: 'HAWKE is designed for rapid deployment across varied terrains, requiring minimal infrastructure and enabling immediate operational readiness.',
     note: '',
@@ -189,7 +173,7 @@ const SECTIONS: {
     ],
   },
   {
-    num: '07', label: 'Sectors',
+    num: '06', label: 'Sectors',
     title: 'ONE\nPLATFORM.\nMULTIPLE\nSECTORS.',
     body: 'SFT platforms are designed to serve multiple industries with a single adaptable system — reducing deployment complexity while increasing operational capability.',
     note: '',
@@ -1247,7 +1231,7 @@ export default function ApplicationsPage() {
 
           {/* Outro slide */}
           <div className={`m-slide${activeStory === SECTIONS.length ? ' active' : ''}`}>
-            <div className="m-slide-bg" style={{ backgroundImage: `url(${SECTIONS[0].img})` }} />
+            <div className="m-slide-bg" style={{ backgroundImage: "url(/sft/applications/hero.png)" }} />
             <div className="m-slide-overlay" style={{ background: 'radial-gradient(ellipse at center, rgba(5,5,5,0.92) 0%, rgba(5,5,5,0.88) 50%, rgba(5,5,5,0.7) 100%)' }} />
             <div className="m-slide-vignette" />
             <div className="m-tap-left" onClick={goPrev} />

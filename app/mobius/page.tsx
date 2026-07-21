@@ -7,19 +7,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 const SECTIONS = [
   {
-    num: '01', label: 'Hero',
-    title: 'MOBIUS',
-    body: 'A reusable high-altitude platform system designed to extend connectivity, sensing, and operational reach beyond conventional systems.',
-    note: 'Persistent, Scalable Aerial Infrastructure',
-    chips: [],
-    pos: 'center' as const, bgPos: 'center center',
-    img: '/sft/mobius/hero-new.jpg',
-    overlay: 'radial-gradient(ellipse at center, rgba(5,5,5,0.84) 0%, rgba(5,5,5,0.62) 40%, rgba(5,5,5,0.25) 65%, transparent 100%)',
-    eyebrow: 'HIGH-ALTITUDE PLATFORM SYSTEM',
-    cta: [{ label: 'Request a Pilot', style: 'primary', href: 'tel:+919486675847' }, { label: 'Contact Us', style: 'ghost', href: 'mailto:info@susanfuturetechnologies.com' }],
-  },
-  {
-    num: '02', label: 'Metrics',
+    num: '01', label: 'Metrics',
     title: 'KEY\nCAPABILITIES',
     body: '',
     note: '',
@@ -33,10 +21,10 @@ const SECTIONS = [
     img: '/sft/mobius/metrics.png',
     overlay: 'radial-gradient(ellipse at center, rgba(5,5,5,0.84) 0%, rgba(5,5,5,0.62) 40%, rgba(5,5,5,0.25) 65%, transparent 100%)',
     eyebrow: 'CAPABILITY BAND',
-    cta: [],
+    cta: [] as { label: string; style: string; href: string }[],
   },
   {
-    num: '03', label: 'Platform',
+    num: '02', label: 'Platform',
     title: 'A NEW LAYER\nOF AERIAL\nINFRASTRUCTURE',
     body: 'MOBIUS is not an aircraft. It is an infrastructure platform — a reusable, station-keeping system that operates in the stratosphere to provide persistent coverage, sensing, and relay capabilities.',
     note: '',
@@ -48,7 +36,7 @@ const SECTIONS = [
     cta: [],
   },
   {
-    num: '04', label: 'Problem',
+    num: '03', label: 'Problem',
     title: 'WHY IT\nMATTERS',
     body: 'Ground infrastructure is terrain-limited and expensive to scale. Drones are short-endurance and low-altitude. Satellites are distant, latency-bound, and costly to deploy. MOBIUS operates in the gap.',
     note: '',
@@ -60,7 +48,7 @@ const SECTIONS = [
     cta: [],
   },
   {
-    num: '05', label: 'Architecture',
+    num: '04', label: 'Architecture',
     title: 'PLATFORM\nARCHITECTURE',
     body: 'Five integrated systems working in concert — lighter-than-air structure, autonomous flight control, modular payload bay, energy management, and ground operations.',
     note: 'LTA Structure · Autonomous Control · Payload Bay · Energy · Ground Ops',
@@ -72,7 +60,7 @@ const SECTIONS = [
     cta: [],
   },
   {
-    num: '06', label: 'Capabilities',
+    num: '05', label: 'Capabilities',
     title: 'WHAT MOBIUS\nDELIVERS',
     body: '',
     note: '',
@@ -89,7 +77,7 @@ const SECTIONS = [
     cta: [],
   },
   {
-    num: '07', label: 'Applications',
+    num: '06', label: 'Applications',
     title: 'MISSION\nAPPLICATIONS',
     body: 'From telecom backhaul to defence surveillance, environmental monitoring to disaster response — MOBIUS adapts to the mission.',
     note: '',
@@ -106,7 +94,7 @@ const SECTIONS = [
     cta: [],
   },
   {
-    num: '08', label: 'Roadmap',
+    num: '07', label: 'Roadmap',
     title: 'DEVELOPMENT\nROADMAP',
     body: 'MOBIUS is under active development, progressing through three phases: subsystem validation, integrated flight testing, and operational deployment.',
     note: 'Phase 1: Subsystem → Phase 2: Integration → Phase 3: Operations',
@@ -118,7 +106,7 @@ const SECTIONS = [
     cta: [],
   },
   {
-    num: '09', label: 'Future',
+    num: '08', label: 'Future',
     title: 'TOWARD A\nNEW\nCONNECTIVITY\nLAYER',
     body: 'A fleet of MOBIUS platforms forming a persistent network in the stratosphere — extending connectivity, intelligence, and coverage to every corner of the Earth.',
     note: '',
@@ -387,7 +375,7 @@ export default function MobiusPage() {
             </div>
           ))}
           <div className={`m-slide${activeStory === N ? ' active' : ''}`}>
-            <div className="m-slide-bg" style={{ backgroundImage: `url(${SECTIONS[0].img})` }} /><div className="m-slide-overlay" style={{ background: 'rgba(5,5,5,0.92)' }} />
+            <div className="m-slide-bg" style={{ backgroundImage: "url(/sft/mobius/hero-new.jpg)" }} /><div className="m-slide-overlay" style={{ background: 'rgba(5,5,5,0.92)' }} />
             <div className="m-header"><a href="/" className="m-header-logo"><img src="/SFT-logo-1.png" alt="SFT" /></a><button className={`m-hamburger${menuOpen ? ' open' : ''}`} onClick={() => setMenuOpen(!menuOpen)} aria-label="Menu"><span /><span /><span /></button></div>
             <div className={`m-mobile-overlay${menuOpen ? ' open' : ''}`}><a href="/" onClick={() => setMenuOpen(false)}>Home</a><a href="/about" onClick={() => setMenuOpen(false)}>About</a><a href="/hawke" onClick={() => setMenuOpen(false)}>HAWKE</a><a href="/applications" onClick={() => setMenuOpen(false)}>Applications</a><a href="/ecosystem" onClick={() => setMenuOpen(false)}>Ecosystem</a><a href="tel:+919486675847" onClick={() => setMenuOpen(false)} style={{ color: '#4AC7FF' }}>Request Pilot</a></div>
             <div className="m-tap-left" onClick={goPrev} />
@@ -406,9 +394,9 @@ export default function MobiusPage() {
 
   return (
     <><style dangerouslySetInnerHTML={{ __html: CSS }} />
-      <div ref={bgLayerARef} className="bg-layer" style={{ backgroundImage: `url(${SECTIONS[0].img})`, backgroundPosition: SECTIONS[0].bgPos, opacity: 1 }} />
+      <div ref={bgLayerARef} className="bg-layer" style={{ backgroundImage: "url(/sft/mobius/hero-new.jpg)", backgroundPosition: 'center center', opacity: 1 }} />
       <div ref={bgLayerBRef} className="bg-layer" style={{ opacity: 0 }} />
-      <div ref={overlayARef} className="bg-overlay" style={{ background: SECTIONS[0].overlay, opacity: 1 }} />
+      <div ref={overlayARef} className="bg-overlay" style={{ background: 'radial-gradient(ellipse at center, rgba(5,5,5,0.84) 0%, rgba(5,5,5,0.62) 40%, rgba(5,5,5,0.25) 65%, transparent 100%)', opacity: 1 }} />
       <div ref={overlayBRef} className="bg-overlay" style={{ opacity: 0 }} />
       <div className="vignette" /><div className="scanlines" />
       <div className="signal-rings"><div className="signal-ring" /><div className="signal-ring" /><div className="signal-ring" /><div className="signal-ring" /></div>

@@ -48,23 +48,7 @@ const SECTIONS: {
   [key: string]: unknown;
 }[] = [
   {
-    num: '01', label: 'Hero',
-    title: 'ECOSYSTEM',
-    body: 'Aerial Infrastructure Systems for Communication and Monitoring',
-    note: 'Integrating platforms, payloads, communication, and control into a unified operational system.',
-    chips: [],
-    pos: 'center' as const,
-    bgPos: 'center center',
-    img: '/sft/ecosystem/hero.png',
-    overlay: 'radial-gradient(ellipse at center, rgba(5,5,5,0.86) 0%, rgba(5,5,5,0.65) 40%, rgba(5,5,5,0.3) 65%, transparent 100%)',
-    eyebrow: 'UNIFIED AERIAL INFRASTRUCTURE',
-    cta: [
-      { label: 'Explore Technology', style: 'primary', href: '/applications' },
-      { label: 'View Applications', style: 'ghost', href: '/applications' },
-    ],
-  },
-  {
-    num: '02', label: 'Statement',
+    num: '01', label: 'Statement',
     title: 'A CONNECTED\nAERIAL\nINFRASTRUCTURE',
     body: 'SFT is building an integrated aerial ecosystem that combines deployable platforms, modular payload systems, communication networks, and control infrastructure.\n\nEach component is designed to operate independently — but delivers maximum value when functioning as part of a unified system.',
     note: '',
@@ -74,11 +58,11 @@ const SECTIONS: {
     img: '/sft/ecosystem/statement.png',
     overlay: 'radial-gradient(ellipse at center, rgba(5,5,5,0.88) 0%, rgba(5,5,5,0.72) 40%, rgba(5,5,5,0.35) 65%, transparent 100%)',
     eyebrow: 'ECOSYSTEM STATEMENT',
-    cta: [],
+    cta: [] as { label: string; style: string; href: string }[],
     nodeLabels: ['PLATFORMS', 'PAYLOADS', 'COMMUNICATION', 'CONTROL', 'GROUND OPS'],
   },
   {
-    num: '03', label: 'System',
+    num: '02', label: 'System',
     title: 'HOW THE\nSYSTEM\nWORKS',
     body: 'SFT\'s ecosystem is structured across multiple interconnected layers that enable deployment, operation, and monitoring.',
     note: '',
@@ -98,7 +82,7 @@ const SECTIONS: {
     ],
   },
   {
-    num: '04', label: 'Platforms',
+    num: '03', label: 'Platforms',
     title: 'PLATFORM\nSYSTEMS',
     body: '',
     note: '',
@@ -129,7 +113,7 @@ const SECTIONS: {
     ],
   },
   {
-    num: '05', label: 'Payloads',
+    num: '04', label: 'Payloads',
     title: 'MISSION-READY\nPAYLOAD\nSYSTEMS',
     body: 'Payload systems define mission capability — enabling communication, sensing, and monitoring across different environments.',
     note: '',
@@ -149,7 +133,7 @@ const SECTIONS: {
     ],
   },
   {
-    num: '06', label: 'Control',
+    num: '05', label: 'Control',
     title: 'CONTROL AND\nOPERATIONS\nINFRASTRUCTURE',
     body: 'Ground control systems manage deployment, monitoring, and mission execution across the entire aerial infrastructure.',
     note: '',
@@ -168,7 +152,7 @@ const SECTIONS: {
     ],
   },
   {
-    num: '07', label: 'Workflow',
+    num: '06', label: 'Workflow',
     title: 'FROM\nDEPLOYMENT\nTO OPERATION',
     body: 'The SFT ecosystem is designed for seamless transition from deployment to active operation, enabling rapid response and sustained performance.',
     note: '',
@@ -188,7 +172,7 @@ const SECTIONS: {
     ],
   },
   {
-    num: '08', label: 'Components',
+    num: '07', label: 'Components',
     title: 'SYSTEM\nCOMPONENTS',
     body: '',
     note: '',
@@ -207,7 +191,7 @@ const SECTIONS: {
     ],
   },
   {
-    num: '09', label: 'Scale',
+    num: '08', label: 'Scale',
     title: 'DESIGNED\nFOR\nSCALE',
     body: 'The SFT ecosystem is designed to scale from localized deployments to wide-area coverage systems.\n\nFrom single deployment units to networked aerial platforms, the system can evolve to support increasing operational demands.',
     note: '',
@@ -800,7 +784,7 @@ export default function EcosystemPage() {
 
           {/* Outro slide */}
           <div className={`m-slide${activeStory === SECTIONS.length ? ' active' : ''}`}>
-            <div className="m-slide-bg" style={{ backgroundImage: `url(${SECTIONS[0].img})` }} />
+            <div className="m-slide-bg" style={{ backgroundImage: "url(/sft/ecosystem/hero.png)" }} />
             <div className="m-slide-overlay" style={{ background: 'radial-gradient(ellipse at center, rgba(5,5,5,0.92) 0%, rgba(5,5,5,0.88) 50%, rgba(5,5,5,0.7) 100%)' }} />
             <div className="m-slide-vignette" />
             <div className="m-tap-left" onClick={goPrev} />
